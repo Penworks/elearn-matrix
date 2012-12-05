@@ -1,0 +1,108 @@
+/* the overlayed element */
+.simple_overlay {
+	
+	/* must be initially hidden */
+	display:none;
+	
+	/* place overlay on top of other elements */
+	z-index:10000;
+	
+	/* styling */
+	/*background-color:#751889;*/
+	background-color:#130104;
+	width:450px;	
+	min-height:200px;
+	border:1px solid #666;
+	padding: 10px;
+	
+	/* CSS3 styling for latest browsers */
+	-moz-box-shadow:0 0 90px 5px #000;
+	-webkit-box-shadow: 0 0 90px #000;
+	/*IE 8 fix disabling cleartype in divs to avoid duplicate antialias behaviour*/
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+    filter:progid:DXImageTransform.Microsoft.Alpha(opacity=99);
+}
+
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+	background-image:url(../images/close.png);
+	position:absolute;
+	right:-15px;
+	top:-15px;
+	cursor:pointer;
+	height:35px;
+	width:35px;
+}
+
+/* get rid of those system borders being generated for A tags */
+a:active {
+  outline:none;
+}
+
+:focus {
+  -moz-outline-style:none;
+}
+
+	
+	/* some styling for triggers from example*/
+	#triggers {
+		text-align:left;
+	}
+	
+	#triggers img  {
+		cursor:pointer;
+		margin:0 5px;
+		background-color:#fff;
+		border:1px solid #ccc;
+		padding:2px;
+	
+		-moz-border-radius:4px;
+		-webkit-border-radius:4px;
+		
+	}
+	
+	
+	
+	/* styling for elements inside overlay */
+	.details {
+		padding:10px;
+		position:absolute;
+		top:25px;
+		right:25px;
+		font-size:1.2em;
+		color:#778277;
+		width:350px;
+		/*my additions*/
+		/*opacity:0.8;filter:alpha(opacity=80);*/
+		background: #EBE0E6;
+		-moz-box-shadow: -1px 0px 10px rgba(0,0,0,0.5);
+		-webkit-box-shadow: -1px 0px 10px rgba(0,0,0,0.5);
+		box-shadow:-1px 0px 10px rgba(0,0,0,0.5);
+		-webkit-border-radius: 10px;
+		-moz-border-radius: 10px;
+		border-radius: 10px;
+
+	}
+	
+/*	.details h3 {*/
+		/*color:#aba;*/
+		/*color:#778277;
+		font-size:15px;
+		margin:0 0 -10px 0;
+	}*/
+	
+	.banner {
+		padding:10px;
+		position:absolute;
+		top:165px;
+		right:15px;
+		font-size:2.5em;
+		font-weight: 600;
+		color:#C2301E;
+		width:375px;
+		height: 180px;
+		/*my additions*/
+		opacity:0.9;filter:alpha(opacity=90);
+		background: url(../img/plank.png) no-repeat;
+	}
+	

@@ -1,0 +1,149 @@
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{embed="embeds/_head"}
+  
+<div id="page">
+    
+        <!--back button-->
+<a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+    
+{exp:channel:entries channel="weblearn" disable="member_data|trackbacks" limit="1" backspace="2"}
+
+
+    <span class="pub_date_author">by: {author} on: {entry_date format="%M %d, %Y"}</span><h2>{title}</h2>
+  
+
+{if summary}
+    <p class="snapshot"><b>Snapshot:</b>
+    {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
+    </p>
+{/if}
+
+
+{embed="embeds/_social_bb"}
+
+<!--<a href="{url_title_path=weblearn/pdf}"><img src="{global_image_url}bb/doc_pdf.png" width="40" height="40"/></a>-->
+
+<div class="page-body">
+
+{if embed_item}
+    <div class="media-embed">    
+    {embed="embeds/_embed_item"}
+    </div><!--/.media-embed-->
+    
+{if:elseif slideshow}
+
+
+{embed="embeds/_slideshow"}
+ 
+
+{if:else}
+
+<!--[if lte IE 8]> 
+    {if img_upload}<img src="{img_upload}" alt="{title}" title="{title}" width="300" />
+     <br />{/if}<![endif]-->
+    <!--[if lte IE 8]><![IGNORE[-->{if img_upload}
+    <img src="{img_upload}" alt="{title}" title="{title}" height="{height}" width="{width}" />
+    {/if}<![IGNORE[]]><![endif]-->
+{/if}
+
+{if page_body}
+    {page_body}
+    {!-- {exp:tagstripper:tagsToStrip tags='div|p'}{page_body}{/exp:tagstripper}--}
+{/if}
+
+<!--- download_files field-->
+{if file_download}
+             <div class="panel-content-downloads">
+                <h5>DOWNLOADS:</h5>
+                {file_download}
+                <ul>
+                <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+                </ul>
+                {/file_download}
+             </div><!--/.panel-content-downloads-->
+{/if}
+
+</div><!--/.page_body-->
+
+{if panel_content}
+    {embed="{select_view}"}
+{/if}
+
+{embed="embeds/_list_items"}
+
+<br />
+<hr>
+
+<div class="tag-footer">
+    
+    <div class="level">
+    <h5>Level:</h5> {level}
+    </div><!--/.level-->
+    
+    <div class="tagged">
+        <h5>Tagged:</h5>
+        
+        {!--{exp:tagger:tags entry_id="{entry_id}" channel="weblearn" backspace="10"}--}
+        
+        {exp:tagger:tags entry_id="{entry_id}" channel="weblearn"}
+         {if tagger:no_tags}<p>No tags where found.</p>{/if} 
+        <span class="word"><a href="/index.php/tags/weblearn/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> <!--&#124;-->
+       {/exp:tagger:tags}
+    </div><!--/.tagged-->
+
+    <div class="cat-detail">
+        <h5>More in:</h5> 
+        {!--{categories backspace="3"}--}
+        {categories}
+        <a href="{path=weblearn/list}"><span class="word">{category_name}</span></a> <!-- &#124;--> {/categories}  
+    </div><!--/.cat-detail-->
+
+{if related_content}
+    {embed="embeds/_related"}  
+{/if}
+
+
+</div><!--/.tag-footer-->
+
+
+
+{paginate}
+    <div class="paginate">
+        <br /><br/>
+    <span class="pagecount">Page {current_page} of {total_pages} pages</span>  {pagination_links}
+    </div><!--/.paginate-->
+{/paginate}
+
+
+
+{/exp:channel:entries}
+
+<div style="clear:both"></div>
+<hr>
+
+<!--COMMENTING-->
+
+    <div id="disqus_thread">
+        
+    </div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'weblearn-londonmet'; // required: forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!--/ COMMENTING-->
+
+</div><!--/#page-->
+
+
+
+{embed="embeds/_footer"}

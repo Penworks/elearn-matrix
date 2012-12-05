@@ -1,0 +1,87 @@
+@charset "windows-1252";
+		
+/* root element for tabs  */
+ul.css-tabs {  
+	margin:0 !important; 
+	padding:0;
+	height:30px;
+	border-bottom:1px solid #ffffff;	
+	width:650px; 	
+}
+
+/* single tab */
+ul.css-tabs li {  
+	float:left;	 
+	padding:0; 
+	margin:0;  
+	list-style-type:none;	
+}
+
+/* link inside the tab. uses a background image */
+ul.css-tabs a { 
+	float:left;
+	font-size:13px;
+	display:block;
+	padding:5px 10px;	
+	text-decoration:none;
+	border:1px solid #ffffff;	
+	border-bottom:0px;
+	height:18px;
+	background-color:#efefef;
+	color:#777;
+	margin-right:2px;
+	-moz-border-radius-topleft: 4px;
+	-moz-border-radius-topright:4px;
+	position:relative;
+	top:1px;	
+}
+
+ul.css-tabs a:hover {
+	background-color:#F7F7F7;
+	color:#333;
+}
+	
+/* selected tab */
+ul.css-tabs a.current {
+	background-color:#E2EDEA;
+	border-bottom:2px solid #E2EDEA;	
+	color:#000;	
+	cursor:default;
+}
+
+	
+/* tab pane */
+.css-panes div {
+	/*display:none;*/
+	border-left:1px solid #FFFFFF;
+	border-top:1px solid #FFFFFF;
+	border-width:0 1px 1px 1px;
+	min-height:350px;
+	padding:15px 20px; 
+	width:610px;
+	background-color:#E2EDEA;
+	overflow: hidden;
+}
+
+a:active {
+  outline:none;
+}
+
+:focus {
+  -moz-outline-style:none;
+  outline: 0; /*fix for FF3.6 in win 7*/
+}
+
+body {
+	/*padding:50px 80px;*/
+	font-family:"Lucida Grande","bitstream vera sans","trebuchet ms",sans-serif,verdana;
+}
+
+.panel {
+   width: 590px;
+
+} 
+
+
+
+

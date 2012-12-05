@@ -1,0 +1,88 @@
+@charset "windows-1252";
+		
+/* root element for tabs  */
+ul.css-tabs_main {  
+	margin:0 !important; 
+	padding:0;
+	height:39px;
+	/*border-bottom:3px solid #FFFEFB;*/	
+	width:auto; 	
+}
+
+/* single tab */
+ul.css-tabs_main li {  
+	float:left;	 
+	padding:0; 
+	margin: 0;  
+	list-style-type:none;	
+}
+
+/* link inside the tab. uses a background image */
+ul.css-tabs_main a { 
+	float:left;
+	font-size:18px;
+	font-weight: 600;
+	letter-spacing: -1px;
+	text-transform:lowercase;
+	/*font-variant: small-caps;*/
+	color:#8AAFB7;
+	/*line-height: 1px;*/
+	text-decoration:none;
+	/*border:1px solid #ffffff;*/	
+	border-bottom:0px;
+	height:18px;
+	/*background-color: #767060;*/
+	background: #CAD6D8 /*url(../images/bb/panel-baks-sm.jpg) no-repeat*/;
+	display:block;
+	padding: 10px;
+	margin-right:2px;
+/*	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright:10px;*/
+	position:relative;
+	top:1px;	
+}
+
+ul.css-tabs_main a:hover {
+	background-color:#69A7A4;
+	color:#CAD6D8 ;
+}
+	
+/* selected tab */
+ul.css-tabs_main a.current {
+	/*background-color:#efefef;
+	border-bottom:2px solid #efefef;*/
+	background:#efefef /*url(../images/bb/panel-baks.jpg) repeat-x*/;
+	color:#429995;	
+	cursor:default;
+	margin-top: 3px;
+	height:21px;
+}
+
+	
+/* tab pane */
+.css-panes_main {
+	height: 200px;
+	max-height:200px;
+	min-height: 200px;
+	padding:5px; 
+	width:99%;
+	background:#efefef /*url(../images/bb/panel-baks.jpg) no-repeat*/;
+	overflow: hidden;
+	clear: left;
+	/*border:1px dotted red;*/
+}
+
+a:active {
+  outline:none;
+}
+
+:focus {
+  -moz-outline-style:none;
+  outline: 0; /*fix for FF3.6 in win 7*/
+}
+
+
+
+
+
+
