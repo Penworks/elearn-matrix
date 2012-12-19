@@ -2,17 +2,15 @@
 {embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
 {embed="embeds/_head"}
 
-
-
 <div id="page">
   
   <!--back button-->
 <a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
   
-<!--category display stuff-->
+<!--category heading and summary stuff-->
 {exp:channel:category_heading channel="weblearn"}
 
-<h2><!--weblearn @ London Met--> everything filed in <i style="color:#30B9B7;">'{category_name}'</i></h2>
+<h2>everything categorized in <i style="color:#30B9B7;">'{category_name}'</i></h2>
   
 <div class="cat_summary">
 <img src="{category_image}" class="category_image" height="{height}" width="{width}" align="left"/>
@@ -24,6 +22,8 @@
 {/exp:channel:category_heading}
 </div><!--/.cat_summary-->
 
+
+<!--category entries stuff-->
 <div id="cat-entry-holder">
   
 {exp:channel:entries channel="weblearn" disable="member_data|trackbacks" orderby="date"  limit="9" dynamic=“no” paginate="bottom"}
@@ -38,43 +38,42 @@ $(function(){
 });
 </script>
 
-{exp:channel_images:images}
 <div class="cat_sum_entry">
 
     <span class="pub_date_sm">{entry_date format="%M %d, %Y"}</span>
-   <a href="{url_title_path=weblearn/detail}"> <h3>{title}</h3></a>
+    <a href="{url_title_path=weblearn/detail}"> <h3>{title}</h3></a>
     
-         {if image_thumb}
+{if image_thumb}
+
       <!--[if lte IE 9]>
     <style>.ie-fix-img-thmb { width:auto;border:none;}</style>
-    <![endif]-->
+    <![endif]-->   
+    <a href="{url_title_path=weblearn/detail}">{exp:ed_imageresizer image="{image_thumb}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}    
+    </a>
     
-<a href="{url_title_path=weblearn/detail}"><img src="{image:url:small}" alt="{title}" title="{title}" align="left" class="ie-fix-img-thmb"/></a>
-      
-      {if:else}
-      <div class="no-image-thmb">Sorry, no thumbnail image available</div>
-      {/if}
+{if:else}
+
+    <div class="no-image-thmb">Sorry, no thumbnail image available</div>
     
+{/if}    
     <p>{exp:snippet total="150" word="" ellipsis="..."}{page_body}{/exp:snippet} <a href="{url_title_path=weblearn/detail}"><b><i>[read the full entry]</i></a></b></p>
-
-</div><!--/.cat_sum_entry-->
-
-{/exp:channel_images:images}
-{/exp:channel:entries}
-
+    
+    </div><!--/.cat_sum_entry-->
+    {/exp:channel:entries}
 </div><!--/#cat-entry-holder-->
 
-
+<!--pagination -->
 {exp:channel:entries channel="weblearn" disable="member_data|trackbacks" orderby="title" sort="asc" limit="9" dynamic=“no” paginate="bottom"}
 
 {if total_results <= '1'}
-{paginate}
-<div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
-{pagination_links}</div>
-{/paginate}
+    {paginate}
+    <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+    {pagination_links}</div>
+    {/paginate}
 {/if}
 </div><!--/#page-->
+
 {/exp:channel:entries}
 
-
+<!--embed the footer stuff-->
 {embed="embeds/_foot"}

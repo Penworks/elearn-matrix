@@ -35,7 +35,7 @@ Class Ed_imageresizer
     /**
      * Vars set in tag params
      */
-    private $debug              = FALSE;    // produce error messages
+    private $debug              = TRUE;    // produce error messages
     private $image              = '';       // The raw image (should be /images/folder/image.gif)
     private $quality            = '100';    // Image quality;
     private $forceHeight        = FALSE;    // do we want to force the height of the imahe to maxHeight
@@ -58,10 +58,10 @@ Class Ed_imageresizer
     private $grayscale          = '';
     
     // ADD PATHS TO YOUR WEB ROOT AND CACHE FOLDER HERE
-    private $server_path        = ''; // no trailing slash
-    private $cache_path         = ''; // with trailing slash
+    private $server_path        = '/Applications/MAMP/htdocs'; // no trailing slash
+    private $cache_path         = '/Applications/MAMP/htdocs/ematrix_site/ematrix/images/uploads/resizer/'; // with trailing slash
     
-    private $memory_limit       = '36M'; // the memory limit to set
+    private $memory_limit       = '64M'; // the memory limit to set
 
     private $EE                 = FALSE;
 

@@ -1,0 +1,24 @@
+<div class="sharing">
+<div class="sharing-inner">
+{exp:channel:entries channel="assorted_content|weblearn|expertise|tutorials|blog" disable="member_data|trackbacks" parse="inward"}
+
+   {exp:hj_social_bookmarks sites="Email|Facebook|Google+|Twitter|LinkedIn" entry_id="{entry_id}" class="sharing-inner" field_name="summary"}
+
+
+</div><!--/.sharing-inner-->
+
+{/exp:channel:entries}
+
+
+
+{exp:channel:entries channel="assorted_content|weblearn|expertise|tutorials|blog" disable="member_data|trackbacks" limit="1" backspace="2"}
+      <span style="position:absolute;top: -5px;left:245px;">
+      <a href="{url_title_path=blackboard/pdf}"><img src="{global_image_url}bb/x_pdf.png" width="30" height="30"/></a>
+      </span>
+
+
+        
+</div><!--/.sharing-->
+   
+
+{/exp:channel:entries}

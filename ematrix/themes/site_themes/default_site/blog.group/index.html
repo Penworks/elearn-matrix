@@ -1,0 +1,174 @@
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_2}/{segment_3}"}
+{embed="embeds/_head"}<!--head above this contains wrapper and skin openers-->
+<!--this is the site index-->
+<div class="panel-index">
+
+<!-- tabs --> 
+      <ul class="css-tabs_main"> 
+
+{exp:channel:entries channel="assorted_content" entry_id="5"}
+<!--Home entry not a category-->
+<li><a href="#">{title}</a></li>
+{/exp:channel:entries}
+
+<li><a href="#">Expertise</a></li>
+<li><a href="#">Tutorials</a></li> 
+<!--<li><a href="{path="weblearn"}">Weblearn</a></li>-->
+<li><a href="#">Weblearn</a></li>
+<li><a href="#">Blog</a></li>
+      </ul> 
+
+<div class="css-panes_main"> <!-- panes -->
+
+
+   <div> <!--tab start-->
+{exp:channel:entries channel="assorted_content" entry_id="5"}
+<!--Home is an entry not a category-->
+   <h3><a href="{page_url}">{title}</a></h3>
+   
+   <a href="{page_url}"><p><img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"/></a></p>
+      
+    <div class="cat_sum_sm">
+         
+        <!--[if lte IE 9]>
+<style>#ie-fix-img-thmb { width:auto;border:none;}</style>
+<![endif]-->   
+        <a href="{page_url}">
+         
+         {exp:ed_imageresizer image="{image_thumb}" maxWidth="130" maxHeight="130" cropratio="100:100" alt="{title}" class="category_image_index" debug="yes"}
+        
+        <!--<img class="category_image_index" src="{global_image_url}exnetwork.png" alt="{channel_title}" title="{channel_title}" />-->
+        </a>
+
+<p class="short-desc">{exp:snippet total="200" word="" ellipsis="..."}{page_body}{/exp:snippet}</p>
+      <a href="{page_url}"><p class="panel-index-readmore">read more</a></p>
+        
+    </div><!--/.cat_sum_sm-->
+      
+    </div> <!--end of tab start -->
+{/exp:channel:entries}
+
+
+    <div> <!--tab 1-->
+    {exp:channel:entries channel="expertise" style="linear" show_empty="yes"}
+    <!--stuff thats from expertise channel-->
+   <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
+<a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
+
+    <div class="cat_sum_sm">
+<img class="category_image_index" src="{global_image_url}phonebook.png" alt="{channel_title}" title="{channel_title}" />
+<p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
+
+   <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
+    </div><!--/.cat_sum_sm-->
+  {/exp:channel:entries}  
+    </div> <!--end of tab 1 -->
+
+    <div> <!--tab 2-->
+    {exp:channel:entries channel="tutorials" style="linear" show_empty="yes"}
+    <!--stuff thats from tutorial channel-->
+   <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
+<a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
+
+    <div class="cat_sum_sm">
+<img class="category_image_index" src="{global_image_url}school.png" alt="{channel_title}" title="{channel_title}" />
+<p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
+
+   <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
+    </div><!--/.cat_sum_sm-->
+     {/exp:channel:entries}   
+    </div> <!--end of tab 2 -->
+    
+    
+    <div> <!--tab 3-->
+    {exp:channel:entries channel="weblearn" style="linear" show_empty="yes"}
+    <!--stuff thats from weblearn channel-->
+   <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
+<a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
+
+    <div class="cat_sum_sm">
+<img class="category_image_index" src="{global_image_url}folder.png" alt="{channel_title}" title="{channel_title}" />
+<p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
+
+   <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
+    </div><!--/.cat_sum_sm-->
+  {/exp:channel:entries}  
+    </div> <!--end of tab 3 -->
+    
+        <div> <!--tab 4-->
+    {exp:channel:entries channel="blog" style="linear" show_empty="yes"}
+    <!--stuff thats from weblearn channel-->
+   <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
+<a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
+
+    <div class="cat_sum_sm">
+<img class="category_image_index" src="{global_image_url}home.png" alt="{channel_title}" title="{channel_title}" />
+<p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
+
+   <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
+    </div><!--/.cat_sum_sm-->
+  {/exp:channel:entries}  
+    </div> <!--end of tab 4 -->
+
+
+</div> <!-- end of css-panes --> 
+
+
+</div><!--/.panel-index-->
+
+
+<!--search & social div here-->
+<div id="index_search_social">    
+   <div id="search">
+   {exp:search:simple_form
+channel=""
+no_result_page="weblearn/no_results" result_page="weblearn/search"
+search_in="entries" channel="weblearn"}
+<input type="text" name="keywords" value="Search" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue; this.style.color = '#5B797B';"
+onfocus="this.value=''; this.style.color = '#848D81';" />
+<input type="submit" value="" class="button" />
+{/exp:search:simple_form}
+   </div><!--/#search-->
+   
+   <div id="social">
+      
+      <ul>
+         <li><a href="{exp:perssonal:link path='weblearn/weblearn-feed' channel='weblearn' feed_name='weblearn @ London Met' feed_url='weblearn' feed_description='Using weblearn at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a></li>
+         <!--<li><a href="http://feeds.feedburner.com/weblearn-londonmet"><img src="{global_bb_img}feed.png"></a></li>-->
+         <li><a href="http://www.facebook.com/pages/London-Met-Elearning/520318357984548"><img src="{site_url}themes/site_themes/default_site/images/facebook.png"></a></li>
+         <li><a href="http://vimeo.com/elearninglondonmet"><img src="{site_url}themes/site_themes/default_site/images/vimeo.png"></a></li>
+         <li><a href="https://twitter.com/elearninglondon"><img src="{site_url}themes/site_themes/default_site/images/twitter.png"></a></li>
+      </ul> 
+   </div><!--/#social-->
+
+</div><!--/#index_search_social-->
+
+
+
+<div class="panel-index">
+
+   <div class="panel-index-holder">
+{exp:channel:entries channel="weblearn|tutorials|expertise" limit="3" disable="pagination|trackbacks|member_data" dynamic="no" orderby="latest"}
+
+<div class="panel-index-inner">
+         <div class="panel-index-content-box">
+           <a href="{channel_url}detail/{url_title}">  <h3>{title} </h3></a>
+         <a href="{channel_url}detail/{url_title}">{if image_thumb}
+         {exp:ed_imageresizer image="{image_thumb}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+            {/if}</a>
+         <p>{exp:snippet total="250" word="" ellipsis="..."}{page_body} 
+         {/exp:snippet}
+         <a href="{channel_url}detail/{url_title}"><b><i>read more >></i></b></a>
+         </p>
+         </div><!--/.panel-index-content-box-->
+   </div><!--/.panel-index-inner-->
+
+{/exp:channel:entries}
+   </div><!--/.panel-index-holder-->
+</div><!--/.panel-index-->
+
+
+<script>$(".css-tabs_main:first").tabs(".css-panes_main:first > div"); </script>
+
+
+{embed="embeds/_foot"}

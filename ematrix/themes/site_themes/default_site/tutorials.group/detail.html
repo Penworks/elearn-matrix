@@ -1,0 +1,149 @@
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{embed="embeds/_head"}
+  
+<div id="page">   
+<!--back button-->
+    <a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+
+<!--- author, date and snapshot summary fields-->
+    {exp:channel:entries channel="tutorials" disable="member_data|trackbacks" limit="1" backspace="2"}
+        <span class="pub_date_author">by: {author} on: {entry_date format="%M %d, %Y"}</span>
+        <h2>{title}</h2>
+    {if summary}
+        <p class="snapshot"><b>Snapshot:</b>
+        {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
+        </p>
+    {/if}
+
+<!--- social media share and print buttons-->
+{embed="embeds/_print_share"}
+
+<!--<a href="{url_title_path=tutorials/pdf}"><img src="{global_image_url}bb/doc_pdf.png" width="40" height="40"/></a>-->
+
+<!---all page content fields-->
+<div class="page-body">
+
+<!--- embed media in the page body if it's there-->
+{if embed_item}
+
+    <div class="media-embed">    
+    {embed="embeds/_embed_item"}
+    </div><!--/.media-embed-->
+
+<!--- otherwise place the single image or image slideshow into the page body-->
+{if:elseif image_slideshow}
+
+{embed="embeds/_image_slideshow"}
+
+<!--- if there's no image or media, give a message to say so-->
+{if:else}
+
+    <div class="no-image-thmb">Sorry, no image available</div>
+    
+{/if}
+
+<!--- page body field-->
+{if page_body}
+    {!--{page_body}--}
+    {exp:tagstripper:tagsToStrip tags='div|p'}{page_body}{/exp:tagstripper:tagsToStrip}
+{/if}
+
+<!--- download files field within page body field-->
+{if file_download}
+    <div class="panel-content-downloads">
+       <h5>DOWNLOADS:</h5>
+       {file_download}
+       <ul>
+       <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+       </ul>
+       {/file_download}
+    </div><!--/.panel-content-downloads-->
+    
+{/if}
+
+</div><!--/.page_body-->
+
+<!--- panel content field displaying tabs, accordions or page view-->
+
+{if panel_content}
+    {embed="{select_view}"}
+{/if}
+
+<!--- list items field-->
+{embed="embeds/_list_items"}
+
+<br />
+<hr>
+
+<!--- being the page footer area-->
+<div class="tag-footer">
+ 
+<!--- level-->   
+    <div class="level">
+    <h5>Level:</h5> {level}
+    </div><!--/.level-->
+    
+<!--- entry tags-->    
+    <div class="tagged">
+        <h5>Tagged:</h5>        
+        {!--{exp:tagger:tags entry_id="{entry_id}" channel="tutorials" backspace="10"}--}        
+        {exp:tagger:tags entry_id="{entry_id}" channel="tutorials"}
+         {if tagger:no_tags}<p>No tags where found.</p>{/if} 
+        <span class="word"><a href="/index.php/tags/tutorials/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> <!--&#124;-->
+       {/exp:tagger:tags}
+    </div><!--/.tagged-->
+
+<!--- entry category info -->
+    <div class="cat-detail">
+        <h5>More in:</h5> 
+        {!--{categories backspace="3"}--}
+        {categories}
+        <a href="{path=tutorials/list}"><span class="word">{category_name}</span></a> <!-- &#124;--> {/categories}  
+    </div><!--/.cat-detail-->
+
+<!--- related entries -->
+{if related_content}
+    {embed="embeds/_related"}  
+{/if}
+
+</div><!--/.tag-footer-->
+
+<!--- pagination if needed-->
+{paginate}
+    <div class="paginate">
+        <br /><br/>
+    <span class="pagecount">Page {current_page} of {total_pages} pages</span>  {pagination_links}
+    </div><!--/.paginate-->
+{/paginate}
+
+{/exp:channel:entries}
+
+<div style="clear:both"></div>
+<hr>
+
+<!--DISQUS COMMENTING-->
+
+    <div id="disqus_thread">
+        
+    </div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'weblearn-londonmet'; // required: forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+<!--/ COMMENTING-->
+
+</div><!--/#page-->
+
+
+<!--- embedding the footer fields-->
+{embed="embeds/_foot"}

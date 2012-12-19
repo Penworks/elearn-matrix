@@ -1,16 +1,82 @@
+    {if segment_1 == "weblearn"}
 
+    <style>
+        #wrapper{
+        background:/*#C1D1C0*/ #61A04D !important;    
+        }
+    </style>
+    
+    {if:elseif segment_1 == "tutorials"}
+    
+        <style>
+        #wrapper{
+        background:#5AA898 !important;    
+        }
+    </style>
+        
+    {if:elseif segment_1 == "expertise"}
+    
+        <style>
+        #wrapper{
+        background:#BFCD68 !important;    
+        }
+    </style>
+    
+    {if:else}
+    <style>
+       #wrapper{
+        background-color:#5996A2;    
+        }
+    </style>   
+    
+    {/if}
+ 
+    </head>
+    <body>
 
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+        <![endif]-->
+        
 <div id="wrapper">
 
 <div class="skin">
 
 <div id="top_header">
     
-<div class="logo">
+    <div class="logo">
     </div>
-<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a></h2>
+    
+    
+    {if segment_1 == "weblearn"}
 
-<p>CELT support for Elearning </p>
+<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/weblearn" alt="go to Weblearn homepage" title="go to Weblearn homepage"><em>Weblearn</em></a></h2>
+
+    
+    {if:elseif segment_1 == "tutorials"}
+    
+<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/tutorials" alt="go to Tutorials homepage" title="go to Tutorials homepage"><em>Tutorials</em></a></h2>
+
+        
+    {if:elseif segment_1 == "expertise"}
+    
+ <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/expertise" alt="go to Expertise homepage" title="go to Expertise homepage"> <em>Expertise</em></a></h2>
+
+    
+    {if:elseif segment_1 == "blog"}
+ <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/blog" alt="go to Blog & News homepage" title="go to Blog & News homepage"><em>Blog & News</em></a></h2>
+
+    {if:else}
+ <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a></h2>
+
+    
+    {/if}
+    
+    
+    
+    <p>CELT support for Elearning </p>
+
+
 
 </div><!--/#top_header-->
 

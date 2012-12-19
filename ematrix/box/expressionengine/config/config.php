@@ -25,6 +25,13 @@ $config['cookie_prefix'] = '';
 
 // END EE config items
 
+
+/*adding the paths for ed imageresiser if not in plugin file*/
+
+//$config['ed_server_path'] = '/Applications/MAMP/htdocs'; // no trailing slash
+//$config['ed_cache_path'] = '/Applications/MAMP/htdocs/ematrix_site/ematrix/images/uploads/resizer/'; // with trailing slash
+
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -325,15 +332,6 @@ $config['rewrite_short_tags'] = TRUE;
 $config['proxy_ips'] = "";
 
 
-/*adding the paths for ed imageresiser*/
-
-$config['ed_server_path'] = '/Applications/MAMP/htdocs/ematrix_site/ematrix'; // no trailing slash
-
-$config['ed_cache_path'] = '/Applications/MAMP/htdocs/ematrix_site/ematrix/images/uploads/resizer/'; // with trailing slash
-
-//$config['ed_server_path'] = '/var/localhost:8888/ematrix_site/ematrix'; // no trailing slash
-
-//$config['ed_cache_path'] = '/var/localhost:8888/ematrix_site/ematrix/images/uploads/resizer/'; // with trailing slash
 
 
 

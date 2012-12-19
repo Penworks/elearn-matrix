@@ -1,1 +1,97 @@
-dadasdasd
+{exp:channel:entries channel="expertise|tutorials|weblearn|main" disable="member_data|trackbacks" limit="1" backspace="2" }
+
+<div id="panel_content">
+    <small><i>Click on the tabs to access panels of content</i></small>
+
+{if panel_content}
+
+{if segment_1 == "weblearn"}
+
+    <!-- tabs --> 
+          <ul class="css-tabs_bb"> 
+     {panel_content}
+         <li> <a href="#">{exp:snippet total="25" word="true" ellipsis="É"}{panel_title}{/exp:snippet}</a></li>
+     {/panel_content}
+          </ul>
+
+        <div class="css-panes_bb"> <!-- panes --> 
+        
+{panel_content}
+        
+                <div> <!--tab 1-->
+                
+               <h2 style="font-size:22px; border:none !important;margin-left:-10px;letter-spacing:normal;"> {panel_title}</h2>
+                
+                {if panel_image}
+               <img src="{panel_image}" alt="{image_title}" class="bb_tab_img">
+                       {/if}
+                <span class="embed-tabbed"><style>strong {display:none;}</style>{if panel_embed}{exp:tagstripper:tagsToStrip tags='div|p|a|span'}{panel_embed}{/panel_embed}{/exp:tagstripper:tagsToStrip}{/if}</span>
+                
+                {exp:tagstripper:tagsToStrip tags='iframe|embed|object'}{if panel_text}<p>{panel_text} </p>{/panel_text}{/exp:tagstripper:tagsToStrip}{/if}
+        
+             {if panel_file}
+             <div class="panel-content-downloads">
+                <h5>DOWNLOADS:</h5>
+                {panel_file}
+                <ul>
+                <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+                </ul>
+                {/panel_file}
+             </div><!--/.panel-content-downloads-->
+             {/if}
+  
+        
+                
+            </div> <!--end of tab 1 -->
+
+{/panel_content}
+
+</div> <!-- end of css-panes_bb-->
+
+</div> <!--end of panel content-->
+
+<script>$(".css-tabs_bb:first").tabs(".css-panes_bb:first > div"); </script>
+
+{if:else}
+
+        <!-- tabs --> 
+        <ul class="css-tabs"> 
+   {panel_content}
+       <li> <a href="#">{exp:snippet total="25" word="true" ellipsis="É"}{panel_title}{/exp:snippet}</a></li>
+   {/panel_content}
+        </ul>
+
+        <div class="css-panes"> <!-- panes --> 
+
+{panel_content}
+
+	<div> <!--tab 1-->
+      
+       {exp:ed_imageresizer image="{panel_image}" maxWidth="300" maxHeight="300" alt="{image_title}"}      
+      
+        <span class="embed-tabbed">{exp:tagstripper:tagsToStrip tags='div|p'}{if panel_embed}{panel_embed}{/panel_embed}{/exp:tagstripper:tagsToStrip}{/if}</span>
+        {if panel_text}<p>{panel_text} </p>{/panel_text}{/if}
+        {!--{panel_embed}
+        <p>{panel_text} </p>--}
+        {panel_file} <a href="{url}">Download File</a>, {/panel_file} 
+	
+        </div> <!--end of tab 1 -->   
+
+{/panel_content}
+
+</div> <!-- end of css-panes -->
+
+</div> <!--end of panel content-->
+
+<script>$(".css-tabs:first").tabs(".css-panes:first > div"); </script>
+
+ {/if}<!--/end of if else-->
+
+{/if}<!--/end of if panel_content-->
+
+{/exp:channel:entries}
+
+
+
+
+

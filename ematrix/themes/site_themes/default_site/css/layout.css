@@ -112,7 +112,7 @@ body a:hover {
     background:  #E1D8D8;
 }
 #top_header a:link {
-	color: #6F4D53;
+	color: #30808C;
 	text-decoration: none;
 }
 #top_header a:visited {
@@ -143,6 +143,15 @@ body a:hover {
 }
 .panel-index h3 a {
     color: #CAD6D8;
+}
+
+.short-desc {
+   text-align:left;
+   font-size: 20px;
+   font-weight:600;
+   letter-spacing: -1px;
+    color: #78A1AB;
+    font-style: italic;
 }
 
 /*arrow graphic in panel index div */
@@ -177,20 +186,21 @@ body a:hover {
 }
 
 .panel-index-holder {
-    margin: 0px 0 10px -5px;
-    width: 970px;
-    max-width: 970px;
-    min-width: 970px;
+    margin: 0px 0px 10px -7px;
+    width: 990px;
+    /*max-width: 970px;
+    min-width: 970px;*/
     height: 100%;
-    padding-left: 23px;
+    padding: 0px;
+   /*border: 1px dotted red;*/
 }
 
 .panel-index-inner{
    float:left;
    padding:18px 0px 10px 5px;
    overflow:hidden;
-   margin: 5px 0 15px auto;
-   width:300px;
+   margin: 5px 2px 15px 7px;
+   width:307px;
    height:245px;
    position: relative;
    background: #efefef;
@@ -216,8 +226,9 @@ body a:hover {
 
 .panel-index-content-box img{
    border:none;
-   padding-right: 10px;
+   padding: 2px;
    margin-right: 5px;
+   float:left;
 }
 
 .panel-index-content-box h3{
@@ -472,17 +483,46 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
 }
 
 
-/*////////////    SOCIAL SHARING BUTTON STYLING    //////////////*/
+/*////////////    SOCIAL SHARING BUTTON STYLING and PDF PRINT ICON   //////////////*/
 
-.sharing-holder {
+.sharing {
    float:left;
-   width:140px;
-   height:16px;
+   width:240px;
+   height:20px;
    padding:5px;
-   margin: -12px 7px 0px 20px;
+/*   margin: -12px 7px 0px 10px;*/
+/*   margin: -25px 7px 0px -65px;*/
+   margin: 0px 7px 0px 0px;
    position:relative;
+  /* border: 1px dotted red;*/
+     /* display:inline;
+      overflow:hidden;*/
 }
 
+.sharing-inner ul {
+   
+   width: 18px;
+   height: 18px;
+   list-style:none;
+   display:inline;
+   margin: 0 auto;
+}
+
+/*.sharing-inner-hj ul {
+   width: 18px;
+   height: 18px;
+   list-style:none;
+   display:inline;
+   margin: -20px 0px 0px -25px;
+}*/
+
+.sharing-inner li img {
+   padding: 3px;
+   border: 1px dotted blue;
+   width: 18px;
+   height: 18px;
+
+}
 
 /*////////////    PAGE STYLING    ///////////////// */
 
@@ -490,8 +530,8 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
 /*general back button*/
 .arrow-back {
    position:absolute;
-   top:80px;
-   left:3px;
+   top:85px;
+   left:7px;
    border:none;
 }
 
@@ -505,7 +545,7 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    padding: 10px 5px;
    overflow: hidden;
    margin: 10px 5px 10px 5px;
-   width: 965px;
+   width: 968px;
 }
 
 #page h2{
@@ -610,8 +650,11 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
 
 #page img {
    border: 0px solid #cccccc;
-   padding: 4px;
+   /*padding: 4px;*/
    float:right;
+   -moz-box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
+   -webkit-box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
+   box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
 }
 
 #page .page-body img, #page .page-body .slideshow-single-img {
@@ -786,10 +829,13 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
 
 #panel_content img {
    float:right;
-   padding: 5px 5px 5px 15px;
-   margin: 4px auto;
+   padding: 5px 5px 5px 5px;
+   margin: 4px 4px 4px 10px;
    max-width:350px;
    max-height: 250px;
+   -moz-box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
+   -webkit-box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
+   box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
 }
 
 #panel_content .panel-content-downloads {
@@ -1139,22 +1185,35 @@ nav #disqus_thread #global-nav #post-count h4 {
 
 .footer-holder {
    margin: 0 auto;
-   width: 970px;
-   max-width: 970px;
-   min-width: 970px;
-   height: 100%;
-   padding-left: 33px;
+   width: 990px;
+   height: 275px;
+   overflow:hidden;
+   padding: 0px 0px 0px 13px;
+   /*border: 1px dotted red;*/
 }
-.footer-inner{
+
+.footer-inner-notused{
    background: #efefef;
    border:4px #E7EDEB  solid;
    float:left;
    padding:20px 0px 10px 5px;
    overflow:hidden;
-   margin: 10px 0 auto;
+   margin: 10px 10px 5px 3px;
    width:300px;
    height:255px;
    position: relative;
+}
+
+.footer-inner{
+   float:left;
+   padding:18px 0px 10px 5px;
+   overflow:hidden;
+   margin: 5px 7px 15px 2px;
+   width:307px;
+   height:245px;
+   position: relative;
+   background: #efefef;
+   border:4px #E7EDEB  solid;
 }
 
 .footer-content-box {

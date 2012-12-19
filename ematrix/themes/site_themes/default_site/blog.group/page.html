@@ -1,0 +1,115 @@
+{embed="embeds/_html_head" my_page_title="Blackboard @ London Met/{segment_3}"}
+{embed="embeds/_head"}<!--this contains wrapper and skin openers-->
+
+<div id="page">
+    
+    <!--back button-->
+<a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+
+{if segment_1 == "about"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="3"}
+
+{/if}
+
+{if segment_1 == "introduction"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="5"}
+
+{/if}
+
+{if segment_1 == "expertise-area"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="8"}
+
+{/if}
+
+{if segment_1 == "tutorials-area"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="9"}
+
+{/if}
+
+{if segment_1 == "blog-area"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="10"}
+
+{/if}
+
+ 
+ <h2>{title}</h2>
+ 
+    <div class="page-body">
+         
+{if image_slideshow}      
+    <!--[if lte IE 9]> 
+    {if image_slideshow}
+    {image_slideshow}
+    <img src="{image}" alt="{name}" title="{name}" width="165"/>
+    {/image_slideshow}
+     <br />
+     {/if}<![endif]-->
+     
+     
+    <!--[if lte IE 8]>
+    <![IGNORE[-->
+   {if image_slideshow}
+   {image_slideshow}
+   {exp:ed_imageresizer image="{image}" maxWidth="305" maxHeight="230" alt="{title}" debug="yes"}
+   {/image_slideshow}
+    {/if}
+    <![IGNORE[]]>
+    <![endif]-->
+    
+{if:else}       
+    <!--[if lte IE 9]>
+    <style>.ie-fix-img-thmb { width:auto;border:none;}</style>
+    <![endif]-->
+     {image_slideshow} <img src="{image}" alt="{title}" title="{title}" height="128" width="" align="left" class="ie-fix-img-thmb"/> {/image_slideshow}
+     
+{/if}
+
+         
+   <!-- <div class="cat_summary">
+    </div>--><!--/.cat_summary-->
+
+        
+    {summary}
+    
+    {if embed_item}
+    {embed_item}
+    {/if}
+    
+    {page_body}
+    
+     {if list_items}
+    {embed="embeds/_list_items"}
+    {/if}
+            
+  {if segment_1 == "about"}      
+            
+    <h4>List of Channels</h4>
+                
+{exp:channel:entries channel="general|weblearn|expertise|tutorials" style="linear" show_empty="yes" }
+        <ul style="font-variant:small-caps;font-weight:600;font-style:italic;font-size:inherit; padding:5px; margin-left:20px;">             
+         {exp:channel:info channel="weblearn"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}
+         {exp:channel:info channel="expertise"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}
+         {exp:channel:info channel="tutorials"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}
+         {exp:channel:info channel="blog"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}  
+        </ul>           
+{/exp:channel:entries}
+       {/if}     
+            
+    </div><!--/.page-body-->
+
+<hr>
+
+    <div class="tag-footer">
+        
+        <strong>Tagged:</strong>
+{exp:tagger:tags entry_id="{entry_id}"  backspace="7"}
+    {if tagger:no_tags}<p>No tags where found.</p>{/if} 
+    <a href="{site_url}index.php/tags/blackboard/{tagger:urlsafe_tagname}">{tagger:tag_name}</a> &#124;
+{/exp:tagger:tags} 
+    </div>
+
+{/exp:channel:entries}
+
+</div><!--/#page-->
+
+{embed="embeds/_foot"}
