@@ -7,7 +7,7 @@
       <ul class="css-tabs_main"> 
 
 {exp:channel:entries channel="assorted_content" entry_id="8"}
-<!--weblearn area entry not a category-->
+<!--this entry not a category-->
 <li><a href="#">{title}</a></li>
 {/exp:channel:entries}
 
@@ -15,13 +15,14 @@
 {exp:channel:categories channel="expertise" category_group="4"  show_empty="yes"}
      <li> <a href="#">{exp:snippet total="25" word="true" ellipsis="..."}{category_name}{/exp:snippet}</a></li>
  {/exp:channel:categories}
-      </ul> 
+      </ul>
+   
 
 <div class="css-panes_main"> <!-- panes -->
 
    <div> <!--tab start-->
 {exp:channel:entries channel="assorted_content" entry_id="8"}
-<!--Home is an entry not a category-->
+<!--this entry not a category-->
    <h3><a href="{page_url}">{title}</a></h3>
    
    <a href="{page_url}"><p><img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"/></a></p>
@@ -34,13 +35,17 @@
 <![endif]-->   
         <a href="{url_title_path=expertise/about}">
          
-        {exp:ed_imageresizer image="{image_thumb}" maxWidth="100" maxHeight="100" alt="{title}" debug="yes" class="category_image_index"}
+        {exp:ed_imageresizer image="{image_promo}" maxWidth="100" maxHeight="100" alt="{title}" debug="yes" class="category_image_index"}
         </a>
         
       {exp:snippet total="600" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
       <a href="{page_url}"><p class="panel-index-readmore">read more</a></p>
+         
+               <div class="channel-rss">  <a href="{exp:perssonal:link path='expertise/rss' channel='expertise' feed_name='London Met Elearning Matrix Expertise ' feed_url='expertise' feed_description='Elearning Expertise at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a></div>   
+         
+         
       </div><!--/.cat_sum_sm-->
-      
+  
    </div> <!--end of tab start -->
 {/exp:channel:entries}
 
@@ -109,8 +114,8 @@ onfocus="this.value=''; this.style.color = '#848D81';" />
 <div class="panel-index-inner">
          <div class="panel-index-content-box">
            <a href="{channel_url}detail/{url_title}">  <h3>{title} </h3></a>
-         <a href="{channel_url}detail/{url_title}">{if image_thumb}
-            {exp:ed_imageresizer image="{image_thumb}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+         <a href="{channel_url}detail/{url_title}">{if image_promo}
+            {exp:ed_imageresizer image="{image_promo}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
             {/if}</a>
          <p>{exp:snippet total="250" word="" ellipsis="..."}{page_body} 
          {/exp:snippet}

@@ -1,1 +1,48 @@
-safasfaf
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix"}
+{embed="embeds/_head"}
+
+
+<!--browse by list-->
+<div id="page">
+
+{exp:channel:category_heading channel="expertise|weblearn|tutorials|blog"}
+
+<h2>Browsing: <i>{category_name}</i></h2>
+<img src="{category_image}" class="category_image_sm" height="{height}" width="{width}" align="left"/>{if category_description}
+<div class="cat-sum-small"><p><i>{category_description}</i></p></div>
+{/if}
+<br />
+{/exp:channel:category_heading}
+
+<!--list the results-->
+
+<div style="clear:left"></div>
+
+{exp:channel:entries channel="expertise|weblearn|tutorials|resources" disable="member_data|trackbacks" orderby="date" sort="desc" limit="10" dynamic=“no” paginate="bottom"}
+
+<div id="entry">
+
+<h3>{title}</h3>
+<p class="pub_date">{entry_date format="%D, %F %d, %Y; %G:%i:%s %a"}</p>
+<a href="{channel_url}detail/{url_title}"><img src="{img_upload_thumb}" alt="{title}" title="{title}" height="{height}" width="{width}" align="left" /></a>
+<p>{exp:snippet total="300" word="true" ellipsis="…"}{page_body}{/exp:snippet}<a href="{channel_url}detail/{url_title}"><i>[read the full entry]</i></a></p>
+
+<p><i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
+
+</div><!--end of entry panel-->
+
+
+
+<div style="clear:left;"></div>
+{if total_results <= '1'}
+{paginate}
+<div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+{pagination_links}</div>
+{/paginate}
+{/if}
+
+{/exp:channel:entries}
+
+</div>
+
+{embed="embeds/_foot"}

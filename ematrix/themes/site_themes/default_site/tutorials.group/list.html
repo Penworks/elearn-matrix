@@ -2,6 +2,7 @@
 {embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
 {embed="embeds/_head"}
 
+<!--this is the tutorial channel list-->
 <div id="page">
   
   <!--back button-->
@@ -43,12 +44,12 @@ $(function(){
     <span class="pub_date_sm">{entry_date format="%M %d, %Y"}</span>
     <a href="{url_title_path=tutorials/detail}"> <h3>{title}</h3></a>
     
-{if image_thumb}
+{if image_promo}
 
       <!--[if lte IE 9]>
     <style>.ie-fix-img-thmb { width:auto;border:none;}</style>
     <![endif]-->   
-    <a href="{url_title_path=tutorials/detail}">{exp:ed_imageresizer image="{image_thumb}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}    
+    <a href="{url_title_path=tutorials/detail}">{exp:ed_imageresizer image="{image_promo}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}    
     </a>
     
 {if:else}

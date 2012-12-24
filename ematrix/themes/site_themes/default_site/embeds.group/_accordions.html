@@ -1,12 +1,12 @@
-{exp:channel:entries channel="expertise|tutorials|weblearn|main" disable="member_data|trackbacks" limit="1" backspace="2" }
+{exp:channel:entries channel="expertise|tutorials|weblearn|blog" disable="member_data|trackbacks" limit="1" backspace="2" }
 
-{if segment_1 == "weblearn"}
-
-{if panel_content}
 <div id="panel_content">
 
 <small><i>Click on the arrows to access panels of content</i></small>
 <div class="accordion"> <!-- accordion --> 
+
+{if panel_content}
+
 
  {panel_content}	
 <!--<small>(panel {row_count})</small>-->									 
@@ -55,43 +55,6 @@ $(function() {
 </script> 
 
 
-{if:else}
 
-
-
-{if panel_content}
-<div id="panel_content">
-<small><i>Click on the arrows to access each panel of content</i></small>
-<div class="accordion"> <!-- accordion --> 
-
- {panel_content}	
-									 
-	<h2> <ul><li> </li></ul>({row_count}) {panel_title}</h2> 
-
-
-	<div class="pane" > <!-- pane -->
-		
-	{exp:ed_imageresizer image="{panel_image}" maxWidth="300" maxHeight="300" alt="{image_title}"}
-        <span class="embed-tabbed">{exp:tagstripper:tagsToStrip tags='div|p'}{if panel_embed}{panel_embed}{/panel_embed}{/if}{/exp:tagstripper:tagsToStrip}</span>
-        {if panel_text}<p>{panel_text} </p>{/panel_text}{/if}
-        {panel_file} <a href="{url}">Download File</a>, {/panel_file} 
-	</div> <!-- end of pane -->
-{/panel_content}	
-</div><!-- end of accordion-->
-
-</div> <!--end of panel content-->
-
-{/if}<!--/end of if panel_content-->
-
-{/exp:channel:entries}
-
-<script> 
-$(function() {
-	$(".accordion").tabs(".pane", {tabs: 'h2', initialIndex: 0});
-//$(".accordion").tabs(".pane", {tabs: 'h2', initialIndex: null});
-});
-</script>
-
- {/if}<!--/end of if else-->
 
 

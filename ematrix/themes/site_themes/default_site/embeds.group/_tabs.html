@@ -1,4 +1,4 @@
-{exp:channel:entries channel="expertise|tutorials|weblearn|main" disable="member_data|trackbacks" limit="1" backspace="2" }
+{exp:channel:entries channel="expertise|tutorials|weblearn|b" disable="member_data|trackbacks" limit="1" backspace="2" }
 
 <div id="panel_content">
     <small><i>Click on the tabs to access panels of content</i></small>
@@ -55,13 +55,13 @@
 {if:else}
 
         <!-- tabs --> 
-        <ul class="css-tabs"> 
+        <ul class="css-tabs_bb"> 
    {panel_content}
        <li> <a href="#">{exp:snippet total="25" word="true" ellipsis="É"}{panel_title}{/exp:snippet}</a></li>
    {/panel_content}
         </ul>
 
-        <div class="css-panes"> <!-- panes --> 
+        <div class="css-panes_bb"> <!-- panes --> 
 
 {panel_content}
 
@@ -83,7 +83,7 @@
 
 </div> <!--end of panel content-->
 
-<script>$(".css-tabs:first").tabs(".css-panes:first > div"); </script>
+<script>$(".css-tabs_bb:first").tabs(".css-panes_bb:first > div"); </script>
 
  {/if}<!--/end of if else-->
 

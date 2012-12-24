@@ -34,7 +34,7 @@
 <![endif]-->   
         <a href="{url_title_path=weblearn/about}">
          
-        {exp:ed_imageresizer image="{image_thumb}" maxWidth="100" maxHeight="100" alt="{title}" debug="yes" class="category_image_index"}
+        {exp:ed_imageresizer image="{image_promo}" maxWidth="100" maxHeight="100" alt="{title}" debug="yes" class="category_image_index"}
         </a>
         
       {exp:snippet total="600" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
@@ -109,8 +109,8 @@ onfocus="this.value=''; this.style.color = '#848D81';" />
 <div class="panel-index-inner">
          <div class="panel-index-content-box">
            <a href="{channel_url}detail/{url_title}">  <h3>{title} </h3></a>
-         <a href="{channel_url}detail/{url_title}">{if image_thumb}
-            {exp:ed_imageresizer image="{image_thumb}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+         <a href="{channel_url}detail/{url_title}">{if image_promo}
+            {exp:ed_imageresizer image="{image_promo}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
             {/if}</a>
          <p>{exp:snippet total="250" word="" ellipsis="..."}{page_body} 
          {/exp:snippet}

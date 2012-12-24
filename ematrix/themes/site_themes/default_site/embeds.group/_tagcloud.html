@@ -1,0 +1,29 @@
+    {if segment_1 == "weblearn"}
+
+    <h3>Weblearn Tag Cloud</h3>
+        {exp:tagger:cloud limit="25" backspace="1" min_size="12" max_size="24" prefix="tags" channel="weblearn"} 
+            <a href="{site_url}index.php/tags/{tags:urlsafe_tagname}/" title="{tags:tag_name}" style="font-size:{tags:size}px">{tags:tag_name}</a>  
+        {/exp:tagger:cloud} 
+   
+    {if:elseif segment_1 == "tutorials"}    
+
+    <h3>Tutorials Tag Cloud</h3>
+        {exp:tagger:cloud limit="25" backspace="1" min_size="12" max_size="24" prefix="tags" channel="tutorials"} 
+            <a href="{site_url}index.php/tags/{tags:urlsafe_tagname}/" title="{tags:tag_name}" style="font-size:{tags:size}px">{tags:tag_name}</a>  
+        {/exp:tagger:cloud}
+      
+    {if:elseif segment_1 == "expertise"}    
+
+    <h3>Expertise Tag Cloud</h3>
+        {exp:tagger:cloud limit="25" backspace="1" min_size="12" max_size="24" prefix="tags" channel="expertise"} 
+            <a href="{site_url}index.php/tags/{tags:urlsafe_tagname}/" title="{tags:tag_name}" style="font-size:{tags:size}px">{tags:tag_name}</a>  
+        {/exp:tagger:cloud}    
+    {if:else}
+
+    <h3>Global Tag Cloud</h3>
+        {exp:tagger:cloud limit="25" backspace="1" min_size="12" max_size="24" prefix="tags" channel="weblearn|expertise|tutorials|blog|assorted_content"} 
+            <a href="{site_url}index.php/tags/{tags:urlsafe_tagname}/" title="{tags:tag_name}" style="font-size:{tags:size}px">{tags:tag_name}</a>  
+        {/exp:tagger:cloud}
+    
+    {/if}
+

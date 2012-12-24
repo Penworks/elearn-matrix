@@ -49,7 +49,7 @@
 	position:absolute;
 	left:0px;
 	bottom:0px;
-	background:#000;
+	background:/*#000*/ #2D748A;
 	color:#fff;
 	opacity:0.8; /* Overridden by captionOpacity setting */
 	width:100%;

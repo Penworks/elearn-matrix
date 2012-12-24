@@ -8,22 +8,41 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
-
 <div class="sharing">
 <div class="sharing-inner">
-    <span style="position: absolute; top: 5px; left: 45px;">
-        <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="penworks" style="margin-bottom: 5px; ">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <span style="position: absolute; top: 5px; left: 40px;">
+        <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="penworks" style="margin-bottom: 5px;">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         </span>
         
-        <span style="position:absolute;top: 5px;left:105px;">
-            <fb:like layout="button_count" show_faces="false" width="300"></fb:like>
-        </span>
-        {exp:channel:entries channel="assorted_content|weblearn|expertise|tutorials|blog" disable="member_data|trackbacks" limit="1" backspace="2"}
-        <span style="position:absolute;top: -5px;left:5px;">
-        <a href="{url_title_path=blackboard/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30"/></a>
-        </span>
-    {/exp:channel:entries}
-        </div><!--/.sharing-inner-->
-</div><!--/.sharing-->
+        <span style="position:absolute;top: 5px;left:100px;">
+            <fb:like layout="button_count" show_faces="false" width="300" style="z-index: 200;"></fb:like>
+    </span>
+      
+    <!--print pdf-->
 
+    {exp:channel:entries channel="assorted_content|weblearn|expertise|tutorials|blog" disable="member_data|trackbacks" limit="1" backspace="2"}
+    
+    {if segment_1 == "weblearn"}
+        <span style="position:absolute;top:-5px;left:5px;">
+        <a href="{url_title_path=weblearn/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
+        </span>   
+    {if:elseif segment_1 == "tutorials"}    
+        <span style="position:absolute;top:-5px;left:5px;">
+        <a href="{url_title_path=tutorials/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
+        </span>      
+    {if:elseif segment_1 == "expertise"}   
+        <span style="position:absolute;top:-5px;left:5px;">
+        <a href="{url_title_path=expertise/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
+        </span>   
+    {if:elseif segment_1 == "blog"}
+        <span style="position:absolute;top:-5px;left:5px;">
+        <a href="{url_title_path=blog/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
+        </span>   
+    {if:else}
+ <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a></h2>  
+    {/if}
+    
+    {/exp:channel:entries} 
+       
+</div><!--/.sharing-inner-->
+</div><!--/.sharing-->

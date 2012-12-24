@@ -7007,7 +7007,7 @@ function Output($name='',$dest='')
 	$dest=strtoupper($dest);
 	if($dest=='') {
 		if($name=='') {
-			$name='mpdf.pdf';
+			$name='The_London_Met_Elearning_Matrix_pdf_article.pdf';
 			$dest='I';
 		}
 		else { $dest='F'; }
@@ -7015,7 +7015,7 @@ function Output($name='',$dest='')
 
 /*-- PROGRESS-BAR --*/
 	if ($this->progressBar && ($dest=='D' || $dest=='I')) {
-		if($name=='') { $name='mpdf.pdf'; }
+		if($name=='') { $name='The_London_Met_Elearning_Matrix_pdf_article.pdf'; }
 		$tempfile = '_tempPDF'.RAND(1,10000);
 		//Save to local file
 		$f=fopen(_MPDF_TEMP_PATH.$tempfile.'.pdf','wb');
@@ -32608,7 +32608,7 @@ function OverWrite($file_in, $search, $replacement, $dest="D", $file_out="mpdf" 
 			break;
 		case 'F':
 			//Save to local file
-			if (!$file_out) { $file_out = 'mpdf.pdf'; }
+			if (!$file_out) { $file_out = 'The_London_Met_Elearning_Matrix_pdf_article.pdf'; }
 			$f=fopen($file_out,'wb');
 			if(!$f) die('Unable to create output file: '.$file_out);
 			fwrite($f,$pdf,strlen($pdf));

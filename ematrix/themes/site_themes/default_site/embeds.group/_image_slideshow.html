@@ -5,32 +5,52 @@
     {if field_total_rows > "1"}
  {/image_slideshow}                
 
-      <div class="slider-wrapper theme-default">
+    <div class="slider-wrapper theme-default">
       
-            <div class="ribbon"></div>
+        <div class="ribbon"></div>
           
-           <div id="slider" class="nivoSlider">
-  {image_slideshow}  
- 
-    <!--<a href="{image:url}" rel="#photo-big">-->
-    <a href="#" rel="#photo-big">
+        <div id="slider" class="nivoSlider">
+                
+      {image_slideshow}  
+     
+        <a href="#" rel="#photo-big">{exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" alt="{title}" title="#{row_id}" forceWidth="yes" forceHeight="yes" cropratio="130:100"}</a>
     
-    {exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="550" alt="{title}" title="#{row_id}" forceWidth="yes" forceHeight="yes" cropratio="130:100"}
-  </a>
+      {/image_slideshow}
+      
+        </div>  <!--/.nivoSlider-->
 
-  {/image_slideshow}
-    </div>  <!--/.nivoSlider-->
-          
-         
-           {image_slideshow} 
+        {image_slideshow} 
          <div id="{row_id}" class="nivo-html-caption">
-            "{caption}"</div>
+            {caption}</div>
          {/image_slideshow}
-            
-            
+                 
     </div><!--/.slider-wrapper .theme-default-->
     
-  <script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.nivo.slider.pack.js"></script>
+  
+    <!--overlay div for larger slideshow-->
+    
+     <div class="simple_overlay" id="photo-big">
+        
+        <div class="slider-wrapper theme-default">      
+            <div class="ribbon"></div>
+           <div id="slider_big" class="nivoSlider">
+     {image_slideshow}
+     {exp:ed_imageresizer image="{image}" maxWidth="600" maxHeight="500" forceWidth="yes" forceHeight="yes" title="#{row_id}" cropratio="130:100" alt="{title}"}
+     {/image_slideshow}
+        </div>  <!--/#slider-big .nivoSlider-->
+        
+        
+           {image_slideshow} 
+         <div id="{row_id}" class="nivo-html-caption">
+            {caption}</div>
+         {/image_slideshow}
+         
+        </div><!--/.slider-wrapper .theme-default-->
+ 
+     </div><!--/.simple_overlay-->
+    
+    
+    <script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.nivo.slider.pack.js"></script>
     <script type="text/javascript">
     $(window).load(function() {
         $('#slider').nivoSlider({
@@ -50,26 +70,12 @@
         });
     });
     
-   // $(document).ready(function() {
-//$("a[rel]").overlay();
 
   $(function () {
    $("a[rel]").overlay({mask: '#000'/*, effect: 'apple'*/});
 
 });
-    </script>
-    
-     <div class="simple_overlay" id="photo-big">
-        
-        <div class="slider-wrapper theme-default">      
-            <div class="ribbon"></div>
-           <div id="slider_big" class="nivoSlider">
-     {image_slideshow}  {exp:ed_imageresizer image="{image}" maxWidth="600" maxHeight="500" cropratio="100:120" alt="{title}"}{/image_slideshow}
-        </div>  <!--/#slider-big .nivoSlider-->
-        </div><!--/.slider-wrapper .theme-default-->
-        
-     </div><!--/.simple_overlay-->
-     
+    </script> 
      
 
       {if:else}
@@ -82,11 +88,21 @@
         
             <!--[if lte IE 9]>
      <a href="#" rel="#link1">{exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" cropratio="130:100" alt="{name}"}</a>
+     
+      <div id="{row_id}" class="slideshow-single-img-caption">
+            {caption}</div>
 
             <![endif]-->            
             <!--[if lte IE 9]> 
             <![IGNORE[-->
-               <a href="#" rel="#link1"> {exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="400" alt="{name}"}</a>
+                
+    
+                <a href="#" rel="#link1"> {exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" alt="{name}"}</a>
+                
+              <div id="{row_id}" class="slideshow-single-img-caption">
+            {caption}</div>
+              
+   
            <![IGNORE[]]>
             <![endif]-->
             
@@ -95,10 +111,20 @@
   
     {/if}
      
+     
+    <!--overlay div for larger single image-->
+    
 <div id="link1" class="simple_overlay">
     {image_slideshow}
     {exp:ed_imageresizer image="{image}" maxWidth="600" maxHeight="500" alt="{name}"}
+    
+            
+         <div id="{row_id}" class="slideshow-overlay-img-caption">
+            {caption}</div>
+        
     {/image_slideshow}
+    
+
 </div>
 
      <script>
@@ -110,9 +136,4 @@
 
 {/exp:channel:entries}
 
-
-  
-
-
-<!--<a href="{image:url}"> <img src="{image}" alt="{image_name}" title="#{row_id}" /></a>--> 
 

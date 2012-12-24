@@ -1,37 +1,35 @@
     {if segment_1 == "weblearn"}
-
     <style>
         #wrapper{
         background:/*#C1D1C0*/ #61A04D !important;    
         }
-    </style>
-    
-    {if:elseif segment_1 == "tutorials"}
-    
+    </style>    
+    {if:elseif segment_1 == "tutorials"}    
         <style>
         #wrapper{
         background:#5AA898 !important;    
         }
-    </style>
-        
-    {if:elseif segment_1 == "expertise"}
-    
+    </style>       
+    {if:elseif segment_1 == "expertise"}    
         <style>
         #wrapper{
         background:#BFCD68 !important;    
         }
-    </style>
-    
+    </style>    
     {if:else}
     <style>
        #wrapper{
-        background-color:#5996A2;    
+        background-color:#2D748A !important;
+        background-image: none !important;
         }
-    </style>   
-    
+        .panel-index h3 a {
+    color: #AAB9AF;
+}
+    </style>      
     {/if}
  
     </head>
+    
     <body>
 
         <!--[if lt IE 7]>
@@ -44,42 +42,47 @@
 
 <div id="top_header">
     
-    <div class="logo">
-    </div>
-    
+        <!--[if lte IE 10]>
+        <style>#top_header h2{font-weight: 600;}</style>
+        <![endif]-->  
     
     {if segment_1 == "weblearn"}
-
-<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/weblearn" alt="go to Weblearn homepage" title="go to Weblearn homepage"><em>Weblearn</em></a></h2>
-
-    
-    {if:elseif segment_1 == "tutorials"}
-    
-<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/tutorials" alt="go to Tutorials homepage" title="go to Tutorials homepage"><em>Tutorials</em></a></h2>
-
-        
-    {if:elseif segment_1 == "expertise"}
-    
- <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/expertise" alt="go to Expertise homepage" title="go to Expertise homepage"> <em>Expertise</em></a></h2>
-
-    
+<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/weblearn" alt="go to Weblearn homepage" title="go to Weblearn homepage"><em>Weblearn</em></a></h2>   
+    {if:elseif segment_1 == "tutorials"}   
+<h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/tutorials" alt="go to Tutorials homepage" title="go to Tutorials homepage"><em>Tutorials</em></a></h2>     
+    {if:elseif segment_1 == "expertise"}   
+ <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/expertise" alt="go to Expertise homepage" title="go to Expertise homepage"> <em>Expertise</em></a></h2>  
     {if:elseif segment_1 == "blog"}
  <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a> : <a href="{site_url}index.php/blog" alt="go to Blog & News homepage" title="go to Blog & News homepage"><em>Blog & News</em></a></h2>
-
     {if:else}
  <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a></h2>
-
-    
     {/if}
     
-    
-    
-    <p>CELT support for Elearning </p>
 
+    <p class="">follow CELT support for Elearning </p>
+      
+    <!--search & social div here-->
+<div id="index_search_social">    
+   <div id="search">
+   {exp:search:simple_form
+channel=""
+no_result_page="weblearn/no_results" result_page="weblearn/search"
+search_in="entries" channel="weblearn"}
+<input type="text" name="keywords" value="Search" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue; this.style.color = '#5B797B';"
+onfocus="this.value=''; this.style.color = '#848D81';" />
+<input type="submit" value="" class="button" />
+{/exp:search:simple_form}
+   </div><!--/#search-->
+   
+   <div id="social">  
+      <ul>
+         <li><a href="{exp:perssonal:link path='blog/rss' channel='weblearn|expertise|tutorials|blog' feed_name='The London Met Elearning Matrix' feed_url='{channel_name}' feed_description='Elearning at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a></li>
+         <li><a href="http://www.facebook.com/pages/London-Met-Elearning/520318357984548"><img src="{site_url}themes/site_themes/default_site/images/facebook.png"></a></li>
+         <li><a href="http://vimeo.com/elearninglondonmet"><img src="{site_url}themes/site_themes/default_site/images/vimeo.png"></a></li>
+         <li><a href="https://twitter.com/elearninglondon"><img src="{site_url}themes/site_themes/default_site/images/twitter.png"></a></li>
+      </ul> 
+   </div><!--/#social-->
 
+</div><!--/#index_search_social-->
 
 </div><!--/#top_header-->
-
-{!--{exp:channel:entries channel="main|weblearn|tutorials|expertise"}
-<p>CELT support for Elearning : {channel_name}</p>
-{/exp:channel:entries}--}

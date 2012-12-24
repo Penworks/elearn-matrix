@@ -18,15 +18,20 @@ Author URI: http://dev7studios.com
     height:auto; 
 }
 
+.theme-default #slider_wide {
+    /*margin:10px auto 0 auto;*/
+    margin:-6px 0px 8px -9px;
+    width:955px; 
+    height:auto; 
+}
+
 
 .theme-default #slider {
     /*margin:10px auto 0 auto;*/
     margin:10px 10px 30px 10px;
     float:left;
-    /*width:618px;*/ /* Make sure your images are the same size */
-    /*height:246px;*/ /* Make sure your images are the same size */
-    width:300px; /* images resized with ed_imageresizer */
-    height:225px; /* images resized with ed_imageresizer */
+    width:450px; /* images resized with ed_imageresizer */
+    height:350px; /* images resized with ed_imageresizer */
 }
 /*====*/
 .theme-default .nivoSlider {

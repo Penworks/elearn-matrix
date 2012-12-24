@@ -24,20 +24,14 @@ ul.css-tabs_main a {
 	font-weight: 600;
 	letter-spacing: -1px;
 	text-transform:lowercase;
-	/*font-variant: small-caps;*/
 	color:#D4CEC3;
-	/*line-height: 1px;*/
-	text-decoration:none;
-	/*border:1px solid #ffffff;*/	
+	text-decoration:none;	
 	border-bottom:0px;
 	height:18px;
-	/*background-color: #767060;*/
 	background: #767060 url(../images/bb/panel-baks-sm.jpg) no-repeat;
 	display:block;
 	padding: 10px;
 	margin-right:2px;
-/*	-moz-border-radius-topleft: 10px;
-	-moz-border-radius-topright:10px;*/
 	position:relative;
 	top:1px;	
 }

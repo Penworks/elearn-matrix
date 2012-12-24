@@ -14,10 +14,13 @@
    
         <div class="footer-content-box">
             
-        <h3>About this site</h3>
+        <h3>Credits</h3>
 
-Developed by Pen Lister (IA, design, web &amp media) and Jim Pettiward (content &amp pedagogy), on behalf of CELT eLearning, <a href="http://www.londonmet.ac.uk/celt/">The Centre for the Enhancement of Learning & Teaching at London Metropolitan University</a>
+Developed by Pen Lister (IA, design, web, media) &amp Jim Pettiward (content, pedagogy &amp inspiration), on behalf of CELT eLearning, <a href="http://www.londonmet.ac.uk/celt/">CELT, London Metropolitan University</a>
 
+  <small>  Powered by <a href="http://expressionengine.com/">Expression Engine 2.5.3</a>, not very valid XHTML and CSS 2&3, jQuery</a> | <a href="http://dryicons.com">DryIcons</a> &amp other icons | &#169; 2012 CELT, London Metropolitan University <br />
+    
+    To increase/decrease the browser view of this site, just use ctrl +/- (cmd +/-)</small>
 <div class="logo-ft"></div>
 
 </div><!--/.footer-content-box-->
@@ -25,15 +28,11 @@ Developed by Pen Lister (IA, design, web &amp media) and Jim Pettiward (content 
     </div><!--/.footer_inner-->
 
 
-
     <div class="footer-inner">
     
         <div class="footer-content-box">
     
-        <h3>Tag Cloud</h3>
-        {exp:tagger:cloud limit="25" backspace="1" min_size="12" max_size="24" prefix="tags" channel="blackboard"} 
-            <a href="/index.php/tags/blackboard/{tags:urlsafe_tagname}/" title="{tags:tag_name}" style="font-size:{tags:size}px">{tags:tag_name}</a>  
-        {/exp:tagger:cloud}
+{embed="embeds/_tagcloud"}
         
         </div><!--/.footer-content-box-->
 
@@ -44,11 +43,16 @@ Developed by Pen Lister (IA, design, web &amp media) and Jim Pettiward (content 
         
         <div class="footer-content-box">
         
-        <h3>Credits</h3>
+        <h3>Using the site</h3>
+        Find content by browsing the main channel tabs or use these general categories:
+        <ul class="footer-browse">
+    <li><a {if '{embed:my_location}'=="media"} class="selected" {/if} href="{path="browse/media"}">Media</a></li>
+    <li><a {if '{embed:my_location}'=="pedagogy"} class="selected" {/if} href="{path="browse/pedagogy"}">Pedagogy</a></li>
+        <li><a {if '{embed:my_location}'=="resources"} class="selected" {/if} href="{path="browse/resources"}">Resources</a></li>
+</ul>
+
     
-    Powered by <a href="http://expressionengine.com/">Expression Engine 2.5.3</a>, not very valid XHTML and CSS 2&3, jQuery</a> | <a href="http://dryicons.com">DryIcons</a> for icons | &#169; 2012 CELT, London Metropolitan University <br />
-    
-    <small>To increase/decrease the browser view of this site, just use ctrl +/- (cmd +/-)</small>
+
     </div><!--/.footer-content-box-->
     
     </div><!--/.footer_inner-->

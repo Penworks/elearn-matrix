@@ -1,1 +1,57 @@
-dDASFASDBSAID Q QQ  S HWIF 
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix"}
+{embed="embeds/_head"}
+
+<!--browse by category group - media -->
+
+<div id="page">
+
+<h2>Browse by Media</h2>
+
+<div class="page-body">
+
+    <div class="browse_cat_summary">
+        
+    <p class="intro">Everything in Media is sorted into types of media used, whether it's resources, further reading, examples or tutorials.</p>
+    
+    </div><!--/.browse_cat_summary-->
+
+{exp:categories category_group_id='5' show_empty="yes" style="linear"}
+
+    <div class="browse_cat">
+    
+        <a title="{category_name}" href="{path=browse/list}/{category_url_title}"><h3>Recent entries in {category_name}</h3></a>
+        <!--<img src="{category_image}" class="browse_cat_image" height="{height}" width="{width}"/>-->
+        
+        {if has_children}
+        <ul class="browse_list">
+        {children}
+        <li class="browse_list_entry"><a title="{child_category_name}" href="{path=blog/category}/{child_category_url_title}">{child_category_name}</a></li>
+        {/children}
+        </ul>
+        {/if}
+        
+        <ul class="browse_list">
+        {exp:channel:entries channel='' category="{category_id}" dynamic='off' limit='3'sort="desc" orderby="date" class="browse_cat_image"}
+        
+        <li class="browse_list_entry"><a href="{channel_url}detail/{url_title}">
+         {exp:ed_imageresizer image="{image_promo}" maxWidth="90" maxHeight="90" alt="{title}" debug="yes"}
+        
+        <h4>{title}</h4></a>
+        <p>{exp:snippet total="200" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
+        <i><strong>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></strong></p></li>
+        
+        {/exp:channel:entries}
+        </ul>
+        
+         <p class="browse_more">See more in <a href="{homepage}/browse/list/category/{category_url_title}/">{category_name}</a></p>
+ 
+    </div><!--/.browse_cat-->
+
+{/exp:categories}
+
+</div><!--/.page-body-->
+
+</div><!--/#page-->
+
+
+{embed="embeds/_foot"}
