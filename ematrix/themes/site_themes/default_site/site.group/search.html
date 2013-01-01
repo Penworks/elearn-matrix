@@ -1,0 +1,39 @@
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{embed="embeds/_head"}
+
+<div id="page">
+
+        <!--back button-->
+<a href="{site_url}"><img src="{global_image_url}arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+  
+<h2 class="underline">Search {exp:search:total_results} result(s) for "{exp:search:keywords}"</h2>
+
+ <div id="cat-entry-holder">
+
+
+<ol>
+{exp:search:search_results switch="resultRowTwo|resultRowOne"}
+<div class="cat_sum_entry">
+     <script type="text/javascript">
+$(function(){
+  $('#cat-entry-holder').masonry({
+    // options
+    itemSelector : '.cat_sum_entry',
+  //columnWidth : 250
+  });
+});
+</script>
+
+<li> <p> <b><a href="{channel_url}detail/{url_title}">{title}</a></b> from <em><a href="{channel_url}">{channel}</a></em><br/>{excerpt}</p></li>
+
+</div><!--/.cat-sum-entry-->
+{/exp:search:search_results}
+</ol>
+
+
+</div><!--/#cat-entry-holder-->
+
+
+</div><!--/#page-->
+
+{embed="embeds/_foot"}

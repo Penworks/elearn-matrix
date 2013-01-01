@@ -1,0 +1,24 @@
+{exp:channel:entries channel="not assorted_content" disable="member_data|trackbacks" limit="1" backspace="2"}
+
+    <div class="related-content">
+        <h3>Related Entries in this series</h3>
+        
+       {exp:playa:children}
+       <span class="rel-list-box">          
+
+    <!--[if lte IE 9]><style>.ie-fix-img-thmb { width:90px;height:auto;border:none;}</style><![endif]-->
+    <a href="{path={channel_short_name}/detail/{url_title}}">
+        
+        {exp:ed_imageresizer image="{image_promo}" maxWidth="90" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes"} 
+    
+    </a>
+<a href="{path={channel_short_name}/detail/{url_title}}"><h6>{exp:snippet total="30" word="" ellipsis="..."}{title}{/exp:snippet}</h6></a>
+<!-- </span>-->
+ 
+        </span>
+        {/exp:playa:children}
+        
+        
+    </div><!--/.related-content-->
+ 
+{/exp:channel:entries}

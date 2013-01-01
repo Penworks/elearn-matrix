@@ -1,0 +1,28 @@
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{embed="embeds/_head"}
+
+
+<div id="page">
+    
+        <!--back button-->
+<a href="{site_url}">
+    <img src="{global_image_url}arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+
+{exp:channel:entries channel="assorted_content"
+disable="pagination|categories|member_data|trackbacks" url_title="no-results"
+dynamic="off"}
+
+<h2 class="underline">{title}</h2>
+
+<div class="page-body">
+
+{page_body}
+
+{/exp:channel:entries}
+
+
+</div><!--/.page-body-->
+</div><!--/#page-->
+
+{embed="embeds/_foot"}
+<!-- entry_id="13"-->

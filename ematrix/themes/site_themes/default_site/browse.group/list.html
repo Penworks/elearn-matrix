@@ -5,7 +5,7 @@
 <!--browse by list-->
 <div id="page">
 
-{exp:channel:category_heading channel="expertise|weblearn|tutorials|blog"}
+{exp:channel:category_heading channel="expertise|weblearn|tutorials|site"}
 
 <h2>Browsing: <i>{category_name}</i></h2>
 <img src="{category_image}" class="category_image_sm" height="{height}" width="{width}" align="left"/>{if category_description}
@@ -18,7 +18,7 @@
 
 <div style="clear:left"></div>
 
-{exp:channel:entries channel="expertise|weblearn|tutorials|resources" disable="member_data|trackbacks" orderby="date" sort="desc" limit="10" dynamic=“no” paginate="bottom"}
+{exp:channel:entries channel="expertise|weblearn|tutorials|site" disable="member_data|trackbacks" orderby="date" sort="desc" limit="10" dynamic=“no” paginate="bottom"}
 
 <div id="entry">
 

@@ -21,7 +21,7 @@ $(function(){
 
     {if tagger:no_entries}<p>No entries where found</p>{/if}
         
-<h3>{exp:snippet total="24" word="true" ellipsis="É"}{tagger:entry_title}{/exp:snippet}</h3>
+<h3>{exp:snippet total="35" word="" ellipsis="..."}{tagger:entry_title}{/exp:snippet}</h3>
 
 {if tagger:image_promo}<img src="{tagger:image_promo}" height="70" alt="{title}"
 title="{title}" style="border: solid 0px #9E9E9E; padding:2px 2px 2px 2px; float:left; margin: 2px 4px 4px 0; " />
@@ -31,7 +31,7 @@ title="{title}" style="border: solid 0px #9E9E9E; padding:2px 2px 2px 2px; float
 
 <span style="padding:0; float:left; margin: 0;">{if no_results} {tagger:panel_content}{exp:ed_imageresizer image="{tagger:panel_image}" maxWidth="70" maxHeight="70" alt="{image_title}"}{/tagger:panel_content}{/if}</span>
 
-<p>{exp:snippet total="180" word="true" ellipsis="É"}{tagger:page_body}{/exp:snippet} <i><b>[<a href="{tagger:channel_url}detail/{tagger:entry_url_title}">read the full entry</a>]</b></i></p>
+<p>{exp:snippet total="180" word="" ellipsis="..."}{tagger:page_body}{/exp:snippet} <i><b>[<a href="{tagger:channel_url}detail/{tagger:entry_url_title}">read the full entry</a>]</b></i></p>
 
 
 </div><!--/.tag-entry-->

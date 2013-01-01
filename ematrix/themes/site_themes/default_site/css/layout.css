@@ -83,16 +83,7 @@ body a:hover {
    overflow:hidden;
    margin: 0 5px 0 5px;
 }
-#top_header .logo {
-   padding:5px;
-   height: 85px;
-   width: 85px;
-   margin-top:0px;
-   background: url(../images/bb/celt-logo_tr_m.png) no-repeat;
-   position: absolute;
-   top: 0px;
-   left: 900px;
-}
+
 #top_header h2{	
     padding: 10px 5px 10px 5px;
     font-size: 34px;
@@ -133,7 +124,6 @@ body a:hover {
    overflow:hidden;
    margin: 4px auto 3px auto;
    height: auto;
-/*   border: 1px dotted red;*/
 }
 .panel-index h3{
    padding: 10px 10px;
@@ -175,15 +165,6 @@ body a:hover {
    border:none;
    outline: 0; /*fix for FF3.6 in win 7*/
    -moz-outline-style:none;/*general ff hack*/ 
-}
-
-.panel-index-readmore {
-   font-variant:small-caps;
-   font-weight:600;
-   font-style: italic;
-   font-size: 120%;
-   float:right;
-   padding: 20px;
 }
 
 .panel-index-holder {
@@ -235,7 +216,6 @@ body a:hover {
       background: #efefef;
 }
 
-
 .panel-index-content-box img{
    border:none;
    padding: 2px;
@@ -286,7 +266,7 @@ body a:hover {
       clear: left;
       color: #A8B5B8;
       font-style: italic;
-      font-size:larger;
+      font-size:inherit;
       font-weight:600;
       margin: 4px 10px 2px 10px;
       width: 180px;
@@ -358,7 +338,11 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
     margin:0;
     position:absolute;
     top:90px;
-    left:850px;
+    left:820px;
+    border:none !important;
+/*   -moz-box-shadow: 0px 0px 0px rgba(0,0,0,0);
+   -webkit-box-shadow: 0px 0px 0px rgba(0,0,0,0);
+   box-shadow: 0px 0px 0px rgba(0,0,0,0);*/
 }
 
 .category_image_index {
@@ -443,6 +427,21 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    width: 880px;
    height: 130px;
    border-right: 12px solid #CAD6D8;
+   position:relative;
+}
+
+.cat_sum_sm_readmore {
+   font-weight:600;
+   font-style: italic;
+   font-size: 20px;
+   text-align:right;
+   padding: 20px;
+   letter-spacing: -1px;
+   text-transform: lowercase;
+   position:absolute;
+   left: 455px;
+   bottom:10px;
+   min-width:400px;
 }
 
 .cat_sum_sm ul{
@@ -466,6 +465,23 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    text-decoration:underline;
 }
 
+.channel-rss {
+   width:180px;
+   height: 75px;
+   font-size: small;
+   font-weight:600;
+   font-style: italic;
+   color: #419D9C;
+   float:left;
+   clear:left;
+   line-height: 40px;
+}
+.channel-rss img{
+   padding: 4px 4px 4px 10px;
+   border:none;
+   float:left;
+}
+
 
 /*////////////    SOCIAL SHARING BUTTON STYLING and PDF PRINT ICON   //////////////*/
 
@@ -474,13 +490,8 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    width:240px;
    height:20px;
    padding:5px;
-/*   margin: -12px 7px 0px 10px;*/
-/*   margin: -25px 7px 0px -65px;*/
    margin: 0px 7px 0px 0px;
    position:relative;
-  /* border: 1px dotted red;*/
-     /* display:inline;
-      overflow:hidden;*/
 }
 
 .sharing-inner ul {
@@ -491,14 +502,6 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    display:inline;
    margin: 0 auto;
 }
-
-/*.sharing-inner-hj ul {
-   width: 18px;
-   height: 18px;
-   list-style:none;
-   display:inline;
-   margin: -20px 0px 0px -25px;
-}*/
 
 .sharing-inner li img {
    padding: 3px;
@@ -621,16 +624,16 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    margin:10px 1px 5px 5px;
 }
 
-/*#page .page-body ul {
-   margin: 10px 0 5px 0;
+#page .page-body ul {
+   margin: 10px 0 5px 20px;
 }
 
 #page .page-body ul li{
-   padding:0px;
+   padding:5px 5px 2px 40px;
    font-size: inherit;
-   color: #413F32;
-   list-style: square outside;
-}*/
+   color: #183A54;
+   list-style: square inside;
+}
 
 #page img {
    border: 0px solid #cccccc;
@@ -722,14 +725,18 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    margin:5px 5px 0px 3px;
 }
 
-/*//////////////    TAG-FOOTER, LEVEL, TAGGED, CAT-DETAIL STYLES    /////////////// */
+/*//////////////    PAGE-FOOTER, LEVEL, TAGGED, CAT-DETAIL STYLES    /////////////// */
 
-.tag-footer, .level, .tagged, .cat-detail{
+.page-footer, .level, .tagged, .cat-detail{
    font-weight:normal;
    padding: 5px;
    font-style: italic;
    clear:left;
 }
+
+/*.page-footer{
+padding-top:10px;
+}*/
 
 .tagged, .cat-detail{
    width: 370px;
@@ -760,7 +767,7 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    font-weight:normal;
    padding:0px 5px 5px 10px;
    font-weight:600;
-   margin-top: -170px;
+   margin-top: -126px;
    overflow:hidden;
    clear:left;
 }
@@ -775,7 +782,7 @@ ALL CATEGORY LIST, SEARCH RESULT LIST, ENTRY DETAIL and PAGE MODULE PAGES
    float:left;
    font-weight:inherit;
    font-style: normal;
-   padding: 0 3px;
+   padding: 5px 3px;
    border: 3px solid #E7EDEB;
    margin: 2px 4px auto auto;
    opacity:1.0;
@@ -1216,9 +1223,10 @@ nav #disqus_thread #global-nav #post-count h4 {
 }
 
 .footer-holder {
+      position: relative;
    margin: 0 auto;
    width: 1000px;
-   height: 275px;
+   height: 340px;
    overflow:hidden;
    padding: 0px 0px 0px 28px;
 /*   border: 1px dotted red;*/
@@ -1281,7 +1289,7 @@ nav #disqus_thread #global-nav #post-count h4 {
 }
 
 .footer-browse {
-     color: #B2BBA2;
+   color: #B2BBA2;
    font-weight: 600;
    font-size: 24px;
    letter-spacing:-2px;
@@ -1302,3 +1310,40 @@ nav #disqus_thread #global-nav #post-count h4 {
    clear:both;
 }
 
+.footer-nav {
+   clear:both;
+   float:left;
+   list-style:none;
+   height: 36px;
+   padding: 5px;
+   width:968px;
+   font-size: .9em;
+   font-style: normal;
+   font-weight: 600;
+   color: #3A4C67;
+   background: #efefef;
+   overflow:hidden;
+   margin: -8px 5px 0px 0px;
+}
+
+.footer-nav ul li {
+   display:inline;
+   color: #B2BBA2;
+   font-weight: 600;
+   font-size: 22px;
+   letter-spacing:-2px;
+   list-style:none;
+   text-transform:lowercase;
+   padding:4px 10px 3px 5px; 
+}
+
+.footer-nav .logo {
+   padding:5px;
+   height: 70px;
+   width: 70px;
+   margin-top:0px;
+   background: url(../images/celt-logo_tr-sm.png) no-repeat;
+   position: absolute;
+   top: 260px;
+   left: 927px;
+}

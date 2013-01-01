@@ -1,1 +1,276 @@
-a
+<!--this is the weblearn channel pdf template-->
+{exp:channel:entries channel="weblearn" disable="member_data|trackbacks" limit="1" backspace="2"}
+
+ 
+  {exp:shine_pdf:make
+   format="A4"
+    default_font_size="11"
+    default_font="Helvetica"
+    margin_left="15"
+    margin_right="15"
+    margin_top="16"
+    margin_bottom="20"
+    margin_header="9"
+    margin_footer="16"
+    orientation="p"
+    margin_top_auto="no"
+    margin_bottom_auto="no"
+    url_title="{segment_3}"
+  }
+  
+  <style>
+#page a:link{
+	color: #2F6D6C;
+	text-decoration: none;
+}
+#page a:visited {
+	color: #419D9C;
+	text-decoration: none;  
+}
+#page a:hover {
+	color: #809408;
+	text-decoration:underline;   
+}
+    #top_header {
+   max-height: 20px;
+   padding: 0;
+   width:auto;
+   text-align: left;
+   font-size: .9em;
+   font-style: normal;
+   font-weight: 600;
+   color: #387B79;
+   background: #efefef;
+   overflow:hidden;
+   margin: 20px 5px 0 5px;
+}
+
+#top_header h2{	
+    padding: 5px 5px 5px 15px;
+    font-size: 34px;
+    letter-spacing: -3px;
+    font-weight:800;
+}
+#top_header p{
+    font-size: 14px;
+    margin: -55px 10px 10px 10px;
+    text-align: right;
+    letter-spacing: -1px;
+    float:right;
+}
+#page {
+   padding: 5px;
+   overflow: hidden;
+   width: auto;
+    font-size:inherit;
+    font-weight:500;
+    text-wrap: normal;
+}
+
+#page img {
+   border: 0px solid #cccccc;
+   padding: 4px;
+   float:left;
+}
+
+#page h2, h3, h4, h5, h6{
+   color: #387B79;
+   padding: 0;
+   font-size:inherit;
+   height:10px;
+}
+
+#page .snapshot{
+   text-align:right;
+   padding: 5px;
+   margin:15px 10px 5px -5px;
+   font-style: italic;
+   font-size: small;
+   color: #1F8389;
+   width:auto;
+   max-width:400px;
+   float: right;
+   overflow:hidden;
+   min-height:40px;
+}
+
+#page .page-body {
+   clear:both;
+   overflow:hidden;
+   width:auto;
+   text-align:left;
+   padding: 5px 15px 5px 0px;
+   font-size:90%;
+   color: #413F32;
+   margin: -3px -5px 10px -5px;
+   border-top: 5px solid #E0E0E0;
+}
+
+#page .page_body h2, h3, h4, h5, h6{
+   color: #387B79;
+   padding: 0;
+   font-size:inherit;
+   height:10px;
+}
+
+#page .page-body p {
+    font-size:inherit;
+    font-weight:500;
+}
+#page .page-body blockquote {
+    font-style:italic;
+    font-weight:500;
+    font-size:90%;
+    color:#154052;
+   margin: -5px 0 auto;
+}
+
+#page .page-body .panel-content-downloads {
+   float:left;
+   clear:both;
+   padding: 5px;
+   margin: 0 auto;
+   width:auto;
+   height:auto;
+   border: 7px solid #E7EDEB;
+}
+
+#page .list_items {
+   padding:3px;
+}
+
+#page .list_items ul li {
+   list-style: square inside;
+}
+
+#panel_content h2, h3, h4, h5, h6{
+   color: #387B79;
+   padding: 0;
+   font-size:inherit;
+   margin: 5px 0 5px 0;
+}
+
+#panel_content {
+   color: #413F32;
+   padding: 0;
+   font-size:inherit;
+}
+
+hr {
+    border: 1px solid #999;
+}
+</style>
+  
+
+  
+  <div id="top_header">
+    
+<div class="logo">
+    </div>
+<h2>The London Met Elearning Matrix</h2>
+<p>CELT support for elearning</p>
+</div><!--/#top_header-->
+
+ <div id="page">
+
+  {pdf_header}
+<small style="border-bottom: 1px dotted grey; width:auto; padding:10px;">
+<a href="{url_title_path=expertise/detail}">{site_url}expertise/detail/{url_title}</a> | 
+  by: {author} on: {entry_date format="%M %d, %Y"}<br /><br /></small>
+  {/pdf_header}
+  {pdf_footer}
+  <small style="border-top: 1px dotted grey; width:auto;">The London Met Elearning Matrix/{title} | page: [page] of [total_pages]</small>
+  {/pdf_footer}
+  
+  <h2>{title}</h2>
+  
+    {if summary}
+    <p class="snapshot"><b>Snapshot:</b>
+    {summary}
+    </p>
+    {/if}
+
+  <div class="page-body">
+
+{if embed_item}
+
+   <i>[In the web page version of this article there is some media here]</i>
+    
+{/if}
+<div style="clear:both; padding:20px;"></div>
+{if image_slideshow}
+ 
+ {image_slideshow}
+ <img src="{image}" alt="{name}" title="{title}" style="width:300px; height:auto;"/>
+ 
+{/image_slideshow}
+
+ {/if}
+
+
+<!--[if lte IE 8]> 
+    {if img_upload}<img src="{img_upload}" alt="{title}" title="{title}" width="300" align="left"/>
+     <br />{/if}<![endif]-->
+    <!--[if lte IE 8]><![IGNORE[-->{if img_upload}
+    <img src="{img_upload}" alt="{title}" title="{title}" height="{height}" width="{width}"  align="left"/>
+    {/if}<![IGNORE[]]><![endif]-->
+
+<br /><br />
+
+{if page_body}
+
+    {page_body}
+    
+{/if}
+
+<pagebreak/>
+
+<!--- download_files field-->
+{if file_download}
+             <div class="panel-content-downloads">
+                <h5>DOWNLOADS:</h5>
+                {file_download}
+                <ul>
+                <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+                </ul>
+                {/file_download}
+             </div><!--/.panel-content-downloads-->
+{/if}
+
+ {if panel_content}
+
+{panel_content}
+
+<div id="panel_content" style="padding: 10px">
+ {if panel_image}
+               <img src="{panel_image}" alt="{title}" class="bb_tab_img" align="left">
+                       {/if}
+
+<h3>{panel_title}</h3>
+
+{if panel_embed}<i>[In the web page version of this article there is some media here]</i><br /><br />{/if}
+{if panel_text}<p>{panel_text} </p>{/panel_text}{/if}
+
+
+            {if panel_file}
+             <div class="panel-content-downloads">
+                <h5>DOWNLOADS:</h5>
+                {panel_file}
+                <ul>
+                <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+                </ul>
+                {/panel_file}
+             </div><!--/.panel-content-downloads-->
+             {/if}
+</div>
+{/panel_content}
+
+{/if}<!--/end of if panel_content--> 
+  
+  <small><hr>We hope you enjoyed this article and found it useful. To leave feedback please follow the link to the article (at the top of this page) and leave your comments.</small>
+  </div><!--/#page-->
+ 
+  {/exp:shine_pdf:make}
+ 
+ 
+{/exp:channel:entries}

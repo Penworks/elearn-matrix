@@ -38,7 +38,10 @@
         </a>
         
       {exp:snippet total="600" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
-      <a href="{page_url}"><p class="panel-index-readmore">read more</a></p>
+      <a href="{page_url}"><p class="cat_sum_sm_readmore">read more</a></p>
+         
+           <div class="channel-rss">  <a href="{exp:perssonal:link path='weblearn/rss' channel='weblearn' feed_name='London Met Elearning Matrix Weblearn' feed_url='weblearn' feed_description='Elearning Weblearn at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a>Weblearn RSS</div>
+           
       </div><!--/.cat_sum_sm-->
       
    </div> <!--end of tab start -->
@@ -58,7 +61,7 @@
   {exp:snippet total="600" word="" ellipsis="..."}  {category_description}{/exp:snippet}
   
  <!-- &nbsp;&nbsp;-->
-   <a href="{path=weblearn/list}" class="panel-index-readmore">Browse the {category_name} section</a>
+   <a href="{path=weblearn/list}" class="cat_sum_sm_readmore">Browse the {category_name} section</a>
 
 </div><!--/.cat_sum_sm-->
       
@@ -71,31 +74,6 @@
 </div><!--/.panel-index-->
 
 
-<!--search & social div here-->
-<div id="index_search_social">    
-   <div id="search">
-   {exp:search:simple_form
-channel=""
-no_result_page="weblearn/no_results" result_page="weblearn/search"
-search_in="entries" channel="weblearn"}
-<input type="text" name="keywords" value="Search" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue; this.style.color = '#5B797B';"
-onfocus="this.value=''; this.style.color = '#848D81';" />
-<input type="submit" value="" class="button" />
-{/exp:search:simple_form}
-   </div><!--/#search-->
-   
-   <div id="social">
-      
-      <ul>
-         <li><a href="{exp:perssonal:link path='weblearn/weblearn-feed' channel='weblearn' feed_name='weblearn @ London Met' feed_url='weblearn' feed_description='Using weblearn at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a></li>
-         <!--<li><a href="http://feeds.feedburner.com/weblearn-londonmet"><img src="{global_bb_img}feed.png"></a></li>-->
-         <li><a href="http://www.facebook.com/pages/London-Met-Elearning/520318357984548"><img src="{site_url}themes/site_themes/default_site/images/facebook.png"></a></li>
-         <li><a href="http://vimeo.com/elearninglondonmet"><img src="{site_url}themes/site_themes/default_site/images/vimeo.png"></a></li>
-         <li><a href="https://twitter.com/elearninglondon"><img src="{site_url}themes/site_themes/default_site/images/twitter.png"></a></li>
-      </ul> 
-   </div><!--/#social-->
-
-</div><!--/#index_search_social-->
 
 
 

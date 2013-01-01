@@ -1,0 +1,50 @@
+<div class="page-footer">
+{exp:channel:entries}
+<!--- level-->   
+   <!-- <div class="level">
+    <h5>Level:</h5> {level}
+    </div>-->
+    <!--/.level-->
+    
+<!--- entry tags-->    
+    <div class="tagged">
+        <h5>Tagged:</h5>        
+      
+        {exp:tagger:tags entry_id="{entry_id}" backspace="7"}
+         {if tagger:no_tags}<p>No tags where found.</p>{/if} 
+        <span class="word"><a href="{site_url}index.php/tags/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> <!--&#124;-->
+       {/exp:tagger:tags}
+       
+           {!--
+           {exp:tagger:tags entry_id="{entry_id}"  backspace="7"}
+    {if tagger:no_tags}<p>No tags where found.</p>{/if} 
+    <a href="{site_url}index.php/tags/{tagger:urlsafe_tagname}">{tagger:tag_name}</a> &#124;
+{/exp:tagger:tags}  channel="{channel_name}"
+--}
+       
+    </div><!--/.tagged-->
+
+<!--- entry category info -->
+    <div class="cat-detail">
+        <h5>More in:</h5> 
+        {!--{categories backspace="3"}--}
+        {categories}
+        <a href="{path={segment_1}/list}"><span class="word">{category_name}</span></a> <!-- &#124;--> {/categories}  
+    </div><!--/.cat-detail-->
+
+<!--- related entries -->
+{if related_content}
+    {embed="embeds/_related"}  
+{/if}
+
+</div><!--/.page-footer-->
+
+<!--- pagination if needed-->
+{paginate}
+    <div class="paginate">
+        <br /><br/>
+    <span class="pagecount">Page {current_page} of {total_pages} pages</span>  {pagination_links}
+    </div><!--/.paginate-->
+{/paginate}
+
+{/exp:channel:entries}

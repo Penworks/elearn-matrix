@@ -1,4 +1,4 @@
-{embed="embeds/_html_head" my_page_title="Blackboard @ London Met/{segment_3}"}
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
 {embed="embeds/_head"}<!--this contains wrapper and skin openers-->
 
 <div id="page">
@@ -35,48 +35,46 @@
  <h2>{title}</h2>
  
     <div class="page-body">
-         
-{if image_slideshow}      
-    <!--[if lte IE 9]> 
-    {if image_slideshow}
-    {image_slideshow}
-    <img src="{image}" alt="{name}" title="{name}" width="165"/>
-    {/image_slideshow}
-     <br />
-     {/if}<![endif]-->
-     
-     
-    <!--[if lte IE 8]>
-    <![IGNORE[-->
-   {if image_slideshow}
-   {image_slideshow}
-   {exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" alt="{title}" debug="yes"}
-   {/image_slideshow}
-    {/if}
-    <![IGNORE[]]>
+ 
+<!--- embed media in the page body if it's there-->        
+{if embed_item}
+
+    <div class="media-embed">    
+    {embed="embeds/_embed_item"}
+    </div><!--/.media-embed-->
+
+<!--- otherwise place the single image or image slideshow into the page body-->
+{if:elseif image_slideshow}
+
+    {embed="embeds/_image_slideshow"}
+
+<!--- if there's no image_slideshow or media_embed, fallback to the image_promo, with overlay -->
+{if:else}
+
+ <!--[if lte IE 9]>
+    <style>.ie-fix-img-thmb {border:none;}</style>
     <![endif]-->
     
-{if:else}       
-    <!--[if lte IE 9]>
-    <style>.ie-fix-img-thmb { width:auto;border:none;}</style>
-    <![endif]-->
-     {image_slideshow} <img src="{image}" alt="{title}" title="{title}" height="128" width="" align="left" class="ie-fix-img-thmb"/> {/image_slideshow}
-     
+    <a href="#" rel="#link1">{exp:ed_imageresizer image="{image_promo}" maxWidth="450" maxHeight="350" cropratio="130:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="ie-fix-img-thmb"}</a>
+   
+    <!--overlay div for larger image_promo-->
+    
+  <div id="link1" class="simple_overlay">  
+      {exp:ed_imageresizer image="{image_promo}" maxWidth="600" maxHeight="500" alt="{name}"}
+ </div>
+
+<script>
+  $(function () {
+   $("a[rel]").overlay({mask: '#000'/*, effect: 'apple'*/});
+  });
+</script>
+  
 {/if}
 
 
-
-
-
-
-
-        
+     
     {summary}
-    
-    {if embed_item}
-    {embed_item}
-    {/if}
-    
+ 
     {page_body}
     
      {if list_items}
@@ -100,15 +98,9 @@
     </div><!--/.page-body-->
 
 <hr>
-
-    <div class="tag-footer">
-        
-        <strong>Tagged:</strong>
-{exp:tagger:tags entry_id="{entry_id}"  backspace="7"}
-    {if tagger:no_tags}<p>No tags where found.</p>{/if} 
-    <a href="{site_url}index.php/tags/blackboard/{tagger:urlsafe_tagname}">{tagger:tag_name}</a> &#124;
-{/exp:tagger:tags} 
-    </div>
+ 
+{embed="embeds/_page_foot"}
+ 
 
 {/exp:channel:entries}
 

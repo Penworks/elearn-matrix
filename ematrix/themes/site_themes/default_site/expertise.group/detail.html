@@ -1,7 +1,7 @@
 {embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
 {embed="embeds/_head"}
+<!--detail:expertise-->
 
-<!--this is the expertise channel entry detail-->
 <div id="page">   
 <!--back button-->
     <a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
@@ -76,72 +76,17 @@
 <br />
 <hr>
 
-<!--- being the page footer area-->
-<div class="tag-footer">
- 
-<!--- level-->   
-    <div class="level">
-    <h5>Level:</h5> {level}
-    </div><!--/.level-->
-    
-<!--- entry tags-->    
-    <div class="tagged">
-        <h5>Tagged:</h5>        
-        {!--{exp:tagger:tags entry_id="{entry_id}" channel="expertise" backspace="10"}--}        
-        {exp:tagger:tags entry_id="{entry_id}" channel="expertise"}
-         {if tagger:no_tags}<p>No tags where found.</p>{/if} 
-        <span class="word"><a href="/index.php/tags/expertise/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> <!--&#124;-->
-       {/exp:tagger:tags}
-    </div><!--/.tagged-->
+<!--- begin the page footer area-->
 
-<!--- entry category info -->
-    <div class="cat-detail">
-        <h5>More in:</h5> 
-        {!--{categories backspace="3"}--}
-        {categories}
-        <a href="{path=expertise/list}"><span class="word">{category_name}</span></a> <!-- &#124;--> {/categories}  
-    </div><!--/.cat-detail-->
+{embed="embeds/_page_foot"}
 
-<!--- related entries -->
-{if related_content}
-    {embed="embeds/_related"}  
+<!--is commenting on?-->
+
+{if commenting == "y"}
+{embed="embeds/_disqus"}
 {/if}
 
-</div><!--/.tag-footer-->
-
-<!--- pagination if needed-->
-{paginate}
-    <div class="paginate">
-        <br /><br/>
-    <span class="pagecount">Page {current_page} of {total_pages} pages</span>  {pagination_links}
-    </div><!--/.paginate-->
-{/paginate}
-
 {/exp:channel:entries}
-
-<div style="clear:both"></div>
-<hr>
-
-<!--DISQUS COMMENTING-->
-
-    <div id="disqus_thread">
-        
-    </div>
-        <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'weblearn-londonmet'; // required: forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
-<!--/ COMMENTING-->
 
 </div><!--/#page-->
 

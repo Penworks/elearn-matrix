@@ -1,205 +1,37 @@
-   {embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_2}/{segment_3}"}
-   {embed="embeds/_head"}<!--head above this contains wrapper and skin openers-->
-   <!--this is the site index-->
- 
- 
-     <!-- featured content panel slideshow -->
-    
-         <div class="panel-index">
-         
-         <div class="slider-wrapper theme-default">
-         
-         <div class="ribbon"></div>
-           
-         <div class="panel-index-features-slideshow">
-                     
-         <div id="slider_wide" class="nivoSlider">
-         
-         {exp:channel:entries channel="weblearn|tutorials|expertise" limit="5" disable="pagination|trackbacks|member_data" dynamic="no" orderby="latest" show_empty="no"}
-         
-          {if featured_content_slideshow == "y"}
-         <div class="panel-index-content-box">
-         
-         <a href="{channel_url}detail/{url_title}">
-            {exp:ed_imageresizer image="{image_promo}" maxWidth="955" maxHeight="170" cropratio="100:27" forceWidth="yes" forceHeight="yes" alt="{title}" title="#{entry_id}" debug="yes"}
-               </a>
-            
-         </div><!--/.panel-index-content-box-->
-            {/if}
-         {/exp:channel:entries}
-         
-         </div>  <!--/.nivoSlider-->
-         
-         {exp:channel:entries channel="weblearn|tutorials|expertise" limit="5" disable="pagination|trackbacks|member_data" dynamic="no" orderby="latest"}
-         
-         
-             
-         <div id="{entry_id}" class="nivo-html-caption">
-              {if featured_content_slideshow == "y"} 
-                     <p style="float:left; width:500px; height:auto;">{exp:snippet total="175" word="" ellipsis="..."}{page_body} 
-                     {/exp:snippet}
-                     <a href="{channel_url}detail/{url_title}"><b><i>read more >></i></b></a> <br /><br /> <a href="{path={channel_name}}">This entry is from the <b>{channel_title}</b> channel</a>
-                     </p>
-            <a href="{channel_url}detail/{url_title}">  <h3>{title} </h3></a>
-            {/if}
-         </div>
-         
-    
-         
-         
-         
-         {/exp:channel:entries}
-         
-         </div><!--/.panel-index-features-slideshow-->
-            
-         </div><!--/.slider-wrapper .theme-default-->
-   
-   </div><!--/.panel-index-->
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-   <div class="panel-index">
-   
-         <!-- tabs --> 
-         <ul class="css-tabs_index"> 
-         
-         {exp:channel:entries channel="assorted_content" entry_id="5"}
-         <!--Home entry not a category-->
-         <li><a href="#">{title}</a></li>
-         {/exp:channel:entries}
-         
-         <li><a href="#">Expertise</a></li>
-         <li><a href="#">Tutorials</a></li> 
-         <!--<li><a href="{path="weblearn"}">Weblearn</a></li>-->
-         <li><a href="#">Weblearn</a></li>
-         <li><a href="#">Blog</a></li>
-         </ul> 
-   
-   <div class="css-panes_index"> <!-- panes -->
-   
-   
-      <div> <!--tab start-->
-      {exp:channel:entries channel="assorted_content" entry_id="5"}
-      <!--Home is an entry not a category-->
-      <h3><a href="{page_url}">{title}</a></h3>
-      
-      <a href="{page_url}"><p><img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"/></a></p>
-      
-      <div class="cat_sum_sm">
-         
-        <!--[if lte IE 9]>
-      <style>#ie-fix-img-thmb { width:auto;border:none;}</style>
-      <![endif]-->   
-        <a href="{page_url}">
-         
-         {exp:ed_imageresizer image="{image_promo}" maxWidth="130" maxHeight="130" cropratio="100:100" alt="{title}" class="category_image_index" debug="yes"}
-        
-        <!--<img class="category_image_index" src="{global_image_url}exnetwork.png" alt="{channel_title}" title="{channel_title}" />-->
-        </a>
-      
-      <p class="short-desc">{exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}</p>
-      <a href="{page_url}"><p class="panel-index-readmore">read more</a></p>
-        
-      </div><!--/.cat_sum_sm-->
-      
-      </div> <!--end of tab start -->
-      {/exp:channel:entries}
+{exp:channel:category_heading channel="blog"}
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
+{embed="embeds/_head"}
 
-      
-      <div> <!--tab 1-->
-      {exp:channel:entries channel="expertise" style="linear" show_empty="yes"}
-      <!--stuff thats from expertise channel-->
-      <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
-      <a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
-      
-      <div class="cat_sum_sm">
-      <img class="category_image_index" src="{global_image_url}phonebook.png" alt="{channel_title}" title="{channel_title}" />
-      <p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
-      
-      <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
-      </div><!--/.cat_sum_sm-->
-      {/exp:channel:entries}  
-      </div> <!--end of tab 1 -->
 
-      
-      <div> <!--tab 2-->
-      {exp:channel:entries channel="tutorials" style="linear" show_empty="yes"}
-      <!--stuff thats from tutorial channel-->
-      <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
-      <a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
-      
-      <div class="cat_sum_sm">
-      <img class="category_image_index" src="{global_image_url}school.png" alt="{channel_title}" title="{channel_title}" />
-      <p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
-      
-      <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
-      </div><!--/.cat_sum_sm-->
-      {/exp:channel:entries}   
-      </div> <!--end of tab 2 -->
-      
-      
-      <div> <!--tab 3-->
-      {exp:channel:entries channel="weblearn" style="linear" show_empty="yes"}
-      <!--stuff thats from weblearn channel-->
-      <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
-      <a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
-      
-      <div class="cat_sum_sm">
-      <img class="category_image_index" src="{global_image_url}folder.png" alt="{channel_title}" title="{channel_title}" />
-      <p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
-      
-      <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
-      </div><!--/.cat_sum_sm-->
-      {/exp:channel:entries}  
-      </div> <!--end of tab 3 -->
+<div id="page">
+   
+<div id="entry">
+<h2>Blog & News</h2>
+{exp:channel:entries channel="blog" orderby="asc" limit="5"}
 
-     
-      <div> <!--tab 4-->
-      {exp:channel:entries channel="blog" style="linear" show_empty="yes"}
-      <!--stuff thats from weblearn channel-->
-      <h3><a href="{path={channel_name}}">{channel_title}</a></h3>
-      <a href="{path={channel_name}}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
-      
-      <div class="cat_sum_sm">
-      <img class="category_image_index" src="{global_image_url}home.png" alt="{channel_title}" title="{channel_title}" />
-      <p class="short-desc">{exp:channel:info channel="{channel_name}"}{exp:snippet total="220" word="" ellipsis="..."}{channel_description}{/exp:snippet}{/exp:channel:info}</p>
-      
-      <a href="{path={channel_name}}" class="panel-index-readmore">Browse the {channel_title} channel</a>
-      </div><!--/.cat_sum_sm-->
-      {/exp:channel:entries}  
-      </div> <!--end of tab 4 -->
-   
-   
-   </div> <!-- end of css-panes --> 
-   
-   </div><!--/.panel-index-->
-   
-     
-   
-   <script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.nivo.slider.pack.js"></script>
-   <script type="text/javascript">
-   $(window).load(function() {
-     $('#slider_wide').nivoSlider({
-     pauseOnHover: true,
-     effect: 'boxRain',
-     animSpeed: 1000,
-     pauseTime: 7000
-     });
-   });
-   </script> 
-   
-   
-   <script>$(".css-tabs_index:first").tabs(".css-panes_index:first > div"); </script>
-   
-   
-   {embed="embeds/_foot"}
+<h3>{title}</h3>
+<p class="pub_date">{entry_date format="%D, %F %d, %Y; %G:%i:%s %a"}</p>
+
+<p>{exp:snippet total="250" word="" ellipsis="..."}{page_body}{/exp:snippet}
+<a href="{channel_url}detail/{url_title}"><i> - read the full entry</i></a> | 
+<i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
+
+
+{paginate}
+<div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+{pagination_links}</div>
+{/paginate}
+
+{/exp:channel:entries}
+
+
+
+
+</div><!--end of #entry-->
+
+</div><!--/#page-->
+
+
+
+<!--embed the footer stuff-->
+{embed="embeds/_foot"}
