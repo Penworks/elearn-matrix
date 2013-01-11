@@ -30,8 +30,6 @@ class Social_update_mcp {
     
     var $settings = array();
     
-    var $providers = array('twitter', 'facebook', 'linkedin');
-    
     function __construct() { 
         // Make a local reference to the ExpressionEngine super object 
         $this->EE =& get_instance(); 
@@ -60,111 +58,156 @@ class Social_update_mcp {
 		{
 			$this->settings = unserialize($query->row('settings'));
 		}
+		
+		//var_dump($this->settings);
 
-        foreach ($this->providers as $provider)
+        foreach ($this->settings as $setting_name=>$setting)
         {
-            $data['name'] = lang($provider);
-            $data['provider'] = $provider;
+            if (is_array($setting) && $setting_name!='trigger_statuses'){
+			if (!empty($setting['app_id']) && !empty($setting['provider']))
+            {
+			$data = array();
+			$provider = $setting['provider'];
+            $app_id = $setting['app_id'];
+			$data['name'] = lang($provider).NBS.lang('for').NBS.$setting['username'].form_hidden("provider[$app_id]", $provider);
 
             $data['fields'] = array(	
                 0 => array(
                         'label'=>lang($provider.'_app_id'),
-                        'field'=>form_input("app_id[$provider]", (isset($this->settings['app_id'][$provider]) && $this->settings['app_id'][$provider]!='')?$this->settings['app_id'][$provider]:((isset($_SESSION['social_update'][$provider]['app_id']))?$_SESSION['social_update'][$provider]['app_id']:''), 'id="'.$provider.'_app_id" style="width: 80%"')
+                        'field'=>form_input("app_id[$app_id]", $app_id, ' style="width: 80%"')
                     ),
                 1 => array(
                         'label'=>lang($provider.'_app_secret'),
-                        'field'=>form_input("app_secret[$provider]", (isset($this->settings['app_secret'][$provider]) && $this->settings['app_secret'][$provider]!='')?$this->settings['app_secret'][$provider]:((isset($_SESSION['social_update'][$provider]['app_secret']))?$_SESSION['social_update'][$provider]['app_secret']:''), 'id="'.$provider.'_app_secret" style="width: 80%"')
+                        'field'=>form_input("app_secret[$app_id]", $setting['app_secret'], ' style="width: 80%"')
                     )
             );
             
             $data['fields'][2] = array(
                         'label'=>lang('token'),
-                        'field'=>form_hidden("token[$provider]", (isset($this->settings['token'][$provider]) && $this->settings['token'][$provider]!='')?$this->settings['token'][$provider]:((isset($_SESSION['social_update'][$provider]['oauth_token']))?$_SESSION['social_update'][$provider]['oauth_token']:''), 'id="'.$provider.'_token"')
+                        'field'=>form_hidden("token[$app_id]", $setting['token']).$setting['token']
             );
-            $data['fields'][2]['field'] .= (isset($this->settings['token'][$provider]) && $this->settings['token'][$provider]!='')?$this->settings['token'][$provider]:((isset($_SESSION['social_update'][$provider]['oauth_token']))?$_SESSION['social_update'][$provider]['oauth_token']:'');
+            
             
             if ($provider!='facebook')
             {
                 $data['fields'][3] = array(
                         'label'=>lang('token_secret'),
-                        'field'=>form_hidden("token_secret[$provider]", (isset($this->settings['token_secret'][$provider]) && $this->settings['token_secret'][$provider]!='')?$this->settings['token_secret'][$provider]:((isset($_SESSION['social_update'][$provider]['oauth_token_secret']))?$_SESSION['social_update'][$provider]['oauth_token_secret']:''), 'id="'.$provider.'_token_secret"')
+                        'field'=>form_hidden("token_secret[$app_id]", $setting['token_secret']).$setting['token_secret']
                     );
-                $data['fields'][3]['field'] .= (isset($this->settings['token_secret'][$provider]) && $this->settings['token_secret'][$provider]!='')?$this->settings['token_secret'][$provider]:((isset($_SESSION['social_update'][$provider]['oauth_token_secret']))?$_SESSION['social_update'][$provider]['oauth_token_secret']:'');
             }
             
             $display_name = '';
-            if (isset($this->settings['username'][$provider]) && $this->settings['username'][$provider]!='')
+            if (isset($setting['username']) && $setting['username']!='')
             {
                 $this->EE->db->select('display_name')
                             ->from('exp_social_update_accounts')
                             ->where('service', $provider)
-                            ->where('userid', $this->settings['username'][$provider])
+                            ->where('userid', $setting['username'])
                             ->limit(1);
                 $display_name_q = $this->EE->db->get();
                 if ($display_name_q->num_rows()>0)
                 {
                     $display_name = $display_name_q->row('display_name');
                 }
-            }
-            
-            if ($provider=='twitter')
-            {
-                if (isset($_SESSION['social_update'][$provider]['username']))
-                {
-                    $data['fields'][] = array(
-                        'label'=>lang('post_to'),
-                        'field'=>form_hidden("username[$provider]", $_SESSION['social_update'][$provider]['username'])
-                    );
-                }
-                else
-                {
-                    $data['fields'][] = array(
-                            'label'=>lang('post_to'),
-                            'field'=>($display_name!='')?'<a href="http://twitter.com/#!/'.$display_name.'" target="_blank">@'.$display_name.'</a>'.form_hidden("username[$provider]", $this->settings['username'][$provider]):''
-                        );
-                }
-            }
-            else if ($provider=='facebook')
-            {
-                if (isset($_SESSION['social_update'][$provider]['username']))
-                {
-                    $data['fields'][] = array(
-                        'label'=>lang('post_to'),
-                        'field'=>form_dropdown("username[$provider]", $_SESSION['social_update'][$provider]['username'])
-                    );
-                    if (count($_SESSION['social_update'][$provider]['username'])>1)
-                    {
-                        $data['fields'][] = array(
-                            'label'=>lang('post_as_page'),
-                            'field'=>form_checkbox("post_as_page[$provider]", 'y', false)
-                        );
-                    }
-                }
-                else if (isset($this->settings['username'][$provider]) && $this->settings['username'][$provider]!='')
-                {
-                    if (isset($this->settings['post_as_page'][$provider]) && $this->settings['post_as_page'][$provider]=='y')
-                    {
-                        $display_name .= ' - '.lang('post_as_page');
-                    }
-                    $data['fields'][] = array(
-                        'label'=>lang('post_to'),
-                        'field'=>'<a href="http://www.facebook.com/profile.php?id='.$this->settings['username'][$provider].'" target="_blank">'.$display_name.'</a>'.form_hidden("username[$provider]", $this->settings['username'][$provider]).form_hidden("post_as_page[$provider]", @$this->settings['post_as_page'][$provider])
-                    );
-                }
-                else
-                {
-                    $data['fields'][] = array(
-                        'label'=>lang('post_to'),
-                        'field'=>''
-                    );
-                }
+
+                switch ($provider)
+        		{
+	                case 'twitter':
+						$data['fields'][] = array(
+		                        'label'	=>	lang('post_to'),
+		                        'field'	=>	'<a href="http://twitter.com/#!/'.$display_name.'" target="_blank">@'.$display_name.'</a>'.form_hidden("username[$app_id]", $setting['username'])
+		                    );
+      				break;
+      				case 'facebook':
+      					$data['fields'][] = array(
+			                    'label'	=>	lang('post_to'),
+			                    'field'	=>	'<a href="http://www.facebook.com/profile.php?id='.$setting['username'].'" target="_blank">'.$display_name.'</a>'.form_hidden("username[$app_id]", $setting['username'])
+			                );
+           				if ($setting['post_as_page']=='y')
+           				{
+	           				$data['fields'][] = array(
+		                        'label'=>lang('post_as_page'),
+		                        'field'=>form_checkbox("post_as_page[$app_id]", 'y', true, ' readonly="readonly"')
+		                    );
+                		}
+              		break;
+                 }
+                
             }
 
             $providers_view .= $this->EE->load->view('provider', $data, TRUE);
+            
+            }
+            }
         }
+        
+        $data = array();
+		$data['name'] = lang('new_app');
+		$data['new_app'] = 'add';
+
+        $select_field_attrs = 'id="new_app_provider"'.((isset($_SESSION['social_update']['app_id']))?' readonly="readonly"':'');
+		$provider = (isset($_SESSION['social_update']['provider']))?$_SESSION['social_update']['provider']:$this->EE->input->get('provider');
+		$data['fields'] = array(	
+            0 => array(
+                    'label'=>lang('provider'),
+                    'field'=>form_dropdown("provider[new_app]", array('twitter'=>lang('twitter'), 'facebook'=>lang('facebook'), 'linkedin'=>lang('linkedin')), $provider, $select_field_attrs)
+                )
+            );
+        
+        if ($provider!='')
+        {
+			$data['new_app'] = 'authorize';
+			$data['fields'][] = array(
+	                    'label'=>lang($provider.'_app_id'),
+	                    'field'=>form_input("app_id[new_app]", (isset($_SESSION['social_update']['app_id']))?$_SESSION['social_update']['app_id']:'', 'id="new_app_app_id" style="width: 80%"')
+	                );
+	                
+	        $data['fields'][] = array(
+	                    'label'=>lang($provider.'_app_secret'),
+	                    'field'=>form_input("app_secret[new_app]", (isset($_SESSION['social_update']['app_secret']))?$_SESSION['social_update']['app_secret']:'', 'id="new_app_app_secret" style="width: 80%"')
+	                );
+	        
+			if (isset($_SESSION['social_update']['oauth_token']))
+        	{ 
+	         	$data['fields'][] = array(
+	                        'label'=>lang('token'),
+	                        'field'=>form_hidden("token[new_app]", (isset($_SESSION['social_update']['oauth_token']))?$_SESSION['social_update']['oauth_token']:'', 'id="new_app_token" style="width: 80%"').$_SESSION['social_update']['oauth_token']
+           		);
+           		if ($provider!='facebook')
+	            {
+	                $data['fields'][] = array(
+	                        'label'=>lang('token_secret'),
+	                        'field'=>form_hidden("token_secret[new_app]", (isset($_SESSION['social_update']['oauth_token_secret']))?$_SESSION['social_update']['oauth_token_secret']:'', 'id="new_app_token_secret"').$_SESSION['social_update']['oauth_token_secret']
+	                    );
+	            }
+	            
+	            $usernames = (is_array($_SESSION['social_update']['username']))?$_SESSION['social_update']['username']:array($_SESSION['social_update']['username']=>$_SESSION['social_update']['username']);
+	            
+	            $data['fields'][] = array(
+                        'label'=>lang('post_to'),
+                        'field'=>form_dropdown("username[new_app]", $usernames)
+                );
+                if ($provider=='facebook' && count($usernames)>1)
+                {
+                    $data['fields'][] = array(
+                        'label'=>lang('post_as_page'),
+                        'field'=>form_checkbox("post_as_page[new_app]", 'y', false)
+                    );
+                }
+	                        
+           }  
+         }
+         
+         $providers_view .= $this->EE->load->view('provider', $data, TRUE);
+
+        
 
         $vars = array();
         $vars['providers'] = $providers_view;
+        
+        $act = $this->EE->db->query("SELECT action_id FROM exp_actions WHERE class='Social_update' AND method='post_delayed'");
+        $cron_job_url = trim($this->EE->config->item('site_url'), '/').'/?ACT='.$act->row('action_id');
+        $vars['settings']['cron_job_url']	= $cron_job_url;
         
         $this->EE->load->model('status_model');
         $query = $this->EE->status_model->get_statuses();
@@ -183,14 +226,25 @@ class Social_update_mcp {
 		}
 		
 		$selected_statuses = (isset($this->settings['trigger_statuses'])?$this->settings['trigger_statuses']:array('open'));
-
+		
 		$vars['settings']['trigger_statuses']	= '';
 		foreach ($statuses as $status=>$lang)
 		{
 			$vars['settings']['trigger_statuses'] .= form_checkbox('trigger_statuses[]', $status, in_array($status, $selected_statuses)).NBS.NBS.$lang.BR.BR;
 		}
+		
+		$url_options = array(
+			'url_title'=>lang('url_auto_url_title'), 
+			'entry_id'=>lang('url_auto_entry_id'),
+			'channel_url' => lang('channel_url'),
+			'site_url' => lang('site_url')
+		);
+
+		$vars['settings']['default_url_type']	= form_dropdown('default_url_type', $url_options, (isset($this->settings['default_url_type'])?$this->settings['default_url_type']:'url_title'));
         
         $vars['settings']['disable_javascript'] = form_checkbox('disable_javascript', 'y', ((isset($this->settings['disable_javascript']) &&  $this->settings['disable_javascript']=='y')?true:false));
+        
+        $vars['settings']['force_url_shortening'] = form_checkbox('force_url_shortening', 'y', ((isset($this->settings['force_url_shortening']) &&  $this->settings['force_url_shortening']=='y')?true:false));
         
         $url_shortening_services = array(
                                     'googl'=>lang('googl'),
@@ -253,35 +307,62 @@ class Social_update_mcp {
     	
     	unset($_POST['submit']);
         
-        foreach ($this->providers as $provider)
+        if (isset($_POST["app_id"]))
         {
-            if ($_POST["app_id"]["$provider"]=="")
+	        foreach ($_POST["app_id"] as $app_id=>$fields)
+	        {
+	            if ($app_id!='new_app' && $_POST['app_id']["$app_id"]!="")
+	            {
+	                $data["$app_id"] = array(
+						'provider'		=> $_POST["provider"]["$app_id"],
+						'app_id'		=> $_POST["app_id"]["$app_id"],
+	                	'app_secret'	=> $_POST["app_secret"]["$app_id"],
+	                	'token'			=> $_POST["token"]["$app_id"],
+	                	'token_secret'	=> (isset($_POST["token_secret"]["$app_id"]))?$_POST["token_secret"]["$app_id"]:'',
+	                	'username'		=> (isset($_POST["username"]["$app_id"]))?$_POST["username"]["$app_id"]:'',
+	                	'post_as_page'	=> isset($_POST["post_as_page"]["$app_id"])?$_POST["post_as_page"]["$app_id"]:''
+					);
+	            }
+	        }
+        }
+        
+        if (isset($_POST['token']['new_app']) && $_POST['token']['new_app']!='' && $_POST['app_id']['new_app']!='')
+        {
+			$app_id = $_POST['app_id']['new_app'];
+			if (isset($_POST["post_as_page"]["new_app"]) && $_POST["post_as_page"]["new_app"]=='y')
             {
-                unset($_POST["app_secret"]["$provider"]);
-                unset($_POST["token"]["$provider"]);
-                unset($_POST["token_secret"]["$provider"]);
-                unset($_POST["username"]["$provider"]);
-                unset($_POST["post_as_page"]["$provider"]);
-            }
-            else
-            {
-                if (isset($_POST["post_as_page"]["$provider"]) && $_POST["post_as_page"]["$provider"]=='y' && isset($_SESSION['social_update']))
+                $all_tokens = $_SESSION['social_update']['all_tokens'];
+                if (!empty($all_tokens) && isset($all_tokens[$_POST["username"]["new_app"]]) && $all_tokens[$_POST["username"]["new_app"]]!='')
                 {
-                    $all_tokens = $_SESSION['social_update'][$provider]['all_tokens'];
-                    if (!empty($all_tokens) && isset($all_tokens[$_POST["username"]["$provider"]]) && $all_tokens[$_POST["username"]["$provider"]]!='')
-                    {
-                        $_POST["token"]["$provider"] = $all_tokens[$_POST["username"]["$provider"]];
-                    }
+                    $_POST["token"]["new_app"] = $all_tokens[$_POST["username"]["new_app"]];
                 }
             }
+			$data["$app_id"] = array(
+				'provider'		=> $_POST["provider"]["new_app"],
+				'app_id'		=> $_POST["app_id"]["new_app"],
+            	'app_secret'	=> $_POST["app_secret"]["new_app"],
+            	'token'			=> $_POST["token"]["new_app"],
+            	'token_secret'	=> (isset($_POST["token_secret"]["new_app"]))?$_POST["token_secret"]["new_app"]:'',
+            	'username'		=> (isset($_POST["username"]["new_app"]))?$_POST["username"]["new_app"]:'',
+            	'post_as_page'	=> isset($_POST["post_as_page"]["new_app"])?$_POST["post_as_page"]["new_app"]:''
+			);
+			
         }
+        
+        $data['trigger_statuses'] = isset($_POST['trigger_statuses'])?$_POST['trigger_statuses']:array();
+		$data['disable_javascript'] = isset($_POST['disable_javascript'])?$_POST['disable_javascript']:'';
+		$data['url_shortening_service'] = $_POST['url_shortening_service'];
+		$data['force_url_shortening'] = isset($_POST['force_url_shortening'])?$_POST['force_url_shortening']:'';
+		$data['default_url_type'] = $_POST['default_url_type'];
 		
-		$data = array(
+		
+		
+		$insert = array(
 			'site_id'	=> $this->EE->config->item('site_id'),
-			'settings'	=> serialize($_POST)
+			'settings'	=> serialize($data)
 		);
 
-    	$this->EE->db->replace('social_update_settings', $data);
+    	$this->EE->db->replace('social_update_settings', $insert);
     	
     	$this->EE->session->set_flashdata(
     		'message_success',
@@ -330,13 +411,13 @@ class Social_update_mcp {
         @session_start();
         unset($_SESSION['social_update']);
         $_SESSION['social_update']['provider'] = $provider;
-        $_SESSION['social_update'][$provider]['app_id'] = $this->EE->input->get_post('app_id');
-        $_SESSION['social_update'][$provider]['app_secret'] = $this->EE->input->get_post('app_secret');
+        $_SESSION['social_update']['app_id'] = $this->EE->input->get_post('app_id');
+        $_SESSION['social_update']['app_secret'] = $this->EE->input->get_post('app_secret');
 
         $access_token_url = $this->EE->config->item('cp_url').'?D=cp&C=addons_modules&M=show_module_cp&module=social_update&method=access_token';
         $response = $this->EE->$lib->get_request_token($access_token_url);
         
-        $_SESSION['social_update'][$provider]['token_secret'] = $response['token_secret'];
+        $_SESSION['social_update']['token_secret'] = $response['token_secret'];
 
         return $this->EE->functions->redirect($response['redirect']);
     }
@@ -352,34 +433,34 @@ class Social_update_mcp {
         
         $provider = $_SESSION['social_update']['provider'];
         $lib = $provider.'_oauth';
-        $params = array('key'=>$_SESSION['social_update'][$provider]['app_id'], 'secret'=>$_SESSION['social_update'][$provider]['app_secret']);
+        $params = array('key'=>$_SESSION['social_update']['app_id'], 'secret'=>$_SESSION['social_update']['app_secret']);
                 
         $this->EE->load->library($lib, $params);
         if ($provider=='facebook')
         {
             $access_token_url = $this->EE->config->item('cp_url').'?D=cp&C=addons_modules&M=show_module_cp&module=social_update&method=access_token';
             $response = $this->EE->$lib->get_access_token($access_token_url, $this->EE->input->get('code'));
-            $_SESSION['social_update'][$provider]['oauth_token'] = $response['access_token'];
-            $_SESSION['social_update'][$provider]['username'] = $response['pages'];
-            $_SESSION['social_update'][$provider]['all_tokens'] = $response['tokens'];
+            $_SESSION['social_update']['oauth_token'] = $response['access_token'];
+            $_SESSION['social_update']['username'] = $response['pages'];
+            $_SESSION['social_update']['all_tokens'] = $response['tokens'];
             $display_names = $response['pages'];
         }
         else if ($provider=='twitter')
         {
-            $response = $this->EE->$lib->get_access_token(false, $_SESSION['social_update'][$provider]['token_secret']);
-            $_SESSION['social_update'][$provider]['oauth_token'] = $response['oauth_token'];
-            $_SESSION['social_update'][$provider]['oauth_token_secret'] = $response['oauth_token_secret'];
-            $_SESSION['social_update'][$provider]['username'] = $response['screen_name'];
-            $_SESSION['social_update'][$provider]['all_tokens'] = array($response['screen_name']=>$response['oauth_token']);
+            $response = $this->EE->$lib->get_access_token(false, $_SESSION['social_update']['token_secret']);
+            $_SESSION['social_update']['oauth_token'] = $response['oauth_token'];
+            $_SESSION['social_update']['oauth_token_secret'] = $response['oauth_token_secret'];
+            $_SESSION['social_update']['username'] = $response['screen_name'];
+            $_SESSION['social_update']['all_tokens'] = array($response['screen_name']=>$response['oauth_token']);
             $display_names = array($response['screen_name']=>$response['screen_name']);
         }
         else
         {
-			$response = $this->EE->$lib->get_access_token(false, $_SESSION['social_update'][$provider]['token_secret']);
-            $_SESSION['social_update'][$provider]['oauth_token'] = $response['oauth_token'];
-            $_SESSION['social_update'][$provider]['oauth_token_secret'] = $response['oauth_token_secret'];
-            $_SESSION['social_update'][$provider]['username'] = $response['screen_name'];
-            $_SESSION['social_update'][$provider]['all_tokens'] = array($response['screen_name']=>$response['oauth_token']);
+			$response = $this->EE->$lib->get_access_token(false, $_SESSION['social_update']['token_secret']);
+            $_SESSION['social_update']['oauth_token'] = $response['oauth_token'];
+            $_SESSION['social_update']['oauth_token_secret'] = $response['oauth_token_secret'];
+            $_SESSION['social_update']['username'] = $response['screen_name'];
+            $_SESSION['social_update']['all_tokens'] = array($response['screen_name']=>$response['oauth_token']);
             $display_names = array($response['screen_name']=>$response['screen_name']);
         }
         

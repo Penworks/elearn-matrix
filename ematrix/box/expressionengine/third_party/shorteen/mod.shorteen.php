@@ -53,6 +53,11 @@ class Shorteen {
         {
             $service = $this->EE->TMPL->fetch_param('service');
             $url = $this->EE->TMPL->parse_globals($this->EE->TMPL->fetch_param('url'));
+            // Path variable: {path=group/template}		
+			if (strpos($url, 'path=') !== FALSE)
+			{
+				$url = preg_replace_callback("/".LD."\s*path=(.*?)".RD."/", array(&$this->EE->functions, 'create_url'), $url);
+			}
             if ($url=='') $url = $this->EE->functions->fetch_current_uri();
         }
         if ($this->EE->input->get('service')!='') $service = $this->EE->input->get('service');

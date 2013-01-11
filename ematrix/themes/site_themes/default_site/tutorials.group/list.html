@@ -11,60 +11,54 @@
 <!--category heading and summary stuff-->
 {exp:channel:category_heading channel="tutorials"}
 
-<h2>everything categorized in <i style="color:#30B9B7;">'{category_name}'</i></h2>
+<h2>everything in <span class="cat-name">'{category_name}'</span></h2>
+
+<div class="page-body">
   
 <div class="cat_summary">
-<img src="{category_image}" class="category_image" height="{height}" width="{width}" align="left"/>
-{if category_description}
-<div class="cat-sum-small">{category_description}</div>
-{/if}
-<h4>See below for everything filed in the<i style="color:#30B9B7;text-transform:lowercase;font-weight:600;">'{category_name}'</i> section:</h4>
+  
+{exp:ed_imageresizer image="{category_image}" maxWidth="150" maxHeight="100" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="category_image"}
 
-{/exp:channel:category_heading}
-</div><!--/.cat_summary-->
-
+    {if category_description}
+    <div class="cat-sum-small">{category_description}</div>
+        {/if}
+        <h4>See below for everything filed in the <span class="cat-name">'{category_name}'</span> section.</h4>
+        
+        {/exp:channel:category_heading}
+    </div><!--/.cat_summary-->
+    
+    
 
 <!--category entries stuff-->
-<div id="cat-entry-holder">
   
-{exp:channel:entries channel="tutorials" disable="member_data|trackbacks" orderby="date"  limit="9" dynamic=“no” paginate="bottom"}
+{exp:channel:entries channel="tutorials" disable="member_data|trackbacks" orderby="date" limit="7" dynamic=“no” paginate="bottom"}
 
-<script type="text/javascript">
-$(function(){
-  $('#cat-entry-holder').masonry({
-    // options
-    itemSelector : '.cat_sum_entry',
-  //columnWidth : 250
-  });
-});
-</script>
+{if no_results}
+<div class="list_entry">
+<span class="no-results">Sorry, no results for this category - try another!</span>
+</div>
+{/if}
 
-<div class="cat_sum_entry">
 
-    <span class="pub_date_sm">{entry_date format="%M %d, %Y"}</span>
-    <a href="{url_title_path=tutorials/detail}"> <h3>{title}</h3></a>
-    
-{if image_promo}
+<div class="list_entry">
 
       <!--[if lte IE 9]>
-    <style>.ie-fix-img-thmb { width:auto;border:none;}</style>
-    <![endif]-->   
-    <a href="{url_title_path=tutorials/detail}">{exp:ed_imageresizer image="{image_promo}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}    
-    </a>
-    
-{if:else}
+<style>#ie-fix-img-thmb { width:auto;border:none;}</style>
+<![endif]-->   
+        <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+      {/image_slideshow}
+        </a>
+        
+<a href="{channel_url}detail/{url_title}"><h3>{title}</h3></a>
+<p class="pub_date">{entry_date format="%D, %F %d, %Y"}</p>
 
-    <div class="no-image-thmb">Sorry, no thumbnail image available</div>
-    
-{/if}    
-    <p>{exp:snippet total="150" word="" ellipsis="..."}{page_body}{/exp:snippet} <a href="{url_title_path=tutorials/detail}"><b><i>[read the full entry]</i></a></b></p>
-    
-    </div><!--/.cat_sum_entry-->
-    {/exp:channel:entries}
-</div><!--/#cat-entry-holder-->
+<p>{exp:snippet total="250" word="" ellipsis="..."}{page_body}{/exp:snippet}
+<a href="{channel_url}detail/{url_title}"><i> - read the full entry</i></a> | 
+<i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
 
-<!--pagination -->
-{exp:channel:entries channel="tutorials" disable="member_data|trackbacks" orderby="title" sort="asc" limit="9" dynamic=“no” paginate="bottom"}
+</div><!--/.blog_entry-->
+
+<!--pagination-->
 
 {if total_results <= '1'}
     {paginate}
@@ -72,9 +66,13 @@ $(function(){
     {pagination_links}</div>
     {/paginate}
 {/if}
-</div><!--/#page-->
 
 {/exp:channel:entries}
+
+</div><!--/.page-body-->
+
+
+</div><!--/#page-->
 
 <!--embed the footer stuff-->
 {embed="embeds/_foot"}

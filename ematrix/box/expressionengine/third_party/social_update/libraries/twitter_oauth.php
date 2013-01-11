@@ -9,7 +9,7 @@ class twitter_oauth
     const AUTHORIZE_URI = '/oauth/authenticate';
     const REQUEST_URI   = '/oauth/request_token';
     const ACCESS_URI    = '/oauth/access_token';
-    const USERINFO_URI    = '/users/show.json';
+    const USERINFO_URI    = '/1/users/show.json';
     
     //Array that should contain the consumer secret and
     //key which should be passed into the constructor.

@@ -111,6 +111,34 @@ class linkedin_oauth
         //need the secret key if you use HMAC-SHA1 signatures.)
         parse_str($response, $oauth);
         //var_dump($oauth);
+        
+        require_once(PATH_THIRD.'social_update/libraries/inc/OAuthSimple.php');
+        
+        $baseurl = self::SCHEME.'://'.self::HOST.'/v1/people/~:(first-name,last-name)';
+    
+        $oauth_obj = new OAuthSimple();
+        $header = $oauth_obj->sign(Array('path'=>$baseurl,
+                        'parameters'=>Array('format'=>'json'),
+                        'signatures'=> Array('consumer_key'=>$this->_consumer['key'],
+                                            'shared_secret'=>$this->_consumer['secret'],
+                                            'access_token'=>$oauth['oauth_token'],
+                                            'access_secret'=>$oauth['oauth_token_secret'])));
+                                            
+        $response = $this->_connect($header['signed_url'], 'Authorization: '.$header['header']);
+        
+        if (function_exists('json_decode'))
+        {
+            $rawdata = json_decode($response);
+        }
+        else
+        {
+            require_once(PATH_THIRD.'social_login_pro/libraries/inc/JSON.php');
+            $json = new Services_JSON();
+            $rawdata = $json->decode($response);
+        }
+
+        $oauth['screen_name'] = $rawdata->firstName.' '.$rawdata->lastName;
+        
         //Return the token and secret for storage
         return $oauth;
     }
@@ -171,16 +199,51 @@ class linkedin_oauth
         curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
         curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 2);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HEADER, true);
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: '.$oauth['header']));
         curl_setopt($ch, CURLOPT_HTTPHEADER, array("Content-Type: application/xml"));
         
         curl_setopt($ch,CURLOPT_POST,true);
         curl_setopt($ch,CURLOPT_POSTFIELDS,$data);
 
-        $response = curl_exec($ch);
+        curl_exec($ch);
+        $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-		
-        return true;
+        
+        $response = array();
+        
+        if ($code==201)
+        {
+	        $baseurl = self::SCHEME.'://'.self::HOST.'/v1/people/~:(id,current-share)';
+	        $oauth_obj = new OAuthSimple();
+	        $header = $oauth_obj->sign(Array('path'=>$baseurl,
+                        'parameters'=>Array('format'=>'json'),
+                        'signatures'=> Array('consumer_key'=>$this->_consumer['key'],
+	                                            'shared_secret'=>$this->_consumer['secret'],
+	                                            'access_token'=>$oauth_token,
+	                                            'access_secret'=>$oauth_token_secret)));
+	                                            
+	        $response = $this->_connect($header['signed_url'], 'Authorization: '.$header['header']);
+
+	        if (function_exists('json_decode'))
+	        {
+	            $rawdata = json_decode($response);
+	        }
+	        else
+	        {
+	            require_once(PATH_THIRD.'social_update/libraries/inc/JSON.php');
+	            $json = new Services_JSON();
+	            $rawdata = $json->decode($response);
+	        }
+	        
+	        $response = array(
+				'remote_user' => $rawdata->currentShare->author->id,
+				'remote_post_id' => $rawdata->currentShare->id
+			);
+
+   		}
+
+        return $response;
 
     }    
     

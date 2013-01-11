@@ -4,36 +4,55 @@
 
 <!--browse by list-->
 <div id="page">
+    
+    <!--back button-->
+<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
-{exp:channel:category_heading channel="expertise|weblearn|tutorials|site"}
+{exp:channel:category_heading channel="expertise|weblearn|tutorials|blog"}
 
 <h2>Browsing: <i>{category_name}</i></h2>
+
+<div class="page-body">
+    
+    <div class="cat_summary">
+
 <img src="{category_image}" class="category_image_sm" height="{height}" width="{width}" align="left"/>{if category_description}
 <div class="cat-sum-small"><p><i>{category_description}</i></p></div>
 {/if}
 <br />
+
+    </div>
 {/exp:channel:category_heading}
 
 <!--list the results-->
 
 <div style="clear:left"></div>
 
-{exp:channel:entries channel="expertise|weblearn|tutorials|site" disable="member_data|trackbacks" orderby="date" sort="desc" limit="10" dynamic=“no” paginate="bottom"}
+{exp:channel:entries channel="expertise|weblearn|tutorials|blog" disable="member_data|trackbacks" orderby="date" sort="desc" limit="7" dynamic=“no” paginate="bottom"}
 
-<div id="entry">
+{if no_results}
+<div class="list_entry">
+<span class="no-results">Sorry, no results for this category - try another!</span>
+</div>
+{/if}
 
-<h3>{title}</h3>
-<p class="pub_date">{entry_date format="%D, %F %d, %Y; %G:%i:%s %a"}</p>
-<a href="{channel_url}detail/{url_title}"><img src="{img_upload_thumb}" alt="{title}" title="{title}" height="{height}" width="{width}" align="left" /></a>
-<p>{exp:snippet total="300" word="true" ellipsis="…"}{page_body}{/exp:snippet}<a href="{channel_url}detail/{url_title}"><i>[read the full entry]</i></a></p>
+<div class="list_entry">
+    
+<a href="{channel_url}detail/{url_title}">
+{image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+      {/image_slideshow}
+</a>
+
+<a href="{channel_url}detail/{url_title}"><h3>{title}</h3><a>
+<p class="pub_date">{entry_date format="%D, %F %d, %Y"}</p>
+<p>{exp:snippet total="250" word="" ellipsis="..."}{page_body}{/exp:snippet}<a href="{channel_url}detail/{url_title}"><i>[read the full entry]</i></a></p>
 
 <p><i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
 
 </div><!--end of entry panel-->
 
-
-
 <div style="clear:left;"></div>
+
 {if total_results <= '1'}
 {paginate}
 <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
@@ -43,6 +62,8 @@
 
 {/exp:channel:entries}
 
-</div>
+</div><!--/.page-body-->
+
+</div><!--/#page-->
 
 {embed="embeds/_foot"}

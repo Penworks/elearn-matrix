@@ -1,7 +1,7 @@
 {exp:channel:entries channel="expertise|tutorials|weblearn|main" disable="member_data|trackbacks" limit="1"}
 
 
-{if segment_1 == "weblearn"}
+
 
 
 {if panel_content}
@@ -38,31 +38,6 @@
 
 {/exp:channel:entries }
 
-{if:else}
-
-
-{if panel_content}
-
-{panel_content}
-
-<div id="panel_content">
-{exp:ed_imageresizer image="{panel_image}" maxWidth="300" maxHeight="300" alt="{image_title}"}
-
-<h4>{panel_title}</h4>
-{!--{exp:tagstripper:tagsToStrip tags='div|p'}{if panel_embed}{panel_embed}{/panel_embed}{/if}{/exp:tagstripper:tagsToStrip}--}
-{if panel_embed}{panel_embed}{/panel_embed}{/if}
-{if panel_text}<p>{panel_text} </p>{/panel_text}{/if}
-{panel_file} <a href="{url}">Download File</a>, {/panel_file} 
-</div>
-{/panel_content}
-
-<div style="clear:both;"></div>
-{/if}<!--/end of if panel_content-->
-
-{/exp:channel:entries }
-
-
-
- {/if}<!--/end of if else-->
+<!--/end of if else-->
 
 

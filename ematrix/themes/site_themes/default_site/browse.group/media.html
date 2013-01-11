@@ -4,18 +4,24 @@
 <!--browse by category group - media -->
 
 <div id="page">
+    
+        <!--back button-->
+<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
 <h2>Browse by Media</h2>
-
-<div class="page-body">
-
-    <div class="browse_cat_summary">
+   <div class="browse_cat_summary">
         
     <p class="intro">Everything in Media is sorted into types of media used, whether it's resources, further reading, examples or tutorials.</p>
     
     </div><!--/.browse_cat_summary-->
+    
+    
+<div class="page-body">
 
-{exp:categories category_group_id='5' show_empty="yes" style="linear"}
+ 
+
+
+{exp:categories category_group_id='5' show_empty="no" style="linear"}
 
     <div class="browse_cat">
     
@@ -25,20 +31,20 @@
         {if has_children}
         <ul class="browse_list">
         {children}
-        <li class="browse_list_entry"><a title="{child_category_name}" href="{path=blog/category}/{child_category_url_title}">{child_category_name}</a></li>
+        <li><a title="{child_category_name}" href="{path=blog/category}/{child_category_url_title}">{child_category_name}</a></li>
         {/children}
         </ul>
         {/if}
         
         <ul class="browse_list">
-        {exp:channel:entries channel='' category="{category_id}" dynamic='off' limit='3'sort="desc" orderby="date" class="browse_cat_image"}
+        {exp:channel:entries channel='' category="{category_id}" dynamic='off' limit='3' sort="desc" orderby="date" class="browse_cat_image"}
         
-        <li class="browse_list_entry"><a href="{channel_url}detail/{url_title}">
-         {exp:ed_imageresizer image="{image_promo}" maxWidth="90" maxHeight="90" alt="{title}" debug="yes"}
-        
-        <h4>{title}</h4></a>
-        <p>{exp:snippet total="200" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
-        <i><strong>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></strong></p></li>
+        <li>
+        <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="100" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes" class="browse_cat_image"}{/image_slideshow}</a>
+        <a href="{channel_url}detail/{url_title}"><h4>{title}</h4></a>
+       {exp:snippet total="200" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
+        <i><strong>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></strong>
+        </li>
         
         {/exp:channel:entries}
         </ul>

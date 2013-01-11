@@ -1,10 +1,10 @@
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{embed="embeds/_html_head" my_page_title="{segment_3}"}
 {embed="embeds/_head"}
 <!--detail:weblearn-->
 
 <div id="page">   
 <!--back button-->
-    <a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
 <!--- author, date and snapshot summary fields-->
     {exp:channel:entries channel="weblearn" disable="member_data|trackbacks" limit="1" backspace="2"}
@@ -18,8 +18,6 @@
 
 <!--- social media share and print buttons-->
 {embed="embeds/_print_share"}
-
-<!--<a href="{url_title_path=weblearn/pdf}"><img src="{global_image_url}bb/doc_pdf.png" width="40" height="40"/></a>-->
 
 <!---all page content fields-->
 <div class="page-body">
@@ -45,7 +43,7 @@
 
 <!--- page body field-->
 {if page_body}
-    {!--{page_body}--}
+  
     {exp:tagstripper:tagsToStrip tags='div|p'}{page_body}{/exp:tagstripper:tagsToStrip}
 {/if}
 
@@ -71,7 +69,9 @@
 {/if}
 
 <!--- list items field-->
+{if list_items}
 {embed="embeds/_list_items"}
+{/if}
 
 <br />
 <hr>
@@ -80,11 +80,16 @@
 
 {embed="embeds/_page_foot"}
 
+<div style="clear:both"></div>
+<hr>
+
 <!--is commenting on?-->
 
 {if commenting == "y"}
 {embed="embeds/_disqus"}
 {/if}
+
+
 
 
 {/exp:channel:entries}

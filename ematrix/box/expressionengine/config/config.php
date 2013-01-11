@@ -14,7 +14,7 @@
 $config['app_version'] = '253';
 $config['install_lock'] = "";
 $config['license_number'] = "9252-5714-3393-0676";
-$config['debug'] = '1';
+$config['debug'] = "2";
 $config['cp_url'] = "http://localhost:8888/ematrix_site/ematrix/admin.php";
 $config['doc_url'] = "http://expressionengine.com/user_guide/";
 $config['is_system_on'] = "y";

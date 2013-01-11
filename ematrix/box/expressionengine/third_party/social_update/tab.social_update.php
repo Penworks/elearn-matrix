@@ -49,13 +49,12 @@ class Social_update_tab {
 	                    ->limit(1);
 	        $query = $this->EE->db->get('social_update_settings');
 		} 
-		$this->settings = unserialize($query->row('settings'));
+		$this->settings = ($query->num_rows()>0)?unserialize($query->row('settings')):array();
 	}
 
 	function publish_tabs($channel_id, $entry_id = '')
 	{
-
-		$tab_settings = array();
+		return array();
 		
 		$theme_folder_url = trim($this->EE->config->item('theme_folder_url'), '/').'/third_party/social_update/';
 		
@@ -136,6 +135,7 @@ $('#social_update__social_update_linkedin').maxlength({
            'field_text_direction' => 'ltr',
            'field_type' => 'select'
         );
+        $tab_settings['string_override'] = lang('social_update_is_now_fieldtype');
         
         foreach ($this->providers as $provider)
         {
@@ -178,7 +178,7 @@ $('#social_update__social_update_linkedin').maxlength({
                 $set['string_override'] = '<p>'.$data["$provider"]->post.' <a href="'.$data["$provider"]->url.'">'.$data["$provider"]->url.'</a></p><p><em>'.lang('sent_on').$this->EE->localize->decode_date($datestr, $data["$provider"]->post_date, TRUE).'</em></p>';
                 
             }
-            $tab_settings[] = $set;
+            
         }
 
 		return $tab_settings;
@@ -193,7 +193,10 @@ $('#social_update__social_update_linkedin').maxlength({
     
 	function publish_data_db($params)
 	{     
-        if (isset($params['mod_data']['social_update_url_base']))
+        return; 
+        
+        
+		if (isset($params['mod_data']['social_update_url_base']))
         {
             $url_base = $params['mod_data']['social_update_url_base'];
         }
@@ -235,24 +238,21 @@ $('#social_update__social_update_linkedin').maxlength({
 					$channel_type = $structure_channels[$params['meta']['channel_id']]['type'];
 					$site_pages = $this->structure_sql->get_site_pages();
 					
-					$structure_uri = $params['mod_data']['structure__uri'] ? trim($params['mod_data']['structure__uri']) : $params['meta']['url_title'];
+					$structure_uri = (isset($params['mod_data']['structure__uri']) && $params['mod_data']['structure__uri']!='') ? trim($params['mod_data']['structure__uri']) : $params['meta']['url_title'];
 					
-					if ($channel_type == 'page')
-					{
-						$structure_parent_id = array_key_exists('structure__parent_id', $params['mod_data']) ? $params['mod_data']['structure__parent_id'] : 0;	
-						$structure_parent_uri = isset($site_pages['uris'][$structure_parent_id]) ? $site_pages['uris'][$structure_parent_id] : '/';
-						$url = $this->EE->config->slash_item('site_url').$this->structure->create_page_uri($structure_parent_uri, $structure_uri);
-					}
-					elseif ($channel_type == 'listing')
+					if ($channel_type == 'listing')
 					{	
-						if ($params['mod_data']['structure__uri'] == '' && $this->structure_sql->is_duplicate_listing_uri($structure_uri))
+						if ((!isset($params['mod_data']['structure__uri']) || $params['mod_data']['structure__uri']=='') && $this->structure_sql->is_duplicate_listing_uri($structure_uri))
 						{
 							$separator = $this->EE->config->item('word_separator') != 'dash' ? '_' : '-';
 							$structure_uri = $structure_uri.$separator.'1';
 						}
+					}	
+					
+					$structure_parent_id = array_key_exists('structure__parent_id', $params['mod_data']) ? $params['mod_data']['structure__parent_id'] : 0;	
+					$structure_parent_uri = isset($site_pages['uris'][$structure_parent_id]) ? $site_pages['uris'][$structure_parent_id] : '/';
+					$url = $this->EE->config->slash_item('site_url').$this->structure->create_page_uri($structure_parent_uri, $structure_uri);
 						
-						$url = $this->EE->config->slash_item('site_url').$this->structure->create_uri($structure_uri, $params['meta']['url_title']);
-					}
 	                break;     
 	            case 'entry_id':
 	                $this->EE->db->select('channel_url, comment_url')
@@ -276,6 +276,19 @@ $('#social_update__social_update_linkedin').maxlength({
         }
         
         $trigger_statuses = (isset($this->settings['trigger_statuses'])?$this->settings['trigger_statuses']:array('open'));
+        $status = $params['meta']['status'];
+        if ($status=='')
+        {
+        	//better workflow compatibility
+			foreach($_POST as $k => $v) 
+			{
+				if (preg_match('/^epBwfEntry/',$k))
+				{
+					$status = array_pop(explode('|',$v));
+					break;
+				}
+			}
+        }
 
         foreach ($this->providers as $provider)
         {
@@ -291,7 +304,7 @@ $('#social_update__social_update_linkedin').maxlength({
                         'post' => $msg
                         );
                          
-                if (in_array($params['meta']['status'], $trigger_statuses) && $url_base!='manual')
+                if (in_array($status, $trigger_statuses) && $url_base!='manual')
                 {
                     if ($url!='' && strlen($msg." ".$url) > $this->maxlen[$provider])
                     {
@@ -342,7 +355,7 @@ $('#social_update__social_update_linkedin').maxlength({
                     $post_id = $q->row('post_id');
                 }
 
-                if (in_array($params['meta']['status'], $trigger_statuses))
+                if (in_array($status, $trigger_statuses))
                 {    
                     //all is ready! post the message
                     $lib = $provider.'_oauth';

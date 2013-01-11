@@ -1,4 +1,4 @@
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_2}"}
 {embed="embeds/_head"}<!--head above this contains wrapper and skin openers-->
 <!--this is the tutorials channel index-->
 <div class="panel-index">
@@ -25,25 +25,24 @@
    <h3><a href="{page_url}">{title}</a></h3>
    
    <a href="{page_url}"><p><img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"/></a></p>
-     
-      
-      <div class="cat_sum_sm">
+   <div class="cat_sum_sm">
          
         <!--[if lte IE 9]>
 <style>#ie-fix-img-thmb { width:auto;border:none;}</style>
 <![endif]-->   
         <a href="{url_title_path=weblearn/about}">
-         
-        {exp:ed_imageresizer image="{image_promo}" maxWidth="100" maxHeight="100" alt="{title}" debug="yes" class="category_image_index"}
+               {image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="250" maxHeight="170" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="category_image_index"}
+            {/image_slideshow}
         </a>
         
-      {exp:snippet total="600" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
-      <a href="{page_url}"><p class="cat_sum_sm_readmore">read more</a></p>
+      <p>{exp:snippet total="600" word="" ellipsis="..."}{page_body}{/exp:snippet}</p>
+      
+      <a href="{page_url}"><span class="cat_sum_sm_readmore">read more</a></span>
          
          
-           <div class="channel-rss">  <a href="{exp:perssonal:link path='tutorials/rss' channel='tutorials' feed_name='London Met Elearning Matrix Tutorials' feed_url='tutorials' feed_description='Elearning Tutorials at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a>Tutorials RSS</div>  
-         
-         
+           <div class="channel-rss">  <a href="{exp:perssonal:link path='tutorials/rss' channel='tutorials' feed_name='London Met Elearning Matrix Tutorials' feed_url='tutorials' feed_description='Elearning Tutorials at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a>Tutorials RSS
+           </div><!--/.channel-rss-->  
+                 
       </div><!--/.cat_sum_sm-->
       
    </div> <!--end of tab start -->
@@ -58,12 +57,16 @@
  <a href="{path=tutorials/list}">  <img src="{site_url}themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  /></a>
     
           <div class="cat_sum_sm">
-<img class="category_image_index" src="{category_image}" alt="{category_name}" title="{category_name}" />
+            
+      {exp:ed_imageresizer image="{category_image}" maxWidth="250" maxHeight="170" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{category_name}" debug="yes" class="category_image_index"}
 
-  {exp:snippet total="600" word="" ellipsis="..."}  {category_description}{/exp:snippet}
+  <p>{exp:snippet total="600" word="" ellipsis="..."}  {category_description}{/exp:snippet}</p>
   
- <!-- &nbsp;&nbsp;-->
+ 
    <a href="{path=tutorials/list}" class="cat_sum_sm_readmore">Browse the {category_name} section</a>
+   
+              <div class="channel-rss">  <a href="{exp:perssonal:link path='tutorials/rss' channel='tutorials' feed_name='London Met Elearning Matrix Tutorials' feed_url='tutorials' feed_description='Elearning Tutorials at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a>Tutorials RSS
+           </div><!--/.channel-rss--> 
 
 </div><!--/.cat_sum_sm-->
       
@@ -75,24 +78,18 @@
 
 </div><!--/.panel-index-->
 
-
-
-
-
-
 <div class="panel-index">
 
    <div class="panel-index-holder">
-      
-      
+           
 {exp:channel:entries channel="tutorials" limit="3" disable="pagination|trackbacks|member_data" dynamic="no" orderby="latest"}
 
 <div class="panel-index-inner">
          <div class="panel-index-content-box">
            <a href="{channel_url}detail/{url_title}">  <h3>{title} </h3></a>
-         <a href="{channel_url}detail/{url_title}">{if image_promo}
-            {exp:ed_imageresizer image="{image_promo}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
-            {/if}</a>
+         <a href="{channel_url}detail/{url_title}">  {image_slideshow limit="1"}  
+                  {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+                   {/image_slideshow}</a>
          <p>{exp:snippet total="250" word="" ellipsis="..."}{page_body} 
          {/exp:snippet}
          <a href="{channel_url}detail/{url_title}"><b><i>read more >></i></b></a>

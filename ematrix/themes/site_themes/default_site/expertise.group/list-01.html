@@ -1,0 +1,88 @@
+{exp:channel:category_heading channel="expertise"}
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
+{embed="embeds/_head"}
+
+<!--this is the expertise channel list-->
+
+<div id="page">
+  
+  <!--back button-->
+<a href="{site_url}"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+  
+<!--category heading and summary stuff-->
+{exp:channel:category_heading channel="expertise"}
+
+<h2>everything categorized in <i style="color:#30B9B7;">'{category_name}'</i></h2>
+  
+<div class="cat_summary">
+  
+{exp:ed_imageresizer image="{category_image}" maxWidth="200" maxHeight="140" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="category_image"}
+
+{if category_description}
+<div class="cat-sum-small">{category_description}</div>
+{/if}
+<h4>See below for everything filed in the<i style="color:#30B9B7;text-transform:lowercase;font-weight:600;">'{category_name}'</i> section:</h4>
+
+{/exp:channel:category_heading}
+</div><!--/.cat_summary-->
+
+
+<!--category entries stuff-->
+<div id="cat-entry-holder">
+  
+{exp:channel:entries channel="expertise" disable="member_data|trackbacks" orderby="date"  limit="9" dynamic=“no” paginate="bottom"}
+
+<script type="text/javascript">
+$(function(){
+  $('#cat-entry-holder').masonry({
+    // options
+    itemSelector : '.cat_sum_entry',
+  //columnWidth : 250
+  });
+});
+</script>
+
+{if no_results}
+<div class="cat_sum_entry">
+<span class="no-results">Sorry, no results for this category - try another!</span>
+</div>
+{/if}
+
+<div class="cat_sum_entry">
+
+    <span class="pub_date_sm">{entry_date format="%M %d, %Y"}</span>
+    <a href="{url_title_path=expertise/detail}"> <h3>{title}</h3></a>
+    
+{if image_slideshow}
+
+      <!--[if lte IE 9]>
+    <style>.ie-fix-img-thmb { width:auto;border:none;}</style>
+    <![endif]-->   
+    <a href="{url_title_path=expertise/detail}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="100" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes"}{/image_slideshow}</a>
+    
+{if:else}
+
+    <div class="no-image-thmb">Sorry, no thumbnail image available</div>
+    
+{/if}    
+    <p>{exp:snippet total="150" word="" ellipsis="..."}{page_body}{/exp:snippet} <a href="{url_title_path=expertise/detail}"><b><i>[read the full entry]</i></a></b></p>
+    
+    </div><!--/.cat_sum_entry-->
+    {/exp:channel:entries}
+</div><!--/#cat-entry-holder-->
+
+<!--pagination -->
+{exp:channel:entries channel="expertise" disable="member_data|trackbacks" orderby="title" sort="asc" limit="9" dynamic=“no” paginate="bottom"}
+
+{if total_results <= '1'}
+    {paginate}
+    <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+    {pagination_links}</div>
+    {/paginate}
+{/if}
+
+{/exp:channel:entries}
+</div><!--/#page-->
+
+<!--embed the footer stuff-->
+{embed="embeds/_foot"}

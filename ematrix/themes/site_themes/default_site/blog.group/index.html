@@ -1,14 +1,26 @@
 {exp:channel:category_heading channel="blog"}
 {embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
 {embed="embeds/_head"}
+<!--this is the blog index-->
 
 
 <div id="page">
    
-<div id="entry">
-<h2>Blog & News</h2>
-{exp:channel:entries channel="blog" orderby="asc" limit="5"}
+   <h2>Blog & News</h2>
+   
+   
+<div class="page-body">   
+   
+{exp:channel:entries channel="blog|weblearn|expertise|tutorials" limit="6" orderby="asc" paginate="bottom" dynamic=“no” disable="member_data|trackbacks"}
+<div class="list_entry">
 
+      <!--[if lte IE 9]>
+<style>#ie-fix-img-thmb { width:auto;border:none;}</style>
+<![endif]-->   
+        <a href="{url_title_path=blog/detail}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+      {/image_slideshow}
+        </a>
+        
 <h3>{title}</h3>
 <p class="pub_date">{entry_date format="%D, %F %d, %Y; %G:%i:%s %a"}</p>
 
@@ -16,22 +28,22 @@
 <a href="{channel_url}detail/{url_title}"><i> - read the full entry</i></a> | 
 <i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
 
+</div><!--/.blog_entry-->
 
-{paginate}
-<div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
-{pagination_links}</div>
-{/paginate}
+<!--pagination-->
+
+{if total_results <= '1'}
+    {paginate}
+    <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+    {pagination_links}</div>
+    {/paginate}
+{/if}
 
 {/exp:channel:entries}
 
-
-
-
-</div><!--end of #entry-->
+</div><!--/.page-body-->
 
 </div><!--/#page-->
-
-
 
 <!--embed the footer stuff-->
 {embed="embeds/_foot"}
