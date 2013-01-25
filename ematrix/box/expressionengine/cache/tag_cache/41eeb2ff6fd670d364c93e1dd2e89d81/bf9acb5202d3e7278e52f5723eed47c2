@@ -1,0 +1,78 @@
+1358586348
+
+     
+         <div id="12" class="nivo-html-caption">
+              {if "y" == "y"} 
+                     <p style="float:left; width:450px; height:auto;">{exp:snippet total="140" word="" ellipsis="..."}<p>
+	hifahfghishasichiochochoc faospf a ud u a a dud</p> 
+                     {/exp:snippet}
+                     <a href="http://localhost:8888/ematrix_site/ematrix/index.php/blog/detail/new-site"><b><i>read more >></i></b></a> <br /><br /> <a href="{path=blog}">This entry is from the <b>Blog</b> channel</a>
+                     </p>
+            <a href="http://localhost:8888/ematrix_site/ematrix/index.php/blog/detail/new-site">  <h3>New Site </h3></a>
+            {/if}
+         </div>
+
+         
+     
+         <div id="11" class="nivo-html-caption">
+              {if "y" == "y"} 
+                     <p style="float:left; width:450px; height:auto;">{exp:snippet total="140" word="" ellipsis="..."}<p>
+	<strong>Prezi is marellous</strong>. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab.&nbsp; Prezi is marellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab. Prezi is marellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab. Prezi is marellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab. Prezi is marellous. <em><strong>Students love to use Prezi</strong></em>, and staff, once they get the hang of it, think it&#39;s fab.</p>
+<p>
+	&nbsp;</p>
+<p>
+	Prezi is marellous. Students love to use Prezi, and staff, <strong><tt><em><span style="color:#a52a2a;">once they get the hang of it</span></em></tt></strong>, think it&#39;s fab. Prezi is marellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab. Prezi is marellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab.Prezi is marellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab.</p> 
+                     {/exp:snippet}
+                     <a href="http://localhost:8888/ematrix_site/ematrix/index.php/tutorials/detail/learn-to-prezi"><b><i>read more >></i></b></a> <br /><br /> <a href="{path=tutorials}">This entry is from the <b>Tutorials</b> channel</a>
+                     </p>
+            <a href="http://localhost:8888/ematrix_site/ematrix/index.php/tutorials/detail/learn-to-prezi">  <h3>Learn to Prezi </h3></a>
+            {/if}
+         </div>
+
+         
+     
+         <div id="4" class="nivo-html-caption">
+              {if "y" == "y"} 
+                     <p style="float:left; width:450px; height:auto;">{exp:snippet total="140" word="" ellipsis="..."}<p>
+	I am writing <strong><em>further</em></strong> to Vice-Chancellor&#39;s December 2012 Staff Newsletter in respect of the arrangements for the academic promotion process.&nbsp; Applications are invited for the academic titles of Associate Professor, Reader and Professor via the University&rsquo;s internal annual promotion procedure.&nbsp; The <span style="color:#b22222;">promotion</span> process is a means of recognising outstanding achievement in learning and pedagogy, or research, or enterprise.&nbsp;</p>
+<p>
+	Teaching and research staff at or above the grades of <span style="background-color:#ffd700;">Senior Lecturer</span> or Senior Research Fellow are eligible to apply for any of the three titles and accompanying salary grade.&nbsp;</p>
+<p>
+	A set of criteria are in place which act as a guidance framework by which to judge promotion applications for each respective title at the relevant level of activity.&nbsp; Promotion will be awarded in recognition of work which demonstrates a high standard of achievement in three broad categories:</p> 
+                     {/exp:snippet}
+                     <a href="http://localhost:8888/ematrix_site/ematrix/index.php/weblearn/detail/new-weblearn-item"><b><i>read more >></i></b></a> <br /><br /> <a href="{path=weblearn}">This entry is from the <b>Weblearn</b> channel</a>
+                     </p>
+            <a href="http://localhost:8888/ematrix_site/ematrix/index.php/weblearn/detail/new-weblearn-item">  <h3>New Weblearn Item </h3></a>
+            {/if}
+         </div>
+
+         
+     
+         <div id="2" class="nivo-html-caption">
+              {if "y" == "y"} 
+                     <p style="float:left; width:450px; height:auto;">{exp:snippet total="140" word="" ellipsis="..."}<p>
+	<a href="http://edudemic.com/2012/10/the-20-best-learning-management-systems/">20 best LMS</a></p>
+<p>
+	From Moodle to Edmodo to Inquisiq r3, there&rsquo;s a lot of tools you can use to manage, track, and deliver courses and training programs in your school. They&rsquo;re called Learning Management Solutions (LMS) or sometimes Learning Management Systems. Either way, how do you pick which is the best? A new infographic from Capterra spells it out in simple stats.</p>
+<p>
+	See Also: A Quick Guide To Learning Management Systems</p>
+<p>
+	Key Takeaways</p>
+<ul>
+	<li>
+		The LMS industry is now a billion dollar plus industry.</li>
+	<li>
+		There are hundreds of LMS solutions out there.</li>
+	<li>
+		Moodle, Edmodo, and Blackboard are the big names in the industry.</li>
+	<li>
+		The most popular tool is not the most popular on social media. See: Edmodo vs Moodle</li>
+</ul> 
+                     {/exp:snippet}
+                     <a href="http://localhost:8888/ematrix_site/ematrix/index.php/weblearn/detail/weblearn-entry"><b><i>read more >></i></b></a> <br /><br /> <a href="{path=weblearn}">This entry is from the <b>Weblearn</b> channel</a>
+                     </p>
+            <a href="http://localhost:8888/ematrix_site/ematrix/index.php/weblearn/detail/weblearn-entry">  <h3>Weblearn Entry </h3></a>
+            {/if}
+         </div>
+
+         

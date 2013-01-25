@@ -1,17 +1,17 @@
     {if segment_1 == "weblearn"}
     <style>
         #wrapper{
-        background:/*#C1D1C0*/ #61A04D !important;    
+        background:#61A04D !important;    
         }
     </style>    
     {if:elseif segment_1 == "tutorials"}    
-        <style>
+    <style>
         #wrapper{
         background:#5AA898 !important;    
         }
     </style>       
     {if:elseif segment_1 == "expertise"}    
-        <style>
+    <style>
         #wrapper{
         background:#BFCD68 !important;    
         }
@@ -62,23 +62,24 @@
     <p class="">follow CELT support for Elearning </p>
       
     <!--search & social div here-->
-<div id="index_search_social">    
-   <div id="search">
-   {exp:search:simple_form channel="weblearn|expertise|tutorials|blog" no_result_page="site/no-results" result_page="site/search" search_in="entries" channel="weblearn|expertise|tutorials|blog"}
-<input type="text" name="keywords" value="search the site" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue; this.style.color = '#5B797B';"
-onfocus="this.value=''; this.style.color = '#848D81';" />
-<input type="submit" value="" class="button" />
-{/exp:search:simple_form}
-   </div><!--/#search-->
-   
-   <div id="social">  
-      <ul>
-         <li><a href="{exp:perssonal:link path='site/rss' channel='weblearn|expertise|tutorials|blog' feed_name='The London Met Elearning Matrix' feed_url='{channel_name}' feed_description='Elearning at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a></li>
-         <li><a href="http://www.facebook.com/pages/London-Met-Elearning/520318357984548"><img src="{site_url}themes/site_themes/default_site/images/facebook.png"></a></li>
-         <li><a href="http://vimeo.com/elearninglondonmet"><img src="{site_url}themes/site_themes/default_site/images/vimeo.png"></a></li>
-         <li><a href="https://twitter.com/elearninglondon"><img src="{site_url}themes/site_themes/default_site/images/twitter.png"></a></li>
-      </ul> 
-   </div><!--/#social-->
+<div id="index_search_social">
+    
+        <div id="search">
+        {exp:search:simple_form channel="weblearn|expertise|tutorials|blog" no_result_page="search/no-results" result_page="search/index" search_in="entries" channel="weblearn|expertise|tutorials|blog"}
+     <input type="text" name="keywords" value="search the site" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue; this.style.color = '#5B797B';"
+     onfocus="this.value=''; this.style.color = '#848D81';" />
+     <input type="submit" value="" class="button" />
+     {/exp:search:simple_form}
+        </div><!--/#search-->
+        
+        <div id="social">  
+           <ul>
+              <li><a href="{exp:perssonal:link path='site/rss' channel='weblearn|expertise|tutorials|blog' feed_name='The London Met Elearning Matrix' feed_url='{channel_name}' feed_description='Elearning at London Met'}"><img src="{site_url}themes/site_themes/default_site/images/feed.png"></a></li>
+              <li><a href="http://www.facebook.com/pages/London-Met-Elearning/520318357984548"><img src="{site_url}themes/site_themes/default_site/images/facebook.png"></a></li>
+              <li><a href="http://vimeo.com/elearninglondonmet"><img src="{site_url}themes/site_themes/default_site/images/vimeo.png"></a></li>
+              <li><a href="https://twitter.com/elearninglondon"><img src="{site_url}themes/site_themes/default_site/images/twitter.png"></a></li>
+           </ul> 
+        </div><!--/#social-->
 
 </div><!--/#index_search_social-->
 

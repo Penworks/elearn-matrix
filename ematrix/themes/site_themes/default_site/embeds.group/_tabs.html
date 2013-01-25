@@ -5,12 +5,12 @@
 
 {if panel_content}
 
-{if segment_1 == "weblearn"}
+
 
     <!-- tabs --> 
           <ul class="css-tabs_bb"> 
      {panel_content}
-         <li> <a href="#">{exp:snippet total="25" word="true" ellipsis="É"}{panel_title}{/exp:snippet}</a></li>
+         <li> <a href="#">{exp:snippet total="40" word="" ellipsis="..."}{panel_title}{/exp:snippet}</a></li>
      {/panel_content}
           </ul>
 
@@ -27,7 +27,7 @@
                        {/if}
                 <span class="embed-tabbed"><style>strong {display:none;}</style>{if panel_embed}{exp:tagstripper:tagsToStrip tags='div|p|a|span'}{panel_embed}{/panel_embed}{/exp:tagstripper:tagsToStrip}{/if}</span>
                 
-                {exp:tagstripper:tagsToStrip tags='iframe|embed|object'}{if panel_text}<p>{panel_text} </p>{/panel_text}{/exp:tagstripper:tagsToStrip}{/if}
+               {if panel_text} {exp:tagstripper:tagsToStrip tags='iframe|embed|object'}<p>{panel_text} </p>{/panel_text}{/exp:tagstripper:tagsToStrip}{/if}
         
              {if panel_file}
              <div class="panel-content-downloads">
@@ -52,40 +52,7 @@
 
 <script>$(".css-tabs_bb:first").tabs(".css-panes_bb:first > div"); </script>
 
-{if:else}
 
-        <!-- tabs --> 
-        <ul class="css-tabs_bb"> 
-   {panel_content}
-       <li> <a href="#">{exp:snippet total="25" word="true" ellipsis="É"}{panel_title}{/exp:snippet}</a></li>
-   {/panel_content}
-        </ul>
-
-        <div class="css-panes_bb"> <!-- panes --> 
-
-{panel_content}
-
-	<div> <!--tab 1-->
-      
-       {exp:ed_imageresizer image="{panel_image}" maxWidth="300" maxHeight="300" alt="{image_title}"}      
-      
-        <span class="embed-tabbed">{exp:tagstripper:tagsToStrip tags='div|p'}{if panel_embed}{panel_embed}{/panel_embed}{/exp:tagstripper:tagsToStrip}{/if}</span>
-        {if panel_text}<p>{panel_text} </p>{/panel_text}{/if}
-        {!--{panel_embed}
-        <p>{panel_text} </p>--}
-        {panel_file} <a href="{url}">Download File</a>, {/panel_file} 
-	
-        </div> <!--end of tab 1 -->   
-
-{/panel_content}
-
-</div> <!-- end of css-panes -->
-
-</div> <!--end of panel content-->
-
-<script>$(".css-tabs_bb:first").tabs(".css-panes_bb:first > div"); </script>
-
- {/if}<!--/end of if else-->
 
 {/if}<!--/end of if panel_content-->
 

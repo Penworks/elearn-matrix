@@ -4,9 +4,8 @@
 ul.css-tabs_main {  
 	margin:0 !important; 
 	padding:0;
-	height:39px;
-	/*border-bottom:3px solid #FFFEFB;*/	
-	width:auto; 	
+	height:39px;	
+	width:auto;
 }
 
 /* single tab */
@@ -63,7 +62,6 @@ ul.css-tabs_main a.current {
 	background:/*#efefef*/ url(../images/bb/panel-baks.jpg) no-repeat;
 	overflow: hidden;
 	clear: left;
-	/*border:1px dotted red;*/
 }
 
 a:active {

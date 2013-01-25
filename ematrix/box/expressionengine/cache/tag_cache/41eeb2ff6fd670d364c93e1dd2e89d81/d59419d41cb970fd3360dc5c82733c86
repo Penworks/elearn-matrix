@@ -1,0 +1,38 @@
+1358586348
+
+         
+          {if "y" == "y"}
+         <div class="panel-index-content-box">
+         
+         <a href="http://localhost:8888/ematrix_site/ematrix/index.php/blog/detail/new-site"> {exp:ed_imageresizer image="http://localhost:8888/ematrix_site/ematrix/images/uploads/tutorials/424798_10150519625133860_508643859_8896156_1974972531_n.jpg" maxWidth="955" maxHeight="170" cropratio="100:27" forceWidth="yes" forceHeight="yes" alt="New bubbly site" debug="yes" title="#12"}
+      </a>      
+         </div><!--/.panel-index-content-box-->
+            {/if}
+         
+         
+          {if "y" == "y"}
+         <div class="panel-index-content-box">
+         
+         <a href="http://localhost:8888/ematrix_site/ematrix/index.php/tutorials/detail/learn-to-prezi"> {exp:ed_imageresizer image="http://localhost:8888/ematrix_site/ematrix/images/uploads/tutorials/Screen_shot_2011-11-08_at_12.17.00.png" maxWidth="955" maxHeight="170" cropratio="100:27" forceWidth="yes" forceHeight="yes" alt="Prezi for SocialMet" debug="yes" title="#11"}
+      </a>      
+         </div><!--/.panel-index-content-box-->
+            {/if}
+         
+         
+          {if "y" == "y"}
+         <div class="panel-index-content-box">
+         
+         <a href="http://localhost:8888/ematrix_site/ematrix/index.php/weblearn/detail/new-weblearn-item"> {exp:ed_imageresizer image="http://localhost:8888/ematrix_site/ematrix/images/uploads/weblearn/IMG_1664.JPG" maxWidth="955" maxHeight="170" cropratio="100:27" forceWidth="yes" forceHeight="yes" alt="Fir Cone" debug="yes" title="#4"}
+      </a>      
+         </div><!--/.panel-index-content-box-->
+            {/if}
+         
+         
+          {if "y" == "y"}
+         <div class="panel-index-content-box">
+         
+         <a href="http://localhost:8888/ematrix_site/ematrix/index.php/weblearn/detail/weblearn-entry"> {exp:ed_imageresizer image="http://localhost:8888/ematrix_site/ematrix/images/uploads/general/100_2071.JPG" maxWidth="955" maxHeight="170" cropratio="100:27" forceWidth="yes" forceHeight="yes" alt="​hodi ho" debug="yes" title="#2"}
+      </a>      
+         </div><!--/.panel-index-content-box-->
+            {/if}
+         

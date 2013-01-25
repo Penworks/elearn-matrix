@@ -1,0 +1,115 @@
+<!--page body content for detail and page module templates-->
+
+<div id="page">   
+
+<!--back button-->
+    <a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+
+<!--conditional channel call for page body entry content-->
+    {if segment_1 == "weblearn"}
+        {exp:channel:entries channel="weblearn" disable="member_data|trackbacks" limit="1" backspace="2"}
+    {/if}
+    {if segment_1 == "expertise"}
+        {exp:channel:entries channel="expertise" disable="member_data|trackbacks" limit="1" backspace="2"}
+    {/if}
+    {if segment_1 == "tutorials"}
+        {exp:channel:entries channel="tutorials" disable="member_data|trackbacks" limit="1" backspace="2"}
+    {/if}
+    {if segment_1 == "blog"}
+        {exp:channel:entries channel="blog" disable="member_data|trackbacks" limit="1" backspace="2"}
+    {/if}
+
+<!--- author, date and snapshot summary fields -->
+      <span class="pub_date_author">by: {author} on: {entry_date format="%M %d, %Y"}</span>
+        <h2>{title}</h2>
+    {if summary}
+        <p class="snapshot"><b>Snapshot:</b>
+        {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
+        </p>
+    {/if}
+
+<!--- social media share and print buttons-->
+{embed="embeds/_print_share"}
+
+<!---all page content fields-->
+<div class="page-body">
+
+<!--- embed media in the page body if it's there-->
+{if embed_media}
+
+    <div class="media-embed">    
+    {embed="embeds/_embed_media"}
+    </div><!--/.media-embed-->
+
+<!--- otherwise place the single image or image slideshow into the page body-->
+{if:elseif image_slideshow}
+
+{embed="embeds/_image_slideshow"}
+
+<!--- if there's no image or media, give a message to say so-->
+{if:else}
+
+    <div class="no-image-thmb">Sorry, no image available</div>
+    
+{/if}
+
+<!--- page body field-->
+{if page_body}
+    
+    {!--{exp:tagstripper:tagsToStrip tags='div|object|embed|iframe'}{page_body}{/exp:tagstripper:tagsToStrip}--}
+    
+    
+    {page_body}
+    
+    
+    
+    
+    {!--{exp:tagstripper:tagsToSave tags='strong|em|u|strike|h4|h5}{page_body}{/exp:tagstripper:tagsToSave}--}
+    
+{/if}
+
+
+
+<!--- download files field within page body field-->
+{if file_download}
+    <div class="panel-content-downloads">
+       <h5>DOWNLOADS:</h5>
+       {file_download}
+       <ul>
+       <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+       </ul>
+       {/file_download}
+    </div><!--/.panel-content-downloads-->
+    
+{/if}
+
+</div><!--/.page_body-->
+
+<!--- panel content field displaying tabs, accordions or page view-->
+
+{if panel_content}
+    {embed="{select_view}"}
+{/if}
+
+
+<br />
+<hr>
+
+<!--- begin the page footer area-->
+
+{embed="embeds/_page_foot"}
+
+
+<div style="clear:both"></div>
+<hr>
+
+<!--is commenting on?-->
+
+{if commenting == "y"}
+{embed="embeds/_disqus"}
+{/if}
+
+{/exp:channel:entries}
+
+
+</div><!--/#page-->

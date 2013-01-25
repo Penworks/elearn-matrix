@@ -2,7 +2,7 @@
 /**
  * Code Igniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An open source application development framework for PHP 5.2.4 or newer
  *
  * @package		CodeIgniter
  * @author		EllisLab Dev Team
@@ -240,7 +240,7 @@ class CI_DB_forge {
 			show_error('A table name is required for that operation.');
 		}
 
-		$sql = $this->_rename_table($table_name, $new_table_name);
+		$sql = $this->_rename_table($this->db->dbprefix.$table_name, $this->db->dbprefix.$new_table_name);
 		return $this->db->query($sql);
 	}
 

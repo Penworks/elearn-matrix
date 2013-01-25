@@ -39,7 +39,7 @@
         <li>
         <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="100" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes" class="browse_cat_image"}{/image_slideshow}</a>
         <a href="{channel_url}detail/{url_title}"><h4>{title}</h4></a>
-       {exp:snippet total="200" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
+       {exp:snippet total="180" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
         <i><strong>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></strong>
         </li>
         {/exp:channel:entries}

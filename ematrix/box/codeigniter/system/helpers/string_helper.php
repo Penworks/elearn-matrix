@@ -2,7 +2,7 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An open source application development framework for PHP 5.2.4 or newer
  *
  * @package		CodeIgniter
  * @author		EllisLab Dev Team
@@ -141,7 +141,7 @@ if ( ! function_exists('reduce_double_slashes'))
 {
 	function reduce_double_slashes($str)
 	{
-		return preg_replace("#(^|[^:])//+#", "\\1/", $str);
+		return preg_replace("#([^/:])/+#", "\\1/", $str);
 	}
 }
 

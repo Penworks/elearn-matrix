@@ -31,7 +31,7 @@
               <!--[if lte IE 9]>
       <style>#ie-fix-img-thmb { width:auto;border:none;}</style>
       <![endif]-->   
-              <a href="{url_title_path=expertise/about}">
+              <a href="{page_url}">
                {image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="250" maxHeight="170" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="category_image_index"}
             {/image_slideshow}</a> 
             <p>{exp:snippet total="400" word="" ellipsis="..."}{page_body}{/exp:snippet}</p>
@@ -87,7 +87,7 @@
                <a href="{channel_url}detail/{url_title}"> {image_slideshow limit="1"}  
                   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
                    {/image_slideshow}  </a>
-               <p>{exp:snippet total="250" word="" ellipsis="..."}{page_body} 
+               <p>{exp:snippet total="200" word="" ellipsis="..."}{page_body} 
                {/exp:snippet}
                <a href="{channel_url}detail/{url_title}"><b><i>read more >></i></b></a>
                </p>

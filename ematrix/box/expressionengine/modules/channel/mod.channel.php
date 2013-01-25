@@ -6,8 +6,8 @@
  * @package		ExpressionEngine
  * @author		EllisLab Dev Team
  * @copyright	Copyright (c) 2003 - 2012, EllisLab, Inc.
- * @license		http://expressionengine.com/user_guide/license.html
- * @link		http://expressionengine.com
+ * @license		http://ellislab.com/expressionengine/user-guide/license.html
+ * @link		http://ellislab.com
  * @since		Version 2.0
  * @filesource
  */
@@ -21,7 +21,7 @@
  * @subpackage	Modules
  * @category	Modules
  * @author		EllisLab Dev Team
- * @link		http://expressionengine.com
+ * @link		http://ellislab.com
  */
 
 class Channel {
@@ -73,6 +73,9 @@ class Channel {
 	// Misc. - Class variable usable by extensions
 	public $misc					= FALSE;
 
+	// Array of parameters allowed to be set dynamically
+	private $_dynamic_parameters	= array();
+
 	/**
 	  * Constructor
 	  */
@@ -101,6 +104,12 @@ class Channel {
 		{
 			$this->_fetch_disable_param();
 		}
+
+		$this->_dynamic_parameters = array('channel', 'entry_id', 'category', 'orderby',
+			'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from',
+			'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month',
+			'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit',
+			'month_limit', 'offset', 'author_id', 'url_title');
 	}
 
 	// ------------------------------------------------------------------------
@@ -127,7 +136,7 @@ class Channel {
 		{
 			foreach (explode('|', $this->EE->TMPL->fetch_param('dynamic_parameters')) as $var)
 			{
-				if (isset($_POST[$var]) && in_array($var, array('channel', 'entry_id', 'category', 'orderby', 'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from', 'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month', 'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit', 'month_limit', 'offset', 'author_id')))
+				if (isset($_POST[$var]) && in_array($var, $this->_dynamic_parameters))
 				{
 					$tag .= $var.'="'.$_POST[$var].'"';
 				}
@@ -570,9 +579,9 @@ class Channel {
 				$random = ($order == 'random') ? TRUE : FALSE;
 
 				$base_orders = array('random', 'date', 'title', 'url_title', 'edit_date', 'comment_total', 'username', 'screen_name', 'most_recent_comment', 'expiration_date', 'entry_id', 
-									 'view_count_one', 'view_count_two', 'view_count_three', 'view_count_four');
+									 'view_count_one', 'view_count_two', 'view_count_three', 'view_count_four', 'status');
 
-				$str_sort = array('title', 'url_title', 'username', 'screen_name');
+				$str_sort = array('title', 'url_title', 'username', 'screen_name', 'status');
 				
 				if ( ! in_array($order, $base_orders))
 				{
@@ -802,7 +811,7 @@ class Channel {
 											$return_data);
 			}
 		}
-
+		
 		$this->return_data = $return_data;
 	}
 
@@ -1144,9 +1153,9 @@ class Channel {
 								. $andor;
 						}
 						else
-						{
+						{	
 							$fields_sql .= ' (wd.site_id=' . $site_id 
-								. ' AND wd.field_id_' . $this->cfields[$site_id][$field_name]
+								. ' AND wd.field_id_' . $this->cfields[$site_id][$field_name] . ' '
 								. $not . ' LIKE "%' . $this->EE->db->escape_like_str($term) . '%") ' 
 								. $andor;
 						}
@@ -1204,7 +1213,7 @@ class Channel {
 		{
 			foreach (explode('|', $this->EE->TMPL->fetch_param('dynamic_parameters')) as $var)
 			{
-				if (isset($_POST[$var]) AND in_array($var, array('channel', 'entry_id', 'category', 'orderby', 'sort', 'sticky', 'show_future_entries', 'show_expired', 'entry_id_from', 'entry_id_to', 'not_entry_id', 'start_on', 'stop_before', 'year', 'month', 'day', 'display_by', 'limit', 'username', 'status', 'group_id', 'cat_limit', 'month_limit', 'offset', 'author_id')))
+				if (isset($_POST[$var]) AND in_array($var, $this->_dynamic_parameters))
 				{
 					$this->EE->TMPL->tagparams[$var] = $_POST[$var];
 				}
@@ -1599,7 +1608,7 @@ class Channel {
 		/**  Validate Results for Later Processing
 		/** -------------------------------------*/
 
-		$base_orders = array('random', 'entry_id', 'date', 'entry_date', 'title', 'url_title', 'edit_date', 'comment_total', 'username', 'screen_name', 'most_recent_comment', 'expiration_date',
+		$base_orders = array('status', 'random', 'entry_id', 'date', 'entry_date', 'title', 'url_title', 'edit_date', 'comment_total', 'username', 'screen_name', 'most_recent_comment', 'expiration_date',
 							 'view_count_one', 'view_count_two', 'view_count_three', 'view_count_four');
 
 		foreach($order_array as $key => $order)
@@ -1698,6 +1707,8 @@ class Channel {
 				$fixed_order = array_reverse($fixed_order);
 			}
 		}
+
+
 
 		/**------
 		/**  Build the master SQL query
@@ -2531,6 +2542,10 @@ class Channel {
 
 						case 'expiration_date' :
 							$end .= "t.expiration_date";
+						break;
+
+						case 'status' :
+							$end .= "t.status";
 						break;
 
 						case 'title' :
@@ -6928,7 +6943,7 @@ class Channel {
 		{
 			$path  = (preg_match("#".LD."path=(.+?)".RD."#", $this->EE->TMPL->tagdata, $match)) ? $this->EE->functions->create_url($match[1]) : $this->EE->functions->create_url("SITE_INDEX");
 			$path .= '/'.$query->row('url_title');
-			$this->EE->TMPL->tagdata = preg_replace("#".LD."path=.+?".RD."#", $path, $this->EE->TMPL->tagdata);
+			$this->EE->TMPL->tagdata = preg_replace("#".LD."path=.+?".RD."#", $this->EE->functions->remove_double_slashes($path), $this->EE->TMPL->tagdata);
 		}
 
 		if (strpos($this->EE->TMPL->tagdata, LD.'id_path=') !== FALSE)
@@ -6936,7 +6951,7 @@ class Channel {
 			$id_path  = (preg_match("#".LD."id_path=(.+?)".RD."#", $this->EE->TMPL->tagdata, $match)) ? $this->EE->functions->create_url($match[1]) : $this->EE->functions->create_url("SITE_INDEX");
 			$id_path .= '/'.$query->row('entry_id');
 
-			$this->EE->TMPL->tagdata = preg_replace("#".LD."id_path=.+?".RD."#", $id_path, $this->EE->TMPL->tagdata);
+			$this->EE->TMPL->tagdata = preg_replace("#".LD."id_path=.+?".RD."#", $this->EE->functions->remove_double_slashes($id_path), $this->EE->TMPL->tagdata);
 		}
 
 		if (strpos($this->EE->TMPL->tagdata, LD.'url_title') !== FALSE)
@@ -6961,7 +6976,7 @@ class Channel {
 													$this->EE->TMPL->tagdata);
 		}
 
-		return $this->EE->functions->remove_double_slashes(stripslashes($this->EE->TMPL->tagdata));
+		return $this->EE->TMPL->tagdata;
 	}
 
 	// ------------------------------------------------------------------------

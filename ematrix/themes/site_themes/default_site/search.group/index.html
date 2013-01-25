@@ -1,1 +1,36 @@
-a
+{embed="embeds/_html_head" my_page_title="{segment_3}"}
+{embed="embeds/_head"}
+
+<div id="page">
+
+    <!--back button-->
+<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
+
+  
+<h2>Search results: &nbsp; <small> {exp:search:total_results} &nbsp; results &nbsp; for &nbsp; "{exp:search:keywords}"</small></h2>
+
+<div class="page-body">
+
+
+
+{exp:search:search_results switch="resultRowTwo|resultRowOne"}
+<div class="list_entry">
+
+
+
+<a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="90" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes"}{/image_slideshow}</a> 
+<p> <b><a href="{channel_url}detail/{url_title}">{title}</a></b> from <b><em><a href="{channel_url}">{channel}</a></em></b><br/>{excerpt}</p>
+
+
+
+</div><!--/.list_entry-->
+{/exp:search:search_results}
+
+
+
+</div><!--/.page-body-->
+
+
+</div><!--/#page-->
+
+{embed="embeds/_foot"}

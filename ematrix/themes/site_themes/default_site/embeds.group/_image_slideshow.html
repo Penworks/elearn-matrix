@@ -86,7 +86,7 @@
     
     <div class="slideshow-single-img">
 
-                <a href="#" rel="#link1"> {exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" alt="{name}"}</a>
+                <a href="#" rel="#link1"> {exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" forceWidth="yes" forceHeight="yes" alt="{title}"}</a>
                 
               <div id="{row_id}" class="slideshow-single-img-caption">
             {caption}</div>
@@ -101,7 +101,7 @@
     
 <div id="link1" class="simple_overlay">
     {image_slideshow}
-    {exp:ed_imageresizer image="{image}" maxWidth="600" maxHeight="500" alt="{name}"}
+    {exp:ed_imageresizer image="{image}" maxWidth="600" maxHeight="500" forceWidth="yes" forceHeight="yes" alt="{title}"}
     
             
          <div id="{row_id}" class="slideshow-overlay-img-caption">

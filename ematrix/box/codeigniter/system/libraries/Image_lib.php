@@ -2,7 +2,7 @@
 /**
  * CodeIgniter
  *
- * An open source application development framework for PHP 5.1.6 or newer
+ * An open source application development framework for PHP 5.2.4 or newer
  *
  * @package		CodeIgniter
  * @author		EllisLab Dev Team
@@ -849,13 +849,19 @@ class CI_Image_lib {
 		{
 			$src_alpha_index = imagecolortransparent($src_img);
 			
-			if ($src_alpha_index >= 0)
+			if ($src_alpha_index >= 0
+				AND imagecolorstotal($src_img) > $src_alpha_index)
 			{
 				// Get color at alpha index
 				$alpha_color = imagecolorsforindex($src_img, $src_alpha_index);
-
+				
 				// Get new alpha index in new image resource
-				$alpha_index = imagecolorallocate($new_img, $alpha_color['red'], $alpha_color['green'], $alpha_color['blue']);
+				$alpha_index = imagecolorallocate(
+					$new_img,
+					$alpha_color['red'],
+					$alpha_color['green'],
+					$alpha_color['blue']
+				);
 				
 				// Set alpha color as background color and make it transparent
 				imagefill($new_img, 0, 0, $alpha_index);

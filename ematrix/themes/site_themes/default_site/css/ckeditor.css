@@ -1,0 +1,15 @@
+@charset "windows-1252";
+/*penworks ckeditor stuff*/
+
+strong {font-weight: bold;}
+em {font-style: italic;}
+
+p {
+    font-family: helvetica, arial, sans-serif;
+    font-size: normal;
+}
+
+ul li {
+    font-family: helvetica, arial, sans-serif;
+    font-size: normal;
+}

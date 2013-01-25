@@ -7,6 +7,12 @@
 <a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
 {if segment_1 == "weblearn-area"}
+    <style>
+        #wrapper{
+        background:/ #61A04D !important;    
+        }
+    </style> 
+
 {exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="3"}
 
 {/if}
@@ -17,11 +23,21 @@
 {/if}
 
 {if segment_1 == "expertise-area"}
+    <style>
+        #wrapper{
+        background:#BFCD68 !important;    
+        }
+    </style>
 {exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="8"}
 
 {/if}
 
 {if segment_1 == "tutorials-area"}
+    <style>
+        #wrapper{
+        background:#5AA898 !important;    
+        }
+    </style>
 {exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="9"}
 
 {/if}
@@ -31,16 +47,38 @@
 
 {/if}
 
+{if segment_1 == "contact"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="27"}
+
+{/if}
+
+{if segment_1 == "terms-and-privacy"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="29"}
+
+{/if}
+
+
  
- <h2>{title}</h2>
+<!-- <h2>{title}</h2>-->
+
+     <span class="pub_date_author">by: {author} on: {entry_date format="%M %d, %Y"}</span>
+        <h2>{title}</h2>
+    {if summary}
+        <p class="snapshot"><b>Snapshot:</b>
+        {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
+        </p>
+    {/if}
+    
+    <!--- social media share and print buttons-->
+{!--{embed="embeds/_print_share"}--}
  
     <div class="page-body">
  
 <!--- embed media in the page body if it's there-->        
-{if embed_item}
+{if embed_media}
 
     <div class="media-embed">    
-    {embed="embeds/_embed_item"}
+    {embed="embeds/_embed_media"}
     </div><!--/.media-embed-->
 
 <!--- otherwise place the single image or image slideshow into the page body-->
@@ -49,28 +87,47 @@
     {embed="embeds/_image_slideshow"}
   
 {/if}
-     
-    {summary}
  
     {page_body}
-    
-     {if list_items}
-    {embed="embeds/_list_items"}
-    {/if}
             
-  {if segment_1 == "weblearn-area"}      
+  {if segment_1 == "introduction"}      
             
     <h4>List of Channels</h4>
                 
-{!--{exp:channel:entries channel="general|weblearn|expertise|tutorials" style="linear" show_empty="yes" }--}
-        <ul style="font-variant:small-caps;font-weight:600;font-style:italic;font-size:inherit; padding:5px; margin-left:20px;">             
-         {exp:channel:info channel="weblearn"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}
-         {exp:channel:info channel="expertise"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}
-         {exp:channel:info channel="tutorials"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}
-         {exp:channel:info channel="blog"} <li> <a href="{path={channel}/list}">The {channel_name} section</a></li>  {/exp:channel:info}  
+
+        <ul>             
+          <li> <a href="expertise">The Expertise section</a></li>  
+          <li> <a href="tutorials">The Tutorials section</a></li> 
+          <li> <a href="weblearn">The Weblearn section</a></li>  
+          <li> <a href="blog">The Blog & News section</a></li>  
         </ul>           
-{!--{/exp:channel:entries}--}
-       {/if}     
+
+
+       {/if}
+       
+   {if segment_1 == "contact"}       
+     
+{exp:freeform:form form:class="contactform" form_name="contact" required="name|email"}
+ <ul>  
+<form name="contact" action="" method="POST" enctype="application/x-www-form-urlencoded">
+
+<li> First Name: <input type="text" name="first_name" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
+<li> Last Name: <input type="text" name="last_name" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
+<li> Email: <input type="text" name="email" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
+<li> <textarea name="user_message" cols="40" rows="6" wrap="SOFT"></textarea></li>
+<li> <input type="submit"/></li>
+ <li><input type="reset"/></li>
+</form>
+</ul>
+{/exp:freeform:form}
+ 
+
+       
+       {/if}
+       
+       
+       
+       
             
     </div><!--/.page-body-->
 

@@ -6,7 +6,7 @@
         <h5>Tagged:</h5>        
         {exp:tagger:tags entry_id="{entry_id}" backspace="7"}
          {if tagger:no_tags}<p>No tags where found.</p>{/if} 
-        <span class="word"><a href="{site_url}index.php/tags/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> 
+        <span class="word"><a href="{site_url}tags/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> 
        {/exp:tagger:tags}
        
     </div><!--/.tagged-->
