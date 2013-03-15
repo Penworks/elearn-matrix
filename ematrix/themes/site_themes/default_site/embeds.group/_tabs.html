@@ -27,7 +27,7 @@
                        {/if}
                 <span class="embed-tabbed"><style>strong {display:none;}</style>{if panel_embed}{exp:tagstripper:tagsToStrip tags='div|p|a|span'}{panel_embed}{/panel_embed}{/exp:tagstripper:tagsToStrip}{/if}</span>
                 
-               {if panel_text} {exp:tagstripper:tagsToStrip tags='iframe|embed|object'}<p>{panel_text} </p>{/panel_text}{/exp:tagstripper:tagsToStrip}{/if}
+                {exp:tagstripper:tagsToStrip tags='iframe|embed|object'}{if panel_text}<p>{panel_text} </p>{/panel_text}{/exp:tagstripper:tagsToStrip}{/if}
         
              {if panel_file}
              <div class="panel-content-downloads">

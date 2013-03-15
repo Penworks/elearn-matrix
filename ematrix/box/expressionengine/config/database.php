@@ -3,10 +3,10 @@
 $active_group = 'expressionengine';
 $active_record = TRUE;
 
-$db['expressionengine']['hostname'] = 'localhost';
-$db['expressionengine']['username'] = 'root';
-$db['expressionengine']['password'] = 'root';
-$db['expressionengine']['database'] = 'ematrix';
+$db['expressionengine']['hostname'] = 'db439758826.db.1and1.com';
+$db['expressionengine']['username'] = 'dbo439758826';
+$db['expressionengine']['password'] = 'elearn-1014-penelope';
+$db['expressionengine']['database'] = 'db439758826';
 $db['expressionengine']['dbdriver'] = 'mysql';
 $db['expressionengine']['pconnect'] = FALSE;
 $db['expressionengine']['dbprefix'] = 'exp_';
@@ -16,7 +16,7 @@ $db['expressionengine']['cache_on'] = FALSE;
 $db['expressionengine']['autoinit'] = FALSE;
 $db['expressionengine']['char_set'] = 'utf8';
 $db['expressionengine']['dbcollat'] = 'utf8_general_ci';
-$db['expressionengine']['cachedir'] = '/Applications/MAMP/htdocs/ematrix_site/ematrix/system/expressionengine/cache/db_cache/';
+$db['expressionengine']['cachedir'] = '/homepages/45/d437191413/htdocs/ematrix/system/expressionengine/cache/db_cache/';
 
 /* End of file database.php */
 /* Location: ./system/expressionengine/config/database.php */

@@ -64,7 +64,9 @@
     
     
     
-    {!--{exp:tagstripper:tagsToSave tags='strong|em|u|strike|h4|h5}{page_body}{/exp:tagstripper:tagsToSave}--}
+    {!--{exp:tagstripper:tagsToSave tags='strong|em|underline|strike|h4|h5}
+{page_body}
+{/exp:tagstripper:tagsToSave}--}
     
 {/if}
 
@@ -91,6 +93,10 @@
     {embed="{select_view}"}
 {/if}
 
+<!--- list items field-->
+{if list_items}
+{embed="embeds/_list_items"}
+{/if}
 
 <br />
 <hr>

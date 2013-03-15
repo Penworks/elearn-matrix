@@ -1,0 +1,542 @@
+@import url(http://www.celtelearning.org/themes/site_themes/default_site/css/handheld.css);*{margin:0}html,body{height:100%}html{overflow:scroll}body{background:#ECF1EF;margin:0;padding:0;height:100%;font-size:14px;color:#1C4952;font-family:helvetica neue,arial,lucida grand,trebuchet MS,sans-serif}strong{display:inline !important}* html
+body{text-align:center;height:100%}img a:link, img a:hover, img a:visited, img a:focus{-moz-outline-style:none;border:none;outline:0}body a:link{color:#2F6D6C;text-decoration:none}body a:visited{color:#419D9C;text-decoration:none}body a:hover{color:#809408;text-decoration:underline}#wrapper{width:1000px;margin:0
+auto;overflow:hidden;padding-top:2px;min-height:100%;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/bak-e0e0e0.png) repeat}* html
+#wrapper{text-align:left;padding-left:30px;height:100%}.skin{width:auto;overflow:hidden;padding:5px
+5px 0px 7px;margin-bottom:360px;position:relative}/*/*/#top_header{height:50px;padding:5px;width:auto;text-align:left;font-size: .9em;font-style:normal;font-weight:600;color:#387B79;background:#efefef;overflow:hidden;margin:0
+5px 0 5px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#top_header
+h2{padding:10px
+5px 10px 5px;font-size:34px;letter-spacing:-3px;font-weight:800}#top_header
+p{font-size:14px;margin:-30px 6px 10px 10px;text-align:right;letter-spacing:-1px}/**/* html
+#top_header{height:190px;width:850px;background:#E1D8D8}#top_header a:link{color:#30808C;text-decoration:none}#top_header a:visited{color:#419D9C;text-decoration:none}#top_header a:hover{color:#809408;text-decoration:underline}/*/*/.panel-index{padding:5px;overflow:hidden;margin:4px
+auto 3px auto;height:auto}.panel-index
+h3{padding:10px
+10px;text-align:right;font-size:36px;font-weight:600;letter-spacing:-3px}.panel-index h3
+a{color:#CAD6D8}.short-desc{text-align:left;font-size:20px;font-weight:600;letter-spacing:-1px;color:#78A1AB;font-style:italic}/**/.panel-index
+.more{border:none;padding:20px
+5px 10px 2px;clear:both;float:right;width:50px;height:140px;margin-top:-28px}.panel-index .more:hover{opacity:0.7;filter:alpha(opacity=70)}.panel-index
+img{border:none;outline:0;-moz-outline-style:none}.panel-index-holder{margin:0px
+0px 10px -7px;width:990px;height:100%;padding:0px}.panel-index-inner{float:left;padding:18px
+0px 10px 5px;overflow:hidden;margin:0px
+2px 15px 7px;width:307px;height:245px;position:relative;background:#efefef;border:4px
+#E7EDEB  solid;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-inner:hover{background:#E5E5E5;border:inset 1px solid #7B7C7B;opacity:0.8;filter:alpha(opacity=80)}.panel-index-content-box{width:auto;padding:20px;margin:0;overflow:hidden;font-size:90%;color:#5F6055;float:left}.panel-index-features-slideshow{width:auto;padding:20px;margin:0;overflow:hidden;font-size:90%;color:#5F6055;background:#efefef}.panel-index-content-box
+img{padding:2px;margin-right:5px;float:left;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-content-box
+h3{color:#7FA6AA;font-weight:600;font-size:26px;text-transform:lowercase;padding:8px
+0px 3px 0px;letter-spacing:-2px;text-align:left}.panel-index-content-box a:link{color:#7D565D;text-decoration:none}.panel-index-content-box a:visited{color:#527733;text-decoration:none}.panel-index-content-box a:hover{color:#3BAC94;text-decoration:underline}/*/*/#search{position:absolute;top:12px;left:648px;font-weight:600;font-size:inherit;margin:0px
+0 5px 4px;width:180px;height:35px}#search
+input.text{border:none;float:left;clear:left;color:#A8B5B8;font-style:italic;font-size:inherit;font-weight:600;margin:4px
+10px 2px 10px;width:180px;height:22px;padding-left:10px;background:#DAE3E2}#search
+input.button{width:45px;height:45px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/bb/search.png) no-repeat;border:none;cursor:pointer}#social{position:absolute;top:8px;left:809px;padding:0px;margin:5px
+14px 10px 10px;width:auto;height:50px}#social ul
+li{display:inline;padding:0px;margin:0px
+auto}#social
+img{border:none;padding:2px}#social  :focus{-moz-outline-style:none;outline:0;/**/}/*/*/.list_entry{float:left;clear:left;width:930px}.list_entry
+h3{font-size:18px !important}.list_entry
+.pub_date{font-style:italic;font-weight:600;color:#30B9B7}.cat-name{font-style:italic;color:#30B9B7;text-transform:lowercase}.cat_summary{padding:5px
+5px 1px 5px;overflow:hidden;margin:0px
+10px 10px 18px;height:auto;width:740px;font-size:inherit;float:left}.category_image{padding:3px;margin:0;position:absolute;top:85px;left:820px;border:none !important}.category_image_index{width:auto;height:170px;padding:3px;float:left;margin:-50px 0 0 0px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}/*/*/.cat_sum_sm{font-size:12px;float:left;padding:5px;margin:-8px -3px 10px 10px;width:880px;height:130px;border-right:12px solid #CAD6D8;position:relative}.cat_sum_sm
+p{float:right;width:595px;font-weight:600;font-size:14px;font-style:italic;color:#547075;padding:2px
+10px 2px 2px}.cat_sum_sm_readmore{font-weight:600;font-style:italic;font-size:20px;text-align:right;padding:20px;letter-spacing:-1px;text-transform:lowercase;position:absolute;left:455px;bottom:-20px;min-width:400px}.cat_sum_sm
+ul{font-size:10px;font-weight:600;float:right;padding:5px;list-style:square outside}.cat_sum_sm a:link{color:#96273C;text-decoration:none}.cat_sum_sm a:visited{color:#419D9C;text-decoration:none}.cat_sum_sm a:hover{color:#809408;text-decoration:underline}.channel-rss{position:absolute;top:98px;left:8px;width:254px;height:30px;font-size:small;font-weight:600;font-style:italic;color:#54C7C5;line-height:40px;background:#193947;opacity:0.8;filter:alpha(opacity=80);/**/}.channel-rss
+img{padding:4px
+4px 4px 10px;border:none;float:left}/*/*/.sharing{float:left;width:240px;height:20px;padding:5px;margin:0px
+7px 0px 0px;position:relative}.sharing-inner
+ul{width:18px;height:18px;list-style:none;display:inline;margin:0
+auto}.sharing-inner li
+img{padding:3px;border:1px
+dotted blue;width:18px;height:18px}/*/*//**/.arrow-back{position:absolute;top:84px;left:7px;border:none}.arrow-back:hover{opacity:0.7;filter:alpha(opacity=70)}#page{background:#F4F4F4;padding:10px
+5px;overflow:hidden;margin:10px
+5px 10px 5px;width:968px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#page
+h2{font-weight:600;font-style:normal;font-size:30px;text-transform:lowercase;text-align:left;letter-spacing:-3px;margin:-1px 5px 10px 25px;padding:7px
+10px 7px 10px;color:#769F9B;border-left:12px solid #CAD6D8;max-width:420px;height:auto;min-height:28px}#page h3,h4,h5,h6{color:#387B79;padding:5px
+5px 10px 0px;font-size:inherit}#page
+.pub_date_author{padding:6px
+15px 4px 5px;font-style:normal;font-size:16px;font-weight:700;letter-spacing:-2px;text-transform:lowercase;color:#5D8482;margin:-1px 10px 2px 5px;width:auto;height:15px;border-right:12px solid #CAD6D8;float:right;text-align:right}#page
+.snapshot{text-align:right;padding:5px;margin:-35px 10px 5px -5px;font-style:italic;font-size:small;color:#1F8389;width:auto;max-width:400px;float:right;overflow:hidden;min-height:40px}#page .page-body{clear:both;overflow:hidden;width:auto;text-align:left;padding:15px
+15px 15px 10px;font-size:90%;color:#413F32;margin:-3px -5px 10px -5px;border-top:5px solid #E0E0E0}#page .page-body
+blockquote{font-style:italic;font-weight:500;color:#154052}#page .page-body .media-embed{float:left;padding:10px;margin:-30px 5px 20px 5px}#page .media-embed-type embed, .media-embed-type object, .media-embed-type
+iframe{float:left;width:450px;height:350px;max-width:450px;min-width:450px;max-height:350px;min-height:350px;overflow:hidden;padding-top:10px;margin:10px
+1px 5px 5px}#page .page-body
+ul{margin:10px
+0 5px 20px}#page .page-body ul
+li{padding:5px
+5px 2px 40px;font-size:inherit;color:#183A54;list-style:square inside}#page
+img{border:0px
+solid #ccc;float:right;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#page .page-body img, #page .page-body .slideshow-single-img{border:0px
+solid #ccc;padding:4px;float:left;margin:0px
+5px 10px 0px}.slideshow-single-img{position:relative}.slideshow-single-img-caption{position:absolute;left:8px;bottom:18px;background:#214444;padding:5px;color:#fff;opacity:0.8;width:440px;height:13px;z-index:8}.slideshow-overlay-img-caption{position:absolute;left:13px;bottom:23px;background:#0B2C2C;padding:5px;color:#fff;opacity:0.8;width:592px;height:15px;z-index:8}#page
+hr{width:110%;padding:0;margin-left:-15px;border:#E0E0E0 3px solid}#page .page-body .panel-content-downloads{float:left;padding:10px;margin:10px
+10px 0 -5px;width:930px;height:auto;border:7px
+solid #E7EDEB}#page .page-body .contactform
+ul{font-weight:600;font-style:italic;float:right;display:block;width:400px;height:auto;text-align:right;text-transform:lowercase}#page .page-body .contactform ul
+li{list-style:none !important;padding:5px}.panel-content-downloads ul
+li{font-weight:600;text-transform:lowercase;list-style:square inside;padding:3px;margin:-10px 0 5px -20px}#page
+.list_items{padding:10px}#page .list_items ul
+li{list-style:square inside}#page .list_items
+h4{font-style:italic}.entry_browse_list{list-style:none}.no-image-thmb{border:1px
+dotted grey;color:grey;width:70px;height:70px;font-style:italic;font-size:small;float:left;padding:5px;margin:5px
+5px 0px 3px}/*/*/.page-footer,.level,.tagged,.cat-detail{font-weight:normal;padding:5px;font-style:italic;clear:left}.tagged,.cat-detail{width:370px}.tagged .word, .cat-detail
+.word{background:#CAD6D8;padding:0
+3px 0 3px;height:auto;margin-bottom:3px;width:auto}.tag-footer{width:100%;float:left}/*/*/.related-content{float:right;border-left:#E0E0E0 3px solid;width:55%;height:auto;font-weight:normal;padding:0px
+5px 5px 10px;font-weight:600;margin-top:-125px;overflow:hidden;clear:left}.related-content
+h3{margin:10px
+5px;font-style:italic}.rel-list-box{width:100px;float:left;font-weight:inherit;font-style:normal;padding:5px
+3px;border:3px
+solid #E7EDEB;margin:2px
+4px auto auto;opacity:1.0;filter:alpha(opacity=100);/**/}.rel-list-box
+img{float:left;padding:5px;border:none}.rel-list-box:hover{background:#E5E5E5;border:inset 1px solid #BEBFBE;opacity:0.8;filter:alpha(opacity=80)}.rel-list-box
+h6{font-size:smaller;padding:5px}.rel-list{width:90%;float:left;font-weight:inherit;padding:5px;font-style:inherit}.rel-list
+li{line-height:30px;list-style:none;padding:5px
+0 5px 0}.paginate{clear:both;width:auto;font-size:inherit;font-weight:700;text-transform:uppercase;color:#9C2D7A;padding:10px;margin:20px
+0 0 0;background:#C4D1CD;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);box-shadow:-1px 0px 10px rgba(0,0,0,0.2)}/*/*/#panel_content{background:none !important;font-size:90%;width:auto;padding:5px
+5px 5px 5px;margin:0
+-5px 0 -5px;overflow:hidden;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);box-shadow:-1px 0px 10px rgba(0,0,0,0.2)}#panel_content
+h3{color:#387B79;padding:5px
+5px 10px 0px;font-size:18px}#panel_content h4,h5,h6{color:#387B79;padding:5px
+5px 10px 0px;font-size:inherit}#panel_content
+img{float:right;padding:5px
+5px 5px 5px;margin:4px
+4px 4px 10px;max-width:350px;max-height:250px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#panel_content .panel-content-downloads{float:left;padding:10px;margin:5px
+auto;width:auto;height:auto;font-size:inherit;border:7px
+solid #D9D9CD}#panel_content div.prezi-player{overflow:hidden;float:right;fit-position:right}#panel_content .embed-tabbed{clear:left;width:auto;height:auto;overflow:hidden;float:right;padding:5px
+5px 5px 15px}#panel_content .embed-tabbed embed,object,iframe{border:0px
+solid !important;float:right}#panel_content .embed-tabbed
+iframe{overflow:hidden;display:block}#panel_content .embed-tabbed .prezi-player{border:0px
+solid !important;overflow:hidden;float:right;fit-position:right}#panel_content .embed-tabbed .prezi-player-links{display:none}#panel_content .embed-tabbed
+div{width:280px !important;min-width:280px !important;max-width:280px !important;height:20px !important;min-height:20px !important;max-height:20px !important;float:right;clear:both}/*/*//**/div.accordion{background:#E7EDEB;width:auto;display:block;overflow:hidden;color:inherit}div.accordion
+h2{background:#CFDBDC;padding:5px
+5px 5px 2px !important;margin-left:-40px !important;font-size:22px !important;letter-spacing:0px !important;word-spacing:2px;font-weight:normal;border-left:none !important;border-bottom:2px solid #CAD6D8;cursor:pointer;height:28px !important;min-width:120% !important}div.accordion
+h2.current{cursor:default;background:#B1D0D4;color:#798D9B !important}div.accordion h2:hover{cursor:default;background-color:#93C3CA !important;color:inherit !important}div.accordion h2 ul
+li{background:url('http://www.celtelearning.org/themes/site_themes/default_site/images/bb/panel-arrow-forward.png') no-repeat;width:32px;height:37px;float:left;list-style:none;list-style-position:outside;padding-left:0px;margin:-3px 5px 2px 0px}div.accordion h2.current ul
+li{background:url('http://www.celtelearning.org/themes/site_themes/default_site/images/bb/panel-arrow-forward-dark.png') no-repeat;width:32px;height:37px;float:left;list-style:none;list-style-position:outside;padding-left:0;margin:-3px 5px 2px 0px}div.accordion
+div.pane{height:auto;padding:10px;color:inherit;font-size:inherit;width:auto;overflow:hidden}div.accordion div.pane
+h3{font-weight:normal;margin:0
+0 2px 0;font-size:16px;color:#999;padding:10px}/*/*/.browse_cat_summary{text-align:right;padding:5px;margin:-55px 10px 5px -5px;font-style:italic;font-size:small;color:#1F8389;width:auto;max-width:400px;float:right;overflow:hidden;min-height:40px}.browse_cat{clear:both;overflow:hidden;height:260px;width:auto;text-align:left;padding:15px
+15px 5px 10px;font-size:inherit;color:#413F32;margin:4px
+-5px 4px -5px;/**/}.browse_cat
+h3{padding:5px
+5px 10px 6px !important;font-size:18px !important;height:12px;margin:-1px 5px 10px 14px;line-height:12px;color:#769F9B;border-left:12px solid #CAD6D8;text-transform:lowercase;text-align:left;letter-spacing:-1px}.browse_cat
+h4{color:#387B79;padding:0px
+5px 10px 0px;font-size:14px}.browse_cat_image{padding:2px!important;float:left;margin:5px
+10px 0px 2px !important}.browse_cat
+ul.browse_list{width:auto;height:180px;overflow:hidden;padding:0px
+!important}.browse_cat ul.browse_list li:hover{background:#fff;border:inset 1px solid #7B7C7B;opacity:0.8;filter:alpha(opacity=80)}.browse_cat ul.browse_list
+li{float:left;text-align:left;border:4px
+solid #CEDDDB;list-style:none !important;width:260px;height:150px;padding:10px
+!important;margin:2px
+2px 2px 5px}.browse_more{text-align:right;font-size:inherit;font-weight:600;font-style:italic;width:930px;text-transform:uppercase;color:#9C2D7A;padding:5px
+10px 5px 10px;margin:10px
+0 0 0px;background:#C4D1CD;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);box-shadow:-1px 0px 10px rgba(0,0,0,0.2)}/*/*/#tag-holder,#cat-entry-holder{padding:5px;overflow:hidden;margin:5px
+auto;height:auto;width:965px;float:left}.tag-holder{font-weight:600;font-style:normal;text-transform:lowercase;margin:5px
+5px 5px 15px;padding:10px
+10px 5px 10px;color:#387B79;border-left:5px double #469995;border-width:3px;text-align:left;max-width:70%;height:40px}.tag-entry{font-style:normal;font-size:11px;margin:10px
+5px 5px 5px;padding:5px
+15px 10px 15px;color:#387B79;border:7px
+solid #E7EDEB;text-align:left;width:265px;max-width:265px;min-height:150px;height:auto;float:left;clear:left}.tag-entry
+img{/**/padding:2px
+2px 2px 2px;float:left !important;margin:2px
+4px 4px 0}.tag-entry:hover{background:#E5E5E5;border:inset 1px solid #7B7C7B;opacity:0.8;filter:alpha(opacity=80)}.tag-entry
+h3{text-transform:lowercase;letter-spacing:2px;float:left;width:250px;height:auto;min-height:20px;color:#898E84;font-weight:600;font-size:14px;border-bottom:2px dotted #ABB3AC;margin:5px
+10px 5px -4px;padding:5px}.tag-entry
+hr{border:1px
+dotted #988490;margin:5px;width:295px}.tag-entry a:link{color:#764B8A;text-decoration:none}.tag-entry a:visited{color:#6F0D4E;text-decoration:none}.tag-entry a:hover{color:#238EA7;text-decoration:underline}/*/*/#disqus_thread{margin:10px
+-7px -20px -7px;clear:both;width:auto;background:#F4F4F4 !important;padding:5px
+10px 10px 10px;overflow:hidden}#disqus_thread
+#layout{margin:10px
+auto;width:auto}nav #disqus_thread #global-nav .publisher-anchor-hover .active #post-count ul li a:link{font-size:20px!important;color:#426A71 !important;text-decoration:none}nav #disqus_thread #global-nav .publisher-anchor-hover .active #post-count  ul li a:visited{font-size:20px!important;color:#337D90 !important;text-decoration:none}nav #disqus_thread #global-nav .publisher-anchor-hover .active #post-count  ul li a:hover{font-size:20px!important;color:#40A749 !important;text-decoration:underline}nav #disqus_thread #global-nav #post-count
+h4{font-size:20px!important;color:#426A71 !important}#disqus_thread .textarea-wrapper{background:#D5DDDE !important}#disqus_thread .connect .services
+ul{width:10px !important;height:10px !important}/*/*/#footer{float:left;display:block;width:auto;color:white;font-size:small;text-align:left;padding:5px
+5px 0px 5px;margin-top:-350px;/**/background: url(http://www.celtelearning.org/themes/site_themes/default_site/images/bb/bake0e0e0.png) repeat;height:345px;min-height:345px;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);box-shadow:-1px 0px 10px rgba(0,0,0,0.2)}.footer-holder{position:relative;margin:0
+auto;width:1000px;height:340px;overflow:hidden;padding:0px
+0px 0px 7px}.footer-inner{float:left;padding:18px
+0px 10px 5px;overflow:hidden;margin:7px
+9px 15px 0px;width:307px;height:245px;background:#efefef;border:4px
+#E7EDEB  solid;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.footer-content-box{width:auto;padding:15px;margin:10px;overflow:hidden;font-size:100%;color:#1D757B;float:left}.footer-content-box
+h3{color:#B2BBA2;font-weight:600;font-size:28px;letter-spacing:-2px;text-transform:lowercase;padding:10px
+0px 3px 0px}.footer-content-box a:link{color:#B8465B;text-decoration:none}.footer-content-box a:visited{color:#85B967;text-decoration:none}.footer-content-box a:hover{color:#3BAC94;text-decoration:underline}.footer-browse{color:#B2BBA2;font-weight:600;font-size:24px;letter-spacing:-2px;list-style:none;text-transform:lowercase;padding:10px
+0px 3px 0px}.footer-content-box .logo-ft{padding:5px;height:90px;width:90px;margin-top:0px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/bb/celt-logo_tr_m.png) no-repeat;position:absolute;top:190px;left:170px;clear:both}.footer-nav{clear:both;float:left;list-style:none;height:32px;padding:5px;width:968px;font-size: .9em;font-style:normal;font-weight:600;color:#3A4C67;background:#efefef;overflow:hidden;margin:-6px 5px 0px 0px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.footer-nav ul
+li{display:inline;color:#B2BBA2;font-weight:600;font-size:22px;letter-spacing:-2px;list-style:none;text-transform:lowercase;padding:4px
+10px 3px 5px}.footer-nav
+.logo{padding:5px;height:70px;width:70px;margin-top:0px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/celt-logo_tr-sm.png) no-repeat;position:absolute;top:260px;left:905px}
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+<!--<!DOCTYPE html>-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>The London Met Elearning Matrix | Homepage</title>
+<meta name="description" content="This is the London Met Elearning Matrix, an online resource for everything relating to elearning, technology enhanced learning and teaching, e-pedagogy and digital literacies in higher education. We are supported by the London Met Centre for the Enhancement of Learning and Teaching.">
+<!--<meta name="viewport" content="width=320;initial-scale=0.6;maximum-scale=1.0;user-scalable=yes;"/>
+<meta name="viewport" content="width=480;initial-scale=0.6;maximum-scale=1.0;user-scalable=yes;"/>
+<meta name="viewport" content="width=580;initial-scale=0.6;maximum-scale=1.0;user-scalable=yes;"/>
+<meta name="viewport" content="width=1140;initial-scale=1.0;maximum-scale=1.0;user-scalable=0;"/>-->
+<!--<script src="js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>-->
+<!--<script type="text/javascript" src="http://www.celtelearning.org/themes/site_themes/default_site/scripts/jquery.tools.min.js"></script>
+<script src="http://www.celtelearning.org/themes/site_themes/default_site/scripts/modernizr.js"></script>-->
+<!--ALL GLOBAL SCRIPTS ARE LINKED HERE-->
+<script src='http://www.celtelearning.org/cache/2f6fe549ecc49fe28aadea7fb2d99382ef6310bb.1358349158.1.0.0.js' type='text/javascript'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.celtelearning.org/elearning-londonmet.rsd" />
+<!--ALL GLOBAL STYLES & ALL jQUERY interface STYLES ARE LINKED HERE-->
+<link rel="stylesheet" href="http://www.celtelearning.org/themes/site_themes/default_site/css/layout.css" type="text/css" media="screen"/>
+<link rel="stylesheet" href="http://www.celtelearning.org/themes/site_themes/default_site/css/fonts/fonts.css" type="text/css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="http://www.celtelearning.org/themes/site_themes/default_site/css/css-tabs.css">
+<link rel="stylesheet" type="text/css" href="http://www.celtelearning.org/themes/site_themes/default_site/css/basic_overlay.css">
+<link rel="stylesheet" href="http://www.celtelearning.org/themes/site_themes/default_site/css/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/default.css" type="text/css" media="screen" />
+<!--OG stuff-->
+<meta property="og:type" content="article"/>
+<meta property="og:title" content="Homepage"/>
+<meta property="og:url" content="http://www.celtelearning.org/themes/site_themes/default_site" />
+<meta property="og:description" content="This is the London Met Elearning Matrix, an online resource for everything relating to elearning, technology enhanced learning and teaching, e-pedagogy and digital literacies in higher education. We are supported by the London Met Centre for the Enhancement of Learning and Teaching."/>
+<meta property="og:image" content="http://www.celtelearning.org/themes/site_themes/default_site/images/celt-logo_tr-sm.png"/>
+<meta property="fb:app_id" content="401377913263513"/>
+<meta property="fb:admins" content="737984873" /><style>#wrapper{background-color:#2D748A !important;background-image:none !important}.panel-index h3
+a{color:#AAB9AF}</style>
+</head>
+<body>
+<!--[if lte IE 7]>
+<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
+<![endif]-->
+<div id="wrapper">
+<div class="skin">
+<div id="top_header">
+<!--[if lte IE 10]>
+<style>#top_header
+h2{font-weight:600}</style>
+<![endif]-->
+<h2><a href="http://www.celtelearning.org/" alt="go home" title="go home">The London Met Elearning Matrix</a></h2>
+<p class="">follow CELT support for Elearning </p>
+<!--search & social div here-->
+<div id="index_search_social">
+<div id="search">
+<form method="post" action="http://www.celtelearning.org/"  >
+<div class='hiddenFields'>
+<input type="hidden" name="ACT" value="9" />
+<input type="hidden" name="XID" value="d2ed6b285ae2219b799357bd0d88282903d602cf" />
+<input type="hidden" name="RES" value="" />
+<input type="hidden" name="meta" value="Vc3uuBEkJllTmu6RN/p+bF7oW3lFosKf2q7OxRkuef5YtsSvTpp3gHq3wGUxHY/XQ2qT73OCkTuhbBavEawa+SFRj8bzK5OkCP/OXxbskhoVc12fHDjvIn1Svvi3bel0TFfpRgOx4u0bfRUc3gztL7irgQ2SOlVBhk7VK4a41k9uf7ka2YCRe+TCP1MsfbVH9+G/7QEmYKHgnMG0gm8yi4YvBrC2YacL24w2xVDD9DizwziDKX+EED2InU0AEXOx6f9dE2D95PQjNuCBc/vxrr0ZFN+aGGVP3aKp9aU55t4tPHZRu8IWPgEwJp8zpMl5so+7rtCWpkQs8OrIWUgQPCoWULLcsePkyz+Jiua7/hnZiwj8AhfqxLjTdhohc5Kfxit5pj8WKzsYIOTdon6ZUZvK0Jw8AUuksI16+H189SY=" />
+<input type="hidden" name="site_id" value="1" />
+</div>
+<input type="text" name="keywords" value="search the site" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue;this.style.color = '#5B797B';"
+onfocus="this.value='';this.style.color = '#848D81';" />
+<input type="submit" value="" class="button" />
+</form>
+</div><!--/#search-->
+<div id="social">
+<ul>
+<li><a href="http://www.celtelearning.org/site/rss/efcb5bb8b39b748fcf7da3d1e16bd753"><img src="http://www.celtelearning.org/themes/site_themes/default_site/images/feed.png"></a></li>
+<li><a href="http://www.facebook.com/pages/London-Met-Elearning/520318357984548"><img src="http://www.celtelearning.org/themes/site_themes/default_site/images/facebook.png"></a></li>
+<li><a href="http://vimeo.com/elearninglondonmet"><img src="http://www.celtelearning.org/themes/site_themes/default_site/images/vimeo.png"></a></li>
+<li><a href="https://twitter.com/elearninglondon"><img src="http://www.celtelearning.org/themes/site_themes/default_site/images/twitter.png"></a></li>
+</ul>
+</div><!--/#social-->
+</div><!--/#index_search_social-->
+</div><!--/#top_header-->
+<!--head above this contains wrapper and skin openers-->
+<!--this is the site index-->
+<!-- featured content panel slideshow -->
+<div class="panel-index">
+<div class="slider-wrapper theme-default">
+<div class="ribbon"></div>
+<div class="panel-index-features-slideshow">
+<div id="slider_wide" class="nivoSlider">
+<div class="panel-index-content-box">
+<a href="http://www.celtelearning.org/tutorials/detail/blogging-for-newbies"> <img title="#26" alt="Paperback Writers"  width="955" height="258" src="/images/uploads/resizer/5b6fd95fdb84e9c756c0c94f4e42398daed248f9.jpg" />
+</a>
+</div><!--/.panel-index-content-box-->
+<div class="panel-index-content-box">
+<a href="http://www.celtelearning.org/tutorials/detail/google-docs-and-presentations"> <img title="#17" alt="Chairing is Caring"  width="955" height="258" src="/images/uploads/resizer/7d98230c04eda6eeee41b409b6622d8f384ebb72.jpg" />
+</a>
+</div><!--/.panel-index-content-box-->
+<div class="panel-index-content-box">
+<a href="http://www.celtelearning.org/weblearn/detail/how-to-create-a-welcoming-entry-point-to-your-module"> <img title="#16" alt="A welcoming environment"  width="955" height="258" src="/images/uploads/resizer/6c0c173c3827a06a04b43a70ce0feb360e2a4a56.jpg" />
+</a>
+</div><!--/.panel-index-content-box-->
+<div class="panel-index-content-box">
+<a href="http://www.celtelearning.org/blog/detail/new-site"> <img title="#12" alt="New bubbly site"  width="955" height="258" src="/images/uploads/resizer/f128d8b34fc37b454a2db706b2c9760653cf5ef9.jpg" />
+</a>
+</div><!--/.panel-index-content-box-->
+<div class="panel-index-content-box">
+<a href="http://www.celtelearning.org/tutorials/detail/learn-to-prezi"> <img title="#11" alt="Prezi for SocialMet"  width="955" height="258" src="/images/uploads/resizer/44f6e6016dd898e9ce847bcac8bdbe8d4579c585.png" />
+</a>
+</div><!--/.panel-index-content-box-->
+</div>  <!--/.nivoSlider-->
+<div id="26" class="nivo-html-caption">
+<p style="float:left;width:450px;height:auto;">
+Blogging is like writing a book, a little every day. And as with all books, each one is very different. We can think of it like this: Is...
+<a href="http://www.celtelearning.org/tutorials/detail/blogging-for-newbies"><b><i>read more >></i></b></a> <br /><br /> <a href="http://www.celtelearning.org/tutorials">This entry is from the <b>Tutorials</b> channel</a>
+</p>
+<a href="http://www.celtelearning.org/tutorials/detail/blogging-for-newbies">  <h3>Blogging for Newbies </h3></a>
+</div>
+<div id="25" class="nivo-html-caption">
+</div>
+<div id="24" class="nivo-html-caption">
+</div>
+<div id="23" class="nivo-html-caption">
+</div>
+<div id="20" class="nivo-html-caption">
+</div>
+<div id="18" class="nivo-html-caption">
+</div>
+<div id="17" class="nivo-html-caption">
+<p style="float:left;width:450px;height:auto;">
+Google Drive is an increibly versatile addition to any teaching situation, whether it&#39;s primary school age, or higher education....
+<a href="http://www.celtelearning.org/tutorials/detail/google-docs-and-presentations"><b><i>read more >></i></b></a> <br /><br /> <a href="http://www.celtelearning.org/tutorials">This entry is from the <b>Tutorials</b> channel</a>
+</p>
+<a href="http://www.celtelearning.org/tutorials/detail/google-docs-and-presentations">  <h3>Google Docs &amp;Presentations </h3></a>
+</div>
+<div id="16" class="nivo-html-caption">
+<p style="float:left;width:450px;height:auto;">
+The Entry point&nbsp;&nbsp;to a Weblearn module is simply the first page that students see when they enter that module - it&#39;s the...
+<a href="http://www.celtelearning.org/weblearn/detail/how-to-create-a-welcoming-entry-point-to-your-module"><b><i>read more >></i></b></a> <br /><br /> <a href="http://www.celtelearning.org/weblearn">This entry is from the <b>Weblearn</b> channel</a>
+</p>
+<a href="http://www.celtelearning.org/weblearn/detail/how-to-create-a-welcoming-entry-point-to-your-module">  <h3>There&#8217;s no place like home&#8230;</h3></a>
+</div>
+<div id="12" class="nivo-html-caption">
+<p style="float:left;width:450px;height:auto;">
+hifahfghishasichiochochoc faospf a ud u a a dud
+<a href="http://www.celtelearning.org/blog/detail/new-site"><b><i>read more >></i></b></a> <br /><br /> <a href="http://www.celtelearning.org/blog">This entry is from the <b>Blog</b> channel</a>
+</p>
+<a href="http://www.celtelearning.org/blog/detail/new-site">  <h3>New Site </h3></a>
+</div>
+<div id="11" class="nivo-html-caption">
+<p style="float:left;width:450px;height:auto;">
+Prezi is marvellous. Students love to use Prezi, and staff, once they get the hang of it, think it&#39;s fab.&nbsp;In fact, as a soft...
+<a href="http://www.celtelearning.org/tutorials/detail/learn-to-prezi"><b><i>read more >></i></b></a> <br /><br /> <a href="http://www.celtelearning.org/tutorials">This entry is from the <b>Tutorials</b> channel</a>
+</p>
+<a href="http://www.celtelearning.org/tutorials/detail/learn-to-prezi">  <h3>Learn to Prezi </h3></a>
+</div>
+</div><!--/.panel-index-features-slideshow-->
+</div><!--/.slider-wrapper .theme-default-->
+</div><!--/.panel-index-->
+<!--TAB MENU BELOW FEATURED SLIDESHOW-->
+<div class="panel-index">
+<!-- tabs -->
+<ul class="css-tabs_index">
+<li><a href="#">The London Met Elearning Matrix</a></li>
+<li><a href="#">Expertise</a></li>
+<li><a href="#">Tutorials</a></li>
+<li><a href="#">Weblearn</a></li>
+<li><a href="#">Blog & News</a></li>
+</ul>
+<div class="css-panes_index"> <!-- panes -->
+<!--this is where the start tab would be-->
+<div> <!--tab 1-->
+<!--assorted_content channel intros with conditional urls to channels-->
+<!--title link-->
+<a href="http://www.celtelearning.org/introduction">
+<h3>The London Met Elearning Matrix</h3>
+</a>
+<!--image arrow link-->
+<a href="http://www.celtelearning.org/introduction">
+<img src="http://www.celtelearning.org/themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  />
+</a>
+<div class="cat_sum_sm">
+<img class="category_image_index" alt="Learning Pod"  width="250" height="167" src="/images/uploads/resizer/26934b1e15d566263b0ee37560af2ca242592099.jpg" />
+<p class="short-desc">
+The Elearning Matrix is a web resource full of tutorials, news, articles and academic theory in online learning, teaching and assessment. The elearning team at CELT are the people behind the resource, with staff from across all faculties contributing to content and ideas.
+We began the project of the Elearning Matrix as early as 2009. Back then it was known as the elearning portal. Initially...</p>
+<a href="http://www.celtelearning.org/introduction"><span class="cat_sum_sm_readmore">read more</a></span>
+</div><!--/.cat_sum_sm-->
+</div> <!--end of tab 1 -->
+<div> <!--tab 1-->
+<!--assorted_content channel intros with conditional urls to channels-->
+<!--title link-->
+<a href="http://www.celtelearning.org/expertise">
+<h3>The Expertise Area</h3>
+</a>
+<!--image arrow link-->
+<a href="http://www.celtelearning.org/expertise">
+<img src="http://www.celtelearning.org/themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  />
+</a>
+<div class="cat_sum_sm">
+<img class="category_image_index" alt="Experts"  width="250" height="167" src="/images/uploads/resizer/4ad92d5572342fe3c6333fd5559ae9fea5c622ef.jpg" />
+<p class="short-desc">
+Pedagogical elements
+Pedagogical elements are attempts to define structures or units of educational material. For example, this could be a lesson, an assignment, a multiple choice question, a quiz, a discussion group or a case study. These units should be format independent, so although it may be in any of the following methods, pedagogical structures would not include a textbook, a web page,...</p>
+<a href="http://www.celtelearning.org/expertise" class="cat_sum_sm_readmore">Browse The Expertise Area</a>
+</div><!--/.cat_sum_sm-->
+</div> <!--end of tab 1 -->
+<div> <!--tab 1-->
+<!--assorted_content channel intros with conditional urls to channels-->
+<!--title link-->
+<a href="http://www.celtelearning.org/tutorials">
+<h3>The Tutorials Area</h3>
+</a>
+<!--image arrow link-->
+<a href="http://www.celtelearning.org/tutorials">
+<img src="http://www.celtelearning.org/themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  />
+</a>
+<div class="cat_sum_sm">
+<img class="category_image_index" alt="Learning"  width="250" height="167" src="/images/uploads/resizer/70050dc728f8912da3df7ba4ea6834730c19e7a8.jpg" />
+<p class="short-desc">
+The Tutorials section may arguably turn out to be the most popular of all the sections on the Elearn Matrix. Maybe not, but at this point, the money&#39;s on it. The aim is to provide all levels of howto&#39;s, including things like case studies that illustrate and give ideas (and contexts) for your classes.
+We&#39;ll need a lot of work on this one - from us the admin team as well as you the...</p>
+<a href="http://www.celtelearning.org/tutorials" class="cat_sum_sm_readmore">Browse The Tutorials Area</a>
+</div><!--/.cat_sum_sm-->
+</div> <!--end of tab 1 -->
+<div> <!--tab 1-->
+<!--assorted_content channel intros with conditional urls to channels-->
+<!--title link-->
+<a href="http://www.celtelearning.org/weblearn">
+<h3>The WebLearn Area</h3>
+</a>
+<!--image arrow link-->
+<a href="http://www.celtelearning.org/weblearn">
+<img src="http://www.celtelearning.org/themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  />
+</a>
+<div class="cat_sum_sm">
+<img class="category_image_index" alt="land of promise"  width="250" height="167" src="/images/uploads/resizer/c3daea2c1b423572249c0fe2cc9838a0b3e9db73.jpg" />
+<p class="short-desc">
+Do you need help with Blackboard? Are you unsure of how of if it can help you teach more effectively and help your students learn? It can be difficult, when you have little time and lots of commitments, to know what to do with your content and how to use the web in your teaching. Five categories:&nbsp;&lsquo;Learning Design&rsquo;, &lsquo;Collaboration&rsquo;, &#39;Communication&rsquo;,...</p>
+<a href="http://www.celtelearning.org/weblearn" class="cat_sum_sm_readmore">Browse The WebLearn Area</a>
+</div><!--/.cat_sum_sm-->
+</div> <!--end of tab 1 -->
+<div> <!--tab 1-->
+<!--assorted_content channel intros with conditional urls to channels-->
+<!--title link-->
+<a href="http://www.celtelearning.org/blog">
+<h3>The Blog Area</h3>
+</a>
+<!--image arrow link-->
+<a href="http://www.celtelearning.org/blog">
+<img src="http://www.celtelearning.org/themes/site_themes/default_site/images/panel-arrow.png" alt="read more" title="read more" class="more"  />
+</a>
+<div class="cat_sum_sm">
+<img class="category_image_index" alt="The blog"  width="250" height="167" src="/images/uploads/resizer/86ccc9f38ae4d05e1f79ec5c92076c9322ba7239.jpg" />
+<p class="short-desc">
+This area is for news, articles, events, conference experiences and other work being done by the e-team at London Met. I hope it will be a place to share with everyone what we are all doing, and where we plan to go next with projects, conferences and other events we might be taking part in. Use the RSS to kep in touch (you can add this to your Facebook newsfeed) or just visit back here now and...</p>
+<a href="http://www.celtelearning.org/blog" class="cat_sum_sm_readmore">Browse The Blog Area</a>
+</div><!--/.cat_sum_sm-->
+</div> <!--end of tab 1 -->
+</div> <!-- end of css-panes -->
+</div><!--/.panel-index-->
+<!--/END OF TAB MENU-->
+<script type="text/javascript" src="http://www.celtelearning.org/themes/site_themes/default_site/scripts/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript">$(window).load(function(){$('#slider_wide').nivoSlider({pauseOnHover:true,
+effect: 'boxRain',
+animSpeed: 1000,
+pauseTime: 7000})});</script>
+<script>$(".css-tabs_index:first").tabs(".css-panes_index:first > div");</script>
+</div><!--/.skin-->
+<div id="footer">
+<div class="footer-holder">
+<div class="footer-inner">
+<div class="footer-content-box">
+<h3>Credits</h3>
+Developed by Pen Lister (IA, design, web, media) &amp Jim Pettiward (content, pedagogy &amp inspiration), on behalf of CELT eLearning, <a href="http://www.londonmet.ac.uk/celt/">CELT, London Metropolitan University</a>
+<small>  Powered by <a href="http://expressionengine.com/">Expression Engine 2.5.3</a>, not very valid XHTML and CSS 2&3, jQuery</a> | <a href="http://dryicons.com">DryIcons</a> &amp other icons | &#169;2012 CELT, London Metropolitan University <br />
+To increase/decrease the browser view of this site, just use ctrl +/- (cmd +/-)</small>
+<div class="logo-ft"></div>
+</div><!--/.footer-content-box-->
+</div><!--/.footer_inner-->
+<div class="footer-inner">
+<div class="footer-content-box">
+<h3>Site Tag Cloud</h3>
+<a href="http://www.celtelearning.org/tags/writing-online/" title="writing online" style="font-size:14px">writing online</a>
+<a href="http://www.celtelearning.org/tags/weblearn-xmas/" title="weblearn xmas" style="font-size:14px">weblearn xmas</a>
+<a href="http://www.celtelearning.org/tags/weblearn-basics/" title="weblearn basics" style="font-size:17px">weblearn basics</a>
+<a href="http://www.celtelearning.org/tags/video/" title="video" style="font-size:12px">video</a>
+<a href="http://www.celtelearning.org/tags/symbolism/" title="symbolism" style="font-size:12px">symbolism</a>
+<a href="http://www.celtelearning.org/tags/signs/" title="signs" style="font-size:12px">signs</a>
+<a href="http://www.celtelearning.org/tags/qualifications/" title="qualifications" style="font-size:12px">qualifications</a>
+<a href="http://www.celtelearning.org/tags/privacy/" title="privacy" style="font-size:12px">privacy</a>
+<a href="http://www.celtelearning.org/tags/prezi/" title="prezi" style="font-size:12px">prezi</a>
+<a href="http://www.celtelearning.org/tags/presentations/" title="presentations" style="font-size:14px">presentations</a>
+<a href="http://www.celtelearning.org/tags/pedagogy/" title="pedagogy" style="font-size:18px">pedagogy</a>
+<a href="http://www.celtelearning.org/tags/news/" title="news" style="font-size:15px">news</a>
+<a href="http://www.celtelearning.org/tags/moderating/" title="moderating" style="font-size:12px">moderating</a>
+<a href="http://www.celtelearning.org/tags/learning-theory/" title="learning theory" style="font-size:12px">learning theory</a>
+<a href="http://www.celtelearning.org/tags/information/" title="information" style="font-size:24px">information</a>
+<a href="http://www.celtelearning.org/tags/images/" title="images" style="font-size:12px">images</a>
+<a href="http://www.celtelearning.org/tags/google/" title="google" style="font-size:12px">google</a>
+<a href="http://www.celtelearning.org/tags/experts/" title="experts" style="font-size:15px">experts</a>
+<a href="http://www.celtelearning.org/tags/expertise/" title="expertise" style="font-size:15px">expertise</a>
+<a href="http://www.celtelearning.org/tags/discussions/" title="discussions" style="font-size:12px">discussions</a>
+<a href="http://www.celtelearning.org/tags/cookies/" title="cookies" style="font-size:12px">cookies</a>
+<a href="http://www.celtelearning.org/tags/cloud/" title="cloud" style="font-size:12px">cloud</a>
+<a href="http://www.celtelearning.org/tags/blogging/" title="blogging" style="font-size:12px">blogging</a>
+</div><!--/.footer-content-box-->
+</div> <!--/.footer_inner-->
+<div class="footer-inner">
+<div class="footer-content-box">
+<h3>Browse the site</h3>
+Find content by browsing the main channel tabs or try these general categories:
+<ul class="footer-browse">
+<li><a  href="http://www.celtelearning.org/browse/media">Media</a></li>
+<li><a  href="http://www.celtelearning.org/browse/pedagogy">Pedagogy</a></li>
+<li><a  href="http://www.celtelearning.org/browse/resources">Resources</a></li>
+</ul>
+</div><!--/.footer-content-box-->
+</div><!--/.footer_inner-->
+<div class="footer-nav">
+<ul>
+<li><a href="http://www.celtelearning.org/index">Home</a></li>
+<li><a href="http://www.celtelearning.org/expertise">Expertise</a></li>
+<li><a href="http://www.celtelearning.org/tutorials">Tutorials</a></li>
+<li><a href="http://www.celtelearning.org/weblearn">Weblearn</a></li>
+<li><a href="http://www.celtelearning.org/blog">Blog</a></li>
+<!--<li><a href="http://www.celtelearning.org/help">Help</a></li>-->
+<li><a href="http://www.celtelearning.org/faq">Help&FAQ</a></li>
+<li><a href="http://www.celtelearning.org/terms-and-privacy">Terms&Privacy</a></li>
+<li><a href="http://www.celtelearning.org/contact">Contact Us</a></li>
+</ul>
+<div class="logo">
+</div>
+</div>
+</div><!--/.footer_holder-->
+</div><!--/#footer-->
+</div><!--end of wrapper-->
+<!--        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.8.1.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+-->
+<script>
+var _gaq=[['_setAccount','UA-36776101-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'));</script>
+</body>
+</html>
+/*/*//**/ul.css-tabs_index{margin:0
+!important;padding:0;height:39px;width:auto}ul.css-tabs_index
+li{float:left;padding:0;margin:0;list-style-type:none}ul.css-tabs_index
+a{float:left;font-size:1.4em;font-weight:600;letter-spacing:-1px;text-transform:lowercase;color:#2B8BAB;text-decoration:none;border-bottom:0px;height:18px;background:#CAD6D8;display:block;padding:10px;margin-right:2px;position:relative;top:1px}ul.css-tabs_index a:hover{background-color:#5F8B97;color:#CAD6D8 }ul.css-tabs_index
+a.current{background:#efefef;color:#2B8BAB;cursor:default;margin-top:0px;height:21px}.css-panes_index{height:200px;max-height:200px;min-height:200px;padding:5px;width:auto;background:#efefef;overflow:hidden;clear:left;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}a:active{outline:none}:focus{-moz-outline-style:none;outline:0}/*/*//**/ul.css-tabs_main{margin:0
+!important;padding:0;height:39px;width:auto}ul.css-tabs_main
+li{float:left;padding:0;margin:0;list-style-type:none}ul.css-tabs_main
+a{float:left;font-size:1.2em;font-weight:600;letter-spacing:-1px;text-transform:lowercase;color:#8AAFB7;text-decoration:none;border-bottom:0px;height:18px;background:#CAD6D8;display:block;padding:10px;margin-right:2px;position:relative;top:1px;z-index:0}ul.css-tabs_main a:hover{background-color:#69A7A4;color:#CAD6D8 }ul.css-tabs_main
+a.current{background:#efefef;color:#429995;cursor:default;margin-top:0px;height:21px}.css-panes_main{height:200px;max-height:200px;min-height:200px;padding:5px;width:auto;background:#efefef;overflow:hidden;clear:left;z-index:1;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}/*/*/ul.css-tabs_bb{margin:0
+!important;padding:0;height:30px;width:auto}/**/ul.css-tabs_bb
+li{float:left;padding:0;margin:0;list-style-type:none}ul.css-tabs_bb
+a{float:left;font-size:16px;font-weight:700;display:block;padding:5px
+10px;text-decoration:none;height:18px;background-color:#CAD6D8;border-bottom:1px solid #efefef;color:#8AAFB7;margin-right:2px;position:relative;top:1px}ul.css-tabs_bb a:hover{background-color:#69A7A4;color:#CAD6D8}ul.css-tabs_bb
+a.current{background-color:#efefef;color:#429995;cursor:default;border-bottom:1px solid #efefef}.css-panes_bb{border-width:0 1px 1px 1px;min-height:200px;padding:15px
+20px;width:auto;background:#efefef;overflow:hidden}
+.simple_overlay{display:none;z-index:10000;background-color:#130104;width:auto;min-height:200px;border:1px
+solid #666;padding:10px;-moz-box-shadow:0 0 90px 5px #000;-webkit-box-shadow:0 0 90px #000;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)";filter:progid:DXImageTransform.Microsoft.Alpha(opacity=99)}.simple_overlay
+.close{background-image:url(http://www.celtelearning.org/themes/site_themes/default_site/images/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px}a:active{outline:none}:focus{-moz-outline-style:none}#triggers{text-align:left}#triggers
+img{cursor:pointer;margin:0
+5px;background-color:#fff;border:1px
+solid #ccc;padding:2px;-moz-border-radius:4px;-webkit-border-radius:4px}.details{padding:10px;position:absolute;top:25px;right:25px;font-size:1.2em;color:#778277;width:350px;background:#EBE0E6;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.5);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.5);box-shadow:-1px 0px 10px rgba(0,0,0,0.5);-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}.banner{padding:10px;position:absolute;top:165px;right:15px;font-size:2.5em;font-weight:600;color:#C2301E;width:375px;height:180px;opacity:0.9;filter:alpha(opacity=90);background:url(http://www.celtelearning.org/themes/site_themes/default_site/img/plank.png) no-repeat}
+.nivoSlider{position:relative}.nivoSlider
+img{position:absolute;top:0px;left:0px}.nivoSlider a.nivo-imageLink{position:absolute;top:0px;left:0px;width:100%;height:100%;border:0;padding:0;margin:0;z-index:6;display:none}.nivo-slice{display:block;position:absolute;z-index:5;height:100%}.nivo-box{display:block;position:absolute;z-index:5}.nivo-caption{position:absolute;left:0px;bottom:0px;background:#2D748A;color:#fff;opacity:0.8;width:100%;z-index:8}.nivo-caption
+p{padding:5px;margin:0}.nivo-caption
+a{display:inline !important}.nivo-html-caption{display:none}.nivo-directionNav
+a{position:absolute;top:45%;z-index:9;cursor:pointer}.nivo-prevNav{left:0px}.nivo-nextNav{right:0px}.nivo-controlNav
+a{position:relative;z-index:9;cursor:pointer}.nivo-controlNav
+a.active{font-weight:bold}
+.theme-default
+#slider_big{margin:10px
+10px 30px 10px;float:left;width:auto;height:auto}.theme-default
+#slider_wide{margin:-6px 0px 8px -9px;width:955px;height:auto}.theme-default
+#slider{margin:10px
+10px 30px 10px;float:left;width:450px;height:350px}.theme-default
+.nivoSlider{position:relative;background:#fff url(http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/loading.gif) no-repeat 50% 50%;margin-bottom:50px;-webkit-box-shadow:0px 1px 5px 0px #4a4a4a;-moz-box-shadow:0px 1px 5px 0px #4a4a4a;box-shadow:0px 1px 5px 0px #4a4a4a}.theme-default .nivoSlider
+img{position:absolute;top:0px;left:0px;display:none}.theme-default .nivoSlider
+a{border:0;display:block}.theme-default .nivo-controlNav{position:absolute;left:10%;bottom:-25px;margin-right:10px;margin-left:-20px}.theme-default .nivo-controlNav
+a{display:block;width:22px;height:22px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/bullets.png) no-repeat;text-indent:-9999px;border:0;margin-right:3px;float:left}.theme-default .nivo-controlNav
+a.active{background-position:0 -22px}.theme-default .nivo-directionNav
+a{display:block;width:30px;height:30px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/arrows.png) no-repeat;text-indent:-9999px;border:0}.theme-default a.nivo-nextNav{background-position:-30px 0;right:15px}.theme-default a.nivo-prevNav{left:15px}.theme-default .nivo-caption{font-family:Helvetica,Arial,sans-serif}.theme-default .nivo-caption
+a{color:#fff;border-bottom:1px dotted #fff}.theme-default .nivo-caption a:hover{color:#fff}
