@@ -1817,12 +1817,23 @@ class EE_Functions {
 		// Create image	
 		$im = ImageCreate($img_width, $img_height);
 				
-		// Assign colors		
+		// Assign colors original settings		
+		//$bg_color		= ImageColorAllocate($im, 255, 255, 255);
+		//$border_color	= ImageColorAllocate($im, 153, 102, 102);
+		//$text_color		= ImageColorAllocate($im, 204, 153, 153);
+		//$grid_color		= imagecolorallocate($im, 255, 182, 182);
+		//$shadow_color	= imagecolorallocate($im, 255, 240, 240);
+		
+		// Assign colors penworks edit		
 		$bg_color		= ImageColorAllocate($im, 255, 255, 255);
-		$border_color	= ImageColorAllocate($im, 153, 102, 102);
-		$text_color		= ImageColorAllocate($im, 204, 153, 153);
-		$grid_color		= imagecolorallocate($im, 255, 182, 182);
-		$shadow_color	= imagecolorallocate($im, 255, 240, 240);
+		$border_color	= ImageColorAllocate($im, 255, 255, 255);
+		$text_color		= ImageColorAllocate($im, 94, 137, 169);
+		$grid_color		= imagecolorallocate($im, 227, 231, 236);
+		$shadow_color	= imagecolorallocate($im, 185, 219, 183);
+		
+		
+		
+		
 
 		// Create the rectangle		
 		ImageFilledRectangle($im, 0, 0, $img_width, $img_height, $bg_color);

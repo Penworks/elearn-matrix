@@ -1,0 +1,138 @@
+Array
+(
+    [0] => stdClass Object
+        (
+            [embed_privacy] => anywhere
+            [id] => 9925756
+            [is_hd] => 0
+            [is_transcoding] => 
+            [license] => 0
+            [privacy] => anybody
+            [title] => THE BEAST FILE: GOOGLE ('HUNGRY BEAST', ABC TV)
+            [description] => Meet Google. The noun that became a verb. The world's favourite search engine, and the company whose motto is "Don't be evil..."
+
+Graphics by Patrick Clair, written/presented by Elmo Keep.
+
+Full list of sources available here: http://hungrybeast.abc.net.au/stories/beast-file-google
+
+'Hungry Beast' airs in Australia on the ABC, 9PM Wednesdays. More stories: abc.net.au/hungrybeast
+            [upload_date] => 2010-03-04 20:24:21
+            [modified_date] => 2011-08-04 12:30:54
+            [number_of_likes] => 653
+            [number_of_plays] => 117724
+            [number_of_comments] => 0
+            [width] => 446
+            [height] => 248
+            [duration] => 166
+            [owner] => stdClass Object
+                (
+                    [display_name] => HUNGRY BEAST
+                    [id] => 1840160
+                    [is_plus] => 0
+                    [is_staff] => 0
+                    [profileurl] => http://vimeo.com/user1840160
+                    [realname] => HUNGRY BEAST
+                    [username] => user1840160
+                    [videosurl] => http://vimeo.com/user1840160/videos
+                    [portraits] => stdClass Object
+                        (
+                            [portrait] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [height] => 30
+                                            [width] => 30
+                                            [_content] => http://b.vimeocdn.com/ps/465/465160_30.jpg
+                                        )
+
+                                    [1] => stdClass Object
+                                        (
+                                            [height] => 75
+                                            [width] => 75
+                                            [_content] => http://b.vimeocdn.com/ps/465/465160_75.jpg
+                                        )
+
+                                    [2] => stdClass Object
+                                        (
+                                            [height] => 100
+                                            [width] => 100
+                                            [_content] => http://b.vimeocdn.com/ps/465/465160_100.jpg
+                                        )
+
+                                    [3] => stdClass Object
+                                        (
+                                            [height] => 300
+                                            [width] => 300
+                                            [_content] => http://b.vimeocdn.com/ps/465/465160_300.jpg
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [cast] => stdClass Object
+                (
+                    [member] => stdClass Object
+                        (
+                            [display_name] => HUNGRY BEAST
+                            [id] => 1840160
+                            [role] => 
+                            [username] => user1840160
+                        )
+
+                )
+
+            [urls] => stdClass Object
+                (
+                    [url] => Array
+                        (
+                            [0] => stdClass Object
+                                (
+                                    [type] => video
+                                    [_content] => http://vimeo.com/9925756
+                                )
+
+                            [1] => stdClass Object
+                                (
+                                    [type] => mobile
+                                    [_content] => http://vimeo.com/m/#/9925756
+                                )
+
+                        )
+
+                )
+
+            [thumbnails] => stdClass Object
+                (
+                    [thumbnail] => Array
+                        (
+                            [0] => stdClass Object
+                                (
+                                    [height] => 75
+                                    [width] => 100
+                                    [_content] => http://b.vimeocdn.com/ts/513/868/51386800_100.jpg
+                                )
+
+                            [1] => stdClass Object
+                                (
+                                    [height] => 150
+                                    [width] => 200
+                                    [_content] => http://b.vimeocdn.com/ts/513/868/51386800_200.jpg
+                                )
+
+                            [2] => stdClass Object
+                                (
+                                    [height] => 356
+                                    [width] => 640
+                                    [_content] => http://b.vimeocdn.com/ts/513/868/51386800_640.jpg
+                                )
+
+                        )
+
+                )
+
+        )
+
+)

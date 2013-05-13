@@ -10,10 +10,10 @@
         <div class="ribbon"></div>
           
         <div id="slider" class="nivoSlider">
-                
+                <!--minWidth="350" minHeight="250"-->
       {image_slideshow}  
      
-        <a href="#" rel="#photo-big">{exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" alt="{title}" title="#{row_id}" forceWidth="yes" forceHeight="yes" cropratio="130:100"}</a>
+        <a href="#" rel="#photo-big">{exp:ed_imageresizer image="{image}" maxWidth="450" maxHeight="350" alt="{title}" title="#{row_id}" forceWidth="no" forceHeight="no" cropratio="130:100"}</a>
     
       {/image_slideshow}
       
@@ -49,39 +49,9 @@
  
      </div><!--/.simple_overlay-->
     
-    
-    <script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.nivo.slider.pack.js"></script>
-    <script type="text/javascript">
-    $(window).load(function() {
-        $('#slider').nivoSlider({
-        pauseOnHover: true,
-        effect: 'fade',
-        animSpeed: 700,
-        pauseTime: 4000
-        });
-    });
-    
-        $(window).load(function() {
-        $('#slider_big').nivoSlider({
-        pauseOnHover: true,
-        effect: 'fade',
-        animSpeed: 700,
-        pauseTime: 4000
-        });
-    });
-    
-
-  $(function () {
-   $("a[rel]").overlay({mask: '#000'/*, effect: 'apple'*/});
-
-});
-    </script> 
-     
 
       {if:else}
              
-
-  
     {image_slideshow}
     
     <div class="slideshow-single-img">
@@ -112,11 +82,7 @@
 
 </div>
 
-     <script>
-  $(function () {
-   $("a[rel]").overlay({mask: '#000'/*, effect: 'apple'*/});
-  });
-</script>
+
 
 
 {/exp:channel:entries}

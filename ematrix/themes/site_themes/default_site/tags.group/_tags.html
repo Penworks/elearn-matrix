@@ -1,39 +1,37 @@
-<script type="text/javascript">
-$(function(){
-  $('#tag-holder').masonry({
-    // options
-    itemSelector : '.tag-entry',
-   // columnWidth : 220
-  });
-});
-</script>
 
 
 <div id="page">
 
-  <h2 class="tag-holder">Entries tagged with <em>"{segment_2}"</em></h2>
-
-<div id="tag-holder">
+  <h2>Entries tagged with <em>"{segment_2}"</em></h2>
   
-    {exp:tagger:entries_quick tag="{segment_2}"}
-    {exp:channel:entries entry_id="{tagger:entry_ids}" channel="not assorted_content"}
+  <div class="page-body"> 
 
-<div class="tag-entry">
+    {exp:tagger:entries_quick tag="{segment_2}"}
+    {exp:channel:entries entry_id="{tagger:entry_ids}" channel="not assorted_content" limit="9"}
+
+<div class="list_entry">
 
     {if tagger:no_entries}<p>No entries where found</p>{/if}
-        
-<h3>{exp:snippet total="35" word="" ellipsis="..."}{title}{/exp:snippet}</h3>
+    
+<a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100"  alt="{title}" debug="yes"}{/image_slideshow}</a>
 
-<a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="90" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes"}{/image_slideshow}</a>
+<h3>{title}</h3>
+<p class="pub_date">{entry_date format="%D, %F %d, %Y; %G:%i:%s %a"}</p>
+<p>{exp:snippet total="250" word="" ellipsis="..."}{page_body}{/exp:snippet} <i><b>[<a href="{channel_url}detail/{url_title}">read the full entry</a>]</b></i></p>
 
-<p>{exp:snippet total="180" word="" ellipsis="..."}{page_body}{/exp:snippet} <i><b>[<a href="{channel_url}detail/{url_title}">read the full entry</a>]</b></i></p>
+</div><!--/.list_entry-->
 
-</div><!--/.tag-entry-->
+   {if total_results <= '1'}
+    {paginate}
+    <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+    {pagination_links}</div>
+    {/paginate}
+{/if}
 
     {/exp:channel:entries}
     {/exp:tagger:entries_quick}
    
    
-   </div><!--/#tag-holder-->
-   
+   </div><!--/.page-body-->
+ 
     </div><!--/#page-->

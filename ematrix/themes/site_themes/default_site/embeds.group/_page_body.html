@@ -2,9 +2,6 @@
 
 <div id="page">   
 
-<!--back button-->
-    <a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
-
 <!--conditional channel call for page body entry content-->
     {if segment_1 == "weblearn"}
         {exp:channel:entries channel="weblearn" disable="member_data|trackbacks" limit="1" backspace="2"}
@@ -33,13 +30,26 @@
 
 <!---all page content fields-->
 <div class="page-body">
+    
+    
+    {if social_video}   
+    <div class="media-embed">
+
+    {exp:channel_videos:videos entry_id="{entry_id}" embed_width="450" embed_height="300"}
+        <h3>{video:title}</h3>
+        {video:embed_code}
+    {/exp:channel_videos:videos}
+    
+        
+    </div><!--/.media-embed-->
 
 <!--- embed media in the page body if it's there-->
-{if embed_media}
+{if:elseif embed_media}
 
     <div class="media-embed">    
     {embed="embeds/_embed_media"}
     </div><!--/.media-embed-->
+
 
 <!--- otherwise place the single image or image slideshow into the page body-->
 {if:elseif image_slideshow}
@@ -56,29 +66,21 @@
 <!--- page body field-->
 {if page_body}
     
-    {!--{exp:tagstripper:tagsToStrip tags='div|object|embed|iframe'}{page_body}{/exp:tagstripper:tagsToStrip}--}
-    
-    
-    {page_body}
-    
-    
-    
-    
-    {!--{exp:tagstripper:tagsToSave tags='strong|em|underline|strike|h4|h5}
-{page_body}
-{/exp:tagstripper:tagsToSave}--}
+    {exp:tagstripper:tagsToStrip tags='div|object|embed|iframe'}{page_body}{/exp:tagstripper:tagsToStrip}
+
     
 {/if}
 
-
-
 <!--- download files field within page body field-->
 {if file_download}
-    <div class="panel-content-downloads">
+    <div class="page-body-downloads">
        <h5>DOWNLOADS:</h5>
        {file_download}
        <ul>
-       <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+       <li>
+      <a href="{url}"> [{kind} : {size}] <span class="download-span"> <img src="{global_image_url}download_icon_sm.png" /></span></a>
+       '{title}'{if desc}, <i>{desc}</i>{/if} 
+       </li>
        </ul>
        {/file_download}
     </div><!--/.panel-content-downloads-->
@@ -93,10 +95,6 @@
     {embed="{select_view}"}
 {/if}
 
-<!--- list items field-->
-{if list_items}
-{embed="embeds/_list_items"}
-{/if}
 
 <br />
 <hr>
@@ -106,16 +104,49 @@
 {embed="embeds/_page_foot"}
 
 
+
 <div style="clear:both"></div>
 <hr>
 
 <!--is commenting on?-->
 
 {if commenting == "y"}
+
 {embed="embeds/_disqus"}
 {/if}
 
 {/exp:channel:entries}
+
+
+
+  <script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.nivo.slider.pack.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider({
+        pauseOnHover: true,
+        effect: 'fade',
+        animSpeed: 700,
+        pauseTime: 4000
+        });
+    });
+    
+        $(window).load(function() {
+        $('#slider_big').nivoSlider({
+        pauseOnHover: true,
+        effect: 'fade',
+        animSpeed: 700,
+        pauseTime: 4000
+        });
+    });
+    
+
+  $(function () {
+   $("a[rel]").overlay({mask: '#000'/*, effect: 'apple'*/});
+
+});
+    </script>
+    
+   
 
 
 </div><!--/#page-->

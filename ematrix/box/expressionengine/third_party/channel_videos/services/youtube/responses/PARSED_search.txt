@@ -1,0 +1,2262 @@
+SimpleXMLElement Object
+(
+    [id] => tag:youtube.com,2008:videos
+    [updated] => 2011-08-04T01:00:59.137Z
+    [category] => SimpleXMLElement Object
+        (
+            [@attributes] => Array
+                (
+                    [scheme] => http://schemas.google.com/g/2005#kind
+                    [term] => http://gdata.youtube.com/schemas/2007#video
+                )
+
+        )
+
+    [title] => YouTube Videos matching query: alo
+    [logo] => http://www.youtube.com/img/pic_youtubelogo_123x63.gif
+    [link] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [rel] => alternate
+                            [type] => text/html
+                            [href] => http://www.youtube.com
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [rel] => http://schemas.google.com/g/2005#feed
+                            [type] => application/atom+xml
+                            [href] => http://gdata.youtube.com/feeds/api/videos?v=2
+                        )
+
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [rel] => http://schemas.google.com/g/2005#batch
+                            [type] => application/atom+xml
+                            [href] => http://gdata.youtube.com/feeds/api/videos/batch?v=2
+                        )
+
+                )
+
+            [3] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [rel] => self
+                            [type] => application/atom+xml
+                            [href] => http://gdata.youtube.com/feeds/api/videos?q=alo&start-index=1&max-results=10&format=5&v=2
+                        )
+
+                )
+
+            [4] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [rel] => service
+                            [type] => application/atomsvc+xml
+                            [href] => http://gdata.youtube.com/feeds/api/videos?alt=atom-service&v=2
+                        )
+
+                )
+
+            [5] => SimpleXMLElement Object
+                (
+                    [@attributes] => Array
+                        (
+                            [rel] => next
+                            [type] => application/atom+xml
+                            [href] => http://gdata.youtube.com/feeds/api/videos?q=alo&start-index=11&max-results=10&format=5&v=2
+                        )
+
+                )
+
+        )
+
+    [author] => SimpleXMLElement Object
+        (
+            [name] => YouTube
+            [uri] => http://www.youtube.com/
+        )
+
+    [generator] => YouTube data API
+    [entry] => Array
+        (
+            [0] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:cNMUnDgiEg8
+                    [published] => 2007-08-10T04:21:17.000Z
+                    [updated] => 2011-08-01T16:29:33.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => alo
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => try
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => jack
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => johnson
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => animal
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => liberation
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => orchestra
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => brushfire
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => oniracom
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => phish
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => grateful
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => dead
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => bob
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => marley
+                                        )
+
+                                )
+
+                            [16] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => john
+                                        )
+
+                                )
+
+                            [17] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => mayer
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => "Try" by ALO
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/cNMUnDgiEg8?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=cNMUnDgiEg8&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/cNMUnDgiEg8/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/cNMUnDgiEg8/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=cNMUnDgiEg8
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/cNMUnDgiEg8?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => GuadalajaraJoe
+                            [uri] => http://gdata.youtube.com/feeds/api/users/guadalajarajoe
+                        )
+
+                )
+
+            [1] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:tlBrdtMpKow
+                    [published] => 2009-02-05T14:55:07.000Z
+                    [updated] => 2011-08-03T20:06:44.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => POP
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => HIP
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => HOP
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => RNB
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => DAMAR
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => SLOW
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => SALIM - ALO ALO VIDEO KLIP ORJINAL 2009 BY TUGBIS
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/tlBrdtMpKow?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=tlBrdtMpKow&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/tlBrdtMpKow/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/tlBrdtMpKow/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=tlBrdtMpKow
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/tlBrdtMpKow?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => TugbisYK
+                            [uri] => http://gdata.youtube.com/feeds/api/users/tugbisyk
+                        )
+
+                )
+
+            [2] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:2-ZOU-Vt-4Q
+                    [published] => 2007-05-17T04:03:29.000Z
+                    [updated] => 2011-07-16T01:04:44.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => alo
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => brushfire
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => records
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => jack
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => johnson
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => oniracom
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => zach
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => gill
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => steve
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => adams
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => dan
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => lebowitz
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => dave
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => brogan
+                                        )
+
+                                )
+
+                            [16] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => powersphilms
+                                        )
+
+                                )
+
+                            [17] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => guadalajarajoe
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => "Lady Loop" by ALO
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/2-ZOU-Vt-4Q?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=2-ZOU-Vt-4Q&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/2-ZOU-Vt-4Q/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/2-ZOU-Vt-4Q/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=2-ZOU-Vt-4Q
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/2-ZOU-Vt-4Q?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => GuadalajaraJoe
+                            [uri] => http://gdata.youtube.com/feeds/api/users/guadalajarajoe
+                        )
+
+                )
+
+            [3] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:WWdr9qoxYd4
+                    [published] => 2010-03-02T00:44:31.000Z
+                    [updated] => 2011-08-01T05:50:18.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => here
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => we
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => go
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => yall
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => cypher
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => alo
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => lil
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => crazed
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => herbal
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => micah
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => siryss
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => d-pryde
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => dpryde
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => longbeachproductions
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => "Here We Go" Cypher - ALO
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/WWdr9qoxYd4?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=WWdr9qoxYd4&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/WWdr9qoxYd4/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/WWdr9qoxYd4/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=WWdr9qoxYd4
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/WWdr9qoxYd4?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => fatpiggy888
+                            [uri] => http://gdata.youtube.com/feeds/api/users/fatpiggy888
+                        )
+
+                )
+
+            [4] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:UDa_EOx3DRI
+                    [published] => 2009-10-05T15:45:23.000Z
+                    [updated] => 2011-08-02T17:43:01.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => ALO
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => (Animal
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Liberation
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Orchestra)
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Brushfire
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Records/Universal
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Rock
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => Girl, I Wanna Lay You Down
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/UDa_EOx3DRI?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=UDa_EOx3DRI&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/UDa_EOx3DRI/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/UDa_EOx3DRI/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/UDa_EOx3DRI?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => AnimalLibOrchVEVO
+                            [uri] => http://gdata.youtube.com/feeds/api/users/animalliborchvevo
+                        )
+
+                )
+
+            [5] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:u9qyqLQg8oM
+                    [published] => 2007-06-14T21:05:58.000Z
+                    [updated] => 2011-08-03T01:23:54.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => People
+                                            [label] => People & Blogs
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => animal
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => liberation
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => orchestra
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => alo
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => pobrecito
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => phish
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => jack
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => johnson
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => grateful
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => dead
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => powers
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => philms
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => oniracom
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => "Pobrecito" by ALO
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/u9qyqLQg8oM?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=u9qyqLQg8oM&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/u9qyqLQg8oM/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/u9qyqLQg8oM/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/u9qyqLQg8oM?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => GuadalajaraJoe
+                            [uri] => http://gdata.youtube.com/feeds/api/users/guadalajarajoe
+                        )
+
+                )
+
+            [6] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:Btm1OFAqn34
+                    [published] => 2007-04-02T06:21:15.000Z
+                    [updated] => 2011-07-30T19:41:53.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => alo
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => jack
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => johnson
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => animal
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => liberation
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => orchestra
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => brushfire
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => oniracom
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => phish
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => grateful
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => dead
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => guadalajara
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => joe
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => john
+                                        )
+
+                                )
+
+                            [16] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => mayer
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => "Roses and Clover" by ALO
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/Btm1OFAqn34?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=Btm1OFAqn34&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/Btm1OFAqn34/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/Btm1OFAqn34/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=Btm1OFAqn34
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/Btm1OFAqn34?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => GuadalajaraJoe
+                            [uri] => http://gdata.youtube.com/feeds/api/users/guadalajarajoe
+                        )
+
+                )
+
+            [7] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:kAqTlfFG5D0
+                    [published] => 2010-01-29T06:02:24.000Z
+                    [updated] => 2011-07-18T17:37:56.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => ALO
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Animal
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Liberation
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Orchestra
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Brushfire
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Records
+                                        )
+
+                                )
+
+                            [8] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Man
+                                        )
+
+                                )
+
+                            [9] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Of
+                                        )
+
+                                )
+
+                            [10] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => The
+                                        )
+
+                                )
+
+                            [11] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => World
+                                        )
+
+                                )
+
+                            [12] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => New
+                                        )
+
+                                )
+
+                            [13] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Album
+                                        )
+
+                                )
+
+                            [14] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Jack
+                                        )
+
+                                )
+
+                            [15] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => Johnson
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => ? ALO - I Love Music [NEW SINGLE]
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/kAqTlfFG5D0?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=kAqTlfFG5D0&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/kAqTlfFG5D0/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/kAqTlfFG5D0/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=kAqTlfFG5D0
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/kAqTlfFG5D0?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => peterborszek
+                            [uri] => http://gdata.youtube.com/feeds/api/users/peterborszek
+                        )
+
+                )
+
+            [8] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:YXFQ8tkFTyw
+                    [published] => 2009-03-02T06:15:33.000Z
+                    [updated] => 2011-08-02T09:16:20.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => alo
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => riblja
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => corba
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => bora
+                                        )
+
+                                )
+
+                            [6] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => djordjevic
+                                        )
+
+                                )
+
+                            [7] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => muzika
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => 'ALO - RIBLJA CORBA
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/YXFQ8tkFTyw?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=YXFQ8tkFTyw&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/YXFQ8tkFTyw/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/YXFQ8tkFTyw/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/YXFQ8tkFTyw?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => hikonline
+                            [uri] => http://gdata.youtube.com/feeds/api/users/hikonline
+                        )
+
+                )
+
+            [9] => SimpleXMLElement Object
+                (
+                    [id] => tag:youtube.com,2008:video:27PK4IgnlGQ
+                    [published] => 2007-01-06T03:33:27.000Z
+                    [updated] => 2011-07-27T03:19:28.000Z
+                    [category] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://schemas.google.com/g/2005#kind
+                                            [term] => http://gdata.youtube.com/schemas/2007#video
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/categories.cat
+                                            [term] => Music
+                                            [label] => Music
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => tahsan
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => bangla
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => romantic
+                                        )
+
+                                )
+
+                            [5] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [scheme] => http://gdata.youtube.com/schemas/2007/keywords.cat
+                                            [term] => bengali
+                                        )
+
+                                )
+
+                        )
+
+                    [title] => Tahsan-Alo
+                    [content] => SimpleXMLElement Object
+                        (
+                            [@attributes] => Array
+                                (
+                                    [type] => application/x-shockwave-flash
+                                    [src] => http://www.youtube.com/v/27PK4IgnlGQ?f=videos&app=youtube_gdata
+                                )
+
+                        )
+
+                    [link] => Array
+                        (
+                            [0] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => alternate
+                                            [type] => text/html
+                                            [href] => http://www.youtube.com/watch?v=27PK4IgnlGQ&feature=youtube_gdata
+                                        )
+
+                                )
+
+                            [1] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.responses
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/27PK4IgnlGQ/responses?v=2
+                                        )
+
+                                )
+
+                            [2] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#video.related
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/27PK4IgnlGQ/related?v=2
+                                        )
+
+                                )
+
+                            [3] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => http://gdata.youtube.com/schemas/2007#mobile
+                                            [type] => text/html
+                                            [href] => http://m.youtube.com/details?v=27PK4IgnlGQ
+                                        )
+
+                                )
+
+                            [4] => SimpleXMLElement Object
+                                (
+                                    [@attributes] => Array
+                                        (
+                                            [rel] => self
+                                            [type] => application/atom+xml
+                                            [href] => http://gdata.youtube.com/feeds/api/videos/27PK4IgnlGQ?v=2
+                                        )
+
+                                )
+
+                        )
+
+                    [author] => SimpleXMLElement Object
+                        (
+                            [name] => daddyluv1
+                            [uri] => http://gdata.youtube.com/feeds/api/users/daddyluv1
+                        )
+
+                )
+
+        )
+
+)
+Array
+(
+    [youtube] => Array
+        (
+        )
+
+)

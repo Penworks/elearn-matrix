@@ -1,4 +1,4 @@
-{exp:channel:entries channel="expertise|tutorials|weblearn|main" disable="member_data|trackbacks" limit="1"}
+{exp:channel:entries channel="expertise|tutorials|weblearn|blog" disable="member_data|trackbacks" limit="1"}
 
 
 
@@ -8,9 +8,16 @@
 
 {panel_content}
 
-<div id="panel_content" style="padding: 10px 10px 20px 10px">
+<div id="panel_content" style="padding: 10px 20px 20px 20px">
+    
+    
  {if panel_image}
-               <img src="{panel_image}" alt="{image_title}" class="bb_tab_img">
+ 
+                 <a href="#" rel="#link{row_id}">
+             {exp:ed_imageresizer image="{panel_image}" maxWidth="300" maxHeight="230" forceWidth="yes" forceHeight="yes" class="bb_tab_img" title="#{row_id}" cropratio="130:100" alt="{panel_title}"}
+                </a>
+                
+                
                        {/if}
 
 <h3>{panel_title}</h3>
@@ -24,7 +31,10 @@
                 <h5>DOWNLOADS:</h5>
                 {panel_file}
                 <ul>
-                <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+       <li>
+      <a href="{url}"> [{kind} : {size}] <span class="download-span"> <img src="{global_image_url}download_icon_sm.png" /></span></a>
+       '{title}'{if desc}, <i>{desc}</i>{/if} 
+       </li>
                 </ul>
                 {/panel_file}
              </div><!--/.panel-content-downloads-->
@@ -35,6 +45,29 @@
 <div style="clear:both;"></div>
 
 {/if}<!--/end of if panel_content-->
+
+
+
+ <!--overlay div for larger slideshow-->
+  
+    {panel_content}
+    
+        <div class="simple_overlay" id="link{row_id}">
+
+         {exp:ed_imageresizer image="{panel_image}" maxWidth="700" maxHeight="500" forceWidth="no" forceHeight="no" title="#{row_id}" alt="{panel_title}"}
+        
+        <div id="{row_id}" class="panel-img-caption">
+           {if panel_title}{panel_title}{/if}
+        </div>
+
+        </div><!--/.simple_overlay-->
+        
+    {/panel_content}
+    
+
+
+
+
 
 {/exp:channel:entries }
 

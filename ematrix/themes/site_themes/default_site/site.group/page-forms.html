@@ -1,0 +1,149 @@
+{!--{embed="embeds/_html_head" my_page_title="{segment_1}"}--}
+{exp:channel:entries}
+{embed="embeds/_html_head" my_page_title="{title}"}
+{/exp:channel:entries}
+{embed="embeds/_head"}<!--this contains wrapper and skin openers-->
+
+<div id="page">
+
+{if segment_1 == "contact"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="27"}
+
+{/if}
+
+
+{if segment_1 == "faq"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="40"}
+
+{/if}
+
+{if segment_1 == "suggest-an-entry"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="51"}
+
+{/if}
+
+{if segment_1 == "email-mar2013"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="60"}
+
+{/if}
+
+{if segment_1 == "london-met-staff"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="48"}
+
+{/if}
+ 
+<!-- <h2>{title}</h2>-->
+
+     <span class="pub_date_author">by: {author} on: {entry_date format="%M %d, %Y"}</span>
+        <h2>{title}</h2>
+{if summary}
+    <p class="snapshot"><b>Snapshot:</b>
+    {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
+    </p>
+{/if}
+
+
+<!--- SMALL single image or image slideshow into the page body-->
+
+{!--{image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="170" maxHeight="120" cropratio="100:90" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" title="{title}" class="category_image"}
+      {/image_slideshow}--}
+      
+      
+ 
+    <div class="page-body">
+     
+     
+{if segment_1 == "contact"}
+
+     {exp:freeform:form form:class="" form_name="contact" required="name|email" return="/thankyou"}
+          
+     <fieldset class="right">   
+       <h3>Submit your query</h3>
+     
+     <ul>  
+     <form name="contact" action="" method="POST" enctype="application/x-www-form-urlencoded">
+     
+     <li> <label for="First Name">First Name</label> <br /><input type="text" name="first_name" value="" maxlength="40"  min="" max="" accept=""/></li>
+     <li> <label for="Last Name">Last Name</label> <br /><input type="text" name="last_name" value=""  maxlength="40"  min="" max="" accept=""/></li>
+     <li> <label for="Email">Email</label> <br/><input type="text" name="email" value=""  maxlength="40"  min="" max="" accept=""/></li>
+     <li> <label for="User Message">Your Message</label><textarea name="user_message" wrap="SOFT" style="width:250px !important"></textarea></li>
+     <li><input type="submit"/> <input type="reset"/></li>
+     <input type="hidden" redirect="/thankyou" />
+     </form>
+     </ul>
+     
+     </fieldset>
+     {/exp:freeform:form}
+     
+      <!--- SMALL single image or image slideshow into the page body-->
+
+     {image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="120" maxHeight="90" cropratio="100:80" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" title="#{entry_id}"}
+      {/image_slideshow}
+
+    {page_body}
+
+  {/if}
+       
+  
+{if segment_1 == "suggest-an-entry"}
+
+<!--- SMALL single image or image slideshow into the page body-->
+
+{image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="120" maxHeight="90" cropratio="100:80" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" title="#{entry_id}"}
+      {/image_slideshow}
+
+    {page_body}
+
+ {embed="embeds/_form_submit"}
+
+  {/if}
+  
+{if segment_1 == "faq"}
+
+<!--some faq form stuff here-->
+
+{/if}
+
+{if segment_1 == "email-mar2013"}
+
+    {page_body}
+
+  {/if}
+  
+ 
+ {if segment_1 == "london-met-staff"}
+<!--- SMALL single image or image slideshow into the page body-->
+
+{image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="120" maxHeight="90" cropratio="100:80" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" title="#{entry_id}"}
+      {/image_slideshow}
+      
+    {page_body}
+    
+      <a href="https://bblearn.londonmet.ac.uk/webapps/blackboard/execute/modulepage/view?course_id=_17918_1&cmp_tab_id=_6538_1" style="border:none !important;" target="_blank"><span style="float:right; margin:30px 70px 5px 5px;">
+     {exp:ed_imageresizer image="/themes/site_themes/default_site/images/weblearn-login.png" maxWidth="300" maxHeight="130" cropratio="170:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" title="{title}"}
+    </span></a>
+
+  {/if} 
+  
+  
+       
+</div><!--/.page-body-->
+
+<hr>
+ 
+{embed="embeds/_page_foot"}
+
+<div style="clear:both"></div>
+<hr>
+
+<!--is commenting on?-->
+
+{if commenting == "y"}
+{embed="embeds/_disqus"}
+{/if}
+
+{/exp:channel:entries}
+
+</div><!--/#page-->
+
+{embed="embeds/_foot"}

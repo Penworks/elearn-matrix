@@ -1,19 +1,13 @@
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix/{segment_3}"}
+{!--{embed="embeds/_html_head" my_page_title="{segment_1}"}--}
+{exp:channel:entries}
+{embed="embeds/_html_head" my_page_title="{title}"}
+{/exp:channel:entries}
 {embed="embeds/_head"}<!--this contains wrapper and skin openers-->
 
 <div id="page">
-    
-    <!--back button-->
-<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
 {if segment_1 == "weblearn-area"}
-    <style>
-        #wrapper{
-        background:/ #61A04D !important;    
-        }
-    </style> 
-
-{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="3"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="49"}
 
 {/if}
 
@@ -23,21 +17,11 @@
 {/if}
 
 {if segment_1 == "expertise-area"}
-    <style>
-        #wrapper{
-        background:#BFCD68 !important;    
-        }
-    </style>
 {exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="8"}
 
 {/if}
 
 {if segment_1 == "tutorials-area"}
-    <style>
-        #wrapper{
-        background:#5AA898 !important;    
-        }
-    </style>
 {exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="9"}
 
 {/if}
@@ -57,20 +41,46 @@
 
 {/if}
 
+{if segment_1 == "copyright"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="39"}
 
+{/if}
+
+{if segment_1 == "accessibility"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="41"}
+
+{/if}
+
+{if segment_1 == "faq"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="40"}
+
+{/if}
+
+{if segment_1 == "london-met-staff"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="48"}
+
+{/if}
+
+{if segment_1 == "credits"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="50"}
+
+{/if}
+
+{if segment_1 == "thankyou"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="57"}
+
+{/if}
  
 <!-- <h2>{title}</h2>-->
 
      <span class="pub_date_author">by: {author} on: {entry_date format="%M %d, %Y"}</span>
         <h2>{title}</h2>
-    {if summary}
-        <p class="snapshot"><b>Snapshot:</b>
-        {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
-        </p>
-    {/if}
-    
-    <!--- social media share and print buttons-->
-{!--{embed="embeds/_print_share"}--}
+{if summary}
+    <p class="snapshot"><b>Snapshot:</b>
+    {exp:snippet total="200" word="" ellipsis="..."}{summary}{/exp:snippet}
+    </p>
+{/if}
+
  
     <div class="page-body">
  
@@ -87,49 +97,55 @@
     {embed="embeds/_image_slideshow"}
   
 {/if}
+
+
  
     {page_body}
+    
             
-  {if segment_1 == "introduction"}      
-            
+{if segment_1 == "introduction"}          
+    <br /><br />
+    
     <h4>List of Channels</h4>
-                
-
-        <ul>             
-          <li> <a href="expertise">The Expertise section</a></li>  
-          <li> <a href="tutorials">The Tutorials section</a></li> 
-          <li> <a href="weblearn">The Weblearn section</a></li>  
-          <li> <a href="blog">The Blog & News section</a></li>  
-        </ul>           
-
-
-       {/if}
+     <ul>             
+       <li> <a href="expertise">The Expertise section</a> 
+        <small>Our channel for continuing prefessional development, under the SEDA scheme</small></li>  
+       <li> <a href="tutorials">The Tutorials section</a>
+         <small>Tutorials on all types of technology in learning, teaching and asesment</small></li> 
+       <li> <a href="weblearn">The Weblearn section</a>  <small>Our channel for all things relating to the Blackboard learning management system - at London Met we call this Weblearn</small></li>  
+       <li> <a href="blog">The Blog & News section</a>  <small>Our blog - that's every article published in each channel of the Matrix, plus some added news and discussion articles</small></li>  
+     </ul>           
+{/if}
        
-   {if segment_1 == "contact"}       
-     
-{exp:freeform:form form:class="contactform" form_name="contact" required="name|email"}
- <ul>  
-<form name="contact" action="" method="POST" enctype="application/x-www-form-urlencoded">
-
-<li> First Name: <input type="text" name="first_name" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
-<li> Last Name: <input type="text" name="last_name" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
-<li> Email: <input type="text" name="email" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
-<li> <textarea name="user_message" cols="40" rows="6" wrap="SOFT"></textarea></li>
-<li> <input type="submit"/></li>
- <li><input type="reset"/></li>
-</form>
-</ul>
-{/exp:freeform:form}
+{if segment_1 == "contact"}       
  
+     {exp:freeform:form form:class="contactform" form_name="contact" required="name|email"}
+     <ul>  
+     <form name="contact" action="" method="POST" enctype="application/x-www-form-urlencoded">
+     
+     <li> First Name: <input type="text" name="first_name" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
+     <li> Last Name: <input type="text" name="last_name" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
+     <li> Email: <input type="text" name="email" value="" size="40" maxlength="40"  min="" max="" accept=""/></li>
+     <li> <textarea name="user_message" cols="40" rows="6" wrap="SOFT"></textarea></li>
+     <li> <input type="submit"/></li>
+     <li><input type="reset"/></li>
+     </form>
+     </ul>
+     {/exp:freeform:form}
+
+  {/if}
+       
+{if segment_1 == "london-met-staff"}
+    
+    <a href="https://bblearn.londonmet.ac.uk/webapps/blackboard/execute/modulepage/view?course_id=_17918_1&cmp_tab_id=_6538_1" style="border:none !important;" target="_blank"><span style="float:right; margin:30px 70px 5px 5px;">
+     {exp:ed_imageresizer image="/themes/site_themes/default_site/images/weblearn-login.png" maxWidth="300" maxHeight="130" cropratio="170:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" title="{title}"}
+    </span></a>
+    
+{/if}
+
 
        
-       {/if}
-       
-       
-       
-       
-            
-    </div><!--/.page-body-->
+</div><!--/.page-body-->
 
 <hr>
  
@@ -144,9 +160,14 @@
 {embed="embeds/_disqus"}
 {/if}
 
- 
-
 {/exp:channel:entries}
+
+<script type="text/javascript">
+  $(function () {
+   $("a[rel]").overlay({mask: '#000'/*, effect: 'apple'*/});
+
+});
+    </script>
 
 </div><!--/#page-->
 

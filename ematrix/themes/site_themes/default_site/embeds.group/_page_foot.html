@@ -1,27 +1,68 @@
 <div class="page-footer">
 {exp:channel:entries}
+
+
+<!--- related entries -->
+{if related_content}
+    {embed="embeds/_related"}  
+{/if}
+
+
+
   
 <!--- entry tags-->    
     <div class="tagged">
-        <h5>Tagged:</h5>        
+        <h5>Tagged</h5>        
         {exp:tagger:tags entry_id="{entry_id}" backspace="7"}
          {if tagger:no_tags}<p>No tags where found.</p>{/if} 
         <span class="word"><a href="{site_url}tags/{tagger:urlsafe_tagname}">{tagger:tag_name}</a></span> 
        {/exp:tagger:tags}
        
     </div><!--/.tagged-->
-
-<!--- entry category info -->
+    
+    {if segment_1 == "tutorials"}
+    
+    <!--- entry category info -->
     <div class="cat-detail">
-        <h5>More in:</h5> 
+        <h5>Categorized in</h5> 
         {categories}
                 <a href="{path={segment_1}/list}"><span class="word">{category_name}</span></a> {/categories}  
     </div><!--/.cat-detail-->
+    
+    {if:elseif  segment_1 == "weblearn"}
+    <!--- entry category info -->
+    <div class="cat-detail">
+        <h5>Categorized in</h5> 
+        {categories}
+                <a href="{path={segment_1}/list}"><span class="word">{category_name}</span></a>
+{/categories}  
+    </div><!--/.cat-detail-->    
+   
+    {if:elseif  segment_1 == "expertise"}
+     <!--- entry category info -->
+    <div class="cat-detail">
+        <h5>Categorized in</h5> 
+        {categories}
+                <a href="{path={segment_1}/list}"><span class="word">{category_name}</span></a> {/categories}  
+    </div><!--/.cat-detail-->   
 
-<!--- related entries -->
-{if related_content}
-    {embed="embeds/_related"}  
-{/if}
+    {if:elseif  segment_1 == "blog"}
+     <!--- entry category info -->
+    <div class="cat-detail">
+        <h5>Categorized in</h5> 
+        {categories}
+                <a href="{path={segment_1}/list}"><span class="word">{category_name}</span></a> {/categories}  
+    </div><!--/.cat-detail-->   
+    
+    {if:else}
+    
+    <div class="cat-detail" style="display:none; height:40px;">
+        </div>
+    
+    {/if}
+
+
+
 
 </div><!--/.page-footer-->
 

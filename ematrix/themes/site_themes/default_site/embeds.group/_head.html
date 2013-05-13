@@ -1,32 +1,3 @@
-    {if segment_1 == "weblearn"}
-    <style>
-        #wrapper{
-        background:#61A04D !important;    
-        }
-    </style>    
-    {if:elseif segment_1 == "tutorials"}    
-        <style>
-        #wrapper{
-        background:#5AA898 !important;    
-        }
-    </style>       
-    {if:elseif segment_1 == "expertise"}    
-        <style>
-        #wrapper{
-        background:#BFCD68 !important;    
-        }
-    </style>    
-    {if:else}
-    <style>
-       #wrapper{
-        background-color:#2D748A !important;
-        background-image: none !important;
-        }
-        .panel-index h3 a {
-        color: #AAB9AF;
-        }
-    </style>      
-    {/if}
  
     </head>
     
@@ -68,7 +39,7 @@
         {exp:search:simple_form channel="weblearn|expertise|tutorials|blog" no_result_page="search/no-results" result_page="search/index" search_in="entries" channel="weblearn|expertise|tutorials|blog"}
      <input type="text" name="keywords" value="search the site" size="25" maxlength="250" class="text" onblur="this.value = this.value || this.defaultValue; this.style.color = '#5B797B';"
      onfocus="this.value=''; this.style.color = '#848D81';" />
-     <input type="submit" value="" class="button" />
+     <!--<input type="submit" value="" class="button" />-->
      {/exp:search:simple_form}
         </div><!--/#search-->
         
@@ -82,5 +53,23 @@
         </div><!--/#social-->
 
 </div><!--/#index_search_social-->
+
+
+
+    <div class="top-nav">
+    
+    <ul>
+        <li><a href="{path="/index"}">Home</a></li>
+        <li><a href="{path="/expertise"}">Expertise</a></li>
+        <li><a href="{path="/tutorials"}">Tutorials</a></li>    
+        <li><a href="{path="/weblearn"}">Weblearn</a></li>
+        <li><a href="{path="/blog"}">Blog</a></li>
+        <li><a href="{path="/faq"}">Help/FAQ</a></li>
+        <li><a href="{path="/london-met-staff"}">London Met</a></li>
+        <li><a href="{path="/contact"}">Contact Us</a></li>
+        <li><a href="{path="/suggest-an-entry"}">Suggest an Idea</a></li>
+    </ul> 
+
+    </div>
 
 </div><!--/#top_header-->

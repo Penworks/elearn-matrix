@@ -1,0 +1,27 @@
+{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix"}
+{embed="embeds/_head"}
+<!--all the site tags in one place-->
+<div id="page">
+
+  <h2>Ematrix tag cloud</h2>
+  
+   <p class="snapshot"><b>Snapshot:</b>
+        These are all the tags used in the site. Don't see what you're looking for? Try browsing by media, resources or pedagogy, or use the main categories for Tutorials or Blackboard.
+        </p>
+  
+  <div class="page-body">
+    
+
+  {exp:tagger:cloud limit="300" backspace="1" min_size="12" max_size="24" prefix="tags" channel="weblearn|expertise|tutorials|blog|assorted_content"} 
+            <a href="{site_url}tags/{tags:urlsafe_tagname}/" title="{tags:tag_name}" style="font-size:{tags:size}px">{tags:tag_name}</a>  
+        {/exp:tagger:cloud}
+   
+   
+   
+   
+   </div><!--/.page-body-->
+ 
+    </div><!--/#page-->
+{embed="embeds/_foot"}
+
+

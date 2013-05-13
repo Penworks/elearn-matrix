@@ -1,12 +1,12 @@
-{exp:channel:category_heading channel="blog"}
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
+{!--{exp:channel:category_heading channel="blog"}--}
+{embed="embeds/_html_head" my_page_title="Blog"}
 {embed="embeds/_head"}
 <!--this is the blog index-->
 
 
 <div id="page">
    
-   <h2>Blog & News</h2>
+   <h2>blog - all our posts in one place</h2>
    
    
 <div class="page-body">   
@@ -17,7 +17,7 @@
       <!--[if lte IE 9]>
 <style>#ie-fix-img-thmb { width:auto;border:none;}</style>
 <![endif]-->   
-        <a href="{url_title_path=blog/detail}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+        <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
       {/image_slideshow}
         </a>
         
@@ -44,6 +44,8 @@
 </div><!--/.page-body-->
 
 </div><!--/#page-->
+
+
 
 <!--embed the footer stuff-->
 {embed="embeds/_foot"}

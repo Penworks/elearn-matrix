@@ -1,0 +1,257 @@
+<!--form for submitting content ideas-->
+
+<div id="form-submit">   
+
+    {exp:safecracker channel="content-form" rules:name="required" logged_out_member_id="5" include_jquery="no" return="/thankyou"}
+      
+
+<style>
+fieldset {
+    padding:5px;
+    margin: 20px 5px 5px 5px;
+    border: 1px dotted #E3E7EC;
+    background: /*#efefef*/;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+fieldset h3{
+    font-weight: 600;
+    font-style:italic;
+    color: #B5D1D9 !important;  
+    padding:5px 5px 5px 22px !important;
+    width:130px;
+    margin: -20px 5px 5px 15px;
+    border: 1px dotted #E3E7EC;
+    background: #efefef;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+fieldset label {
+    font-weight: 600;
+    color: #4A8D9A;    
+}
+
+fieldset ul{
+    margin-left:-40px !important;
+}
+
+fieldset ul li {
+    list-style: none !important;
+    padding-bottom:10px !important;
+    margin:10px auto 10px auto;
+    clear:left;
+    background: /*#E5E5E5*/ #E3E7EC;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
+
+fieldset ul li.sublist {
+    list-style: none !important;
+    margin:10px 5px 10px -15px !important;
+    display:inline !important;
+    background: none !important;
+}
+
+.sub-label {
+    font-weight: 600;
+    font-size:small;
+    font-style:italic;
+    color: #4A8D9A;
+}
+
+fieldset hr {
+    border: 0 !important;
+    height: 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding:0 !important;
+    width:425px !important;
+    margin-left:10px !important;
+}
+
+fieldset p {
+    font-weight: normal;
+    font-style:italic;
+    color: #4A8D9A;
+}
+
+fieldset input[type=text] {
+    clear:left;
+    border: 3px solid white; 
+    padding: 7px;
+    width: 160px;
+    background: rgba(255,255,255,0.5);
+    margin: 5px 0 10px 0;
+    -webkit-appearence: none;
+}
+
+fieldset input[type=checkbox] {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align: middle;
+    border: 3px solid white; 
+    background:rgba(255,255,255,0.5);
+    cursor:pointer;
+    -webkit-appearence: none;
+}
+
+textarea {
+    margin-top:10px;
+    width: 300px;
+    height: 120px;
+    border: 3px solid white;
+    padding: 10px;
+    font-family: Tahoma, sans-serif;
+    background: rgba(255,255,255,0.5);
+    -webkit-appearence: none;
+}
+
+fieldset select {
+    border: 3px solid white !important; 
+    padding: 7px;
+    width: 160px;
+    margin-top:10px;
+    background: rgba(255,255,255,0.5);
+    /*border:3px solid white:active;*/
+    -webkit-appearence: none;
+    -moz-appearance: none;
+}
+
+.captcha {
+    padding:10px !important;
+}
+
+.captcha img {
+    border: 3px solid white;
+   -moz-box-shadow: none !important;
+   -webkit-box-shadow: none !important;
+   box-shadow: none !important;
+   margin-top:1px !important;
+   height:32px !important;
+}
+</style>
+
+
+<fieldset>
+    
+    <h3>Suggest and Entry</h3>
+    
+<ul>
+
+<li>
+
+    <label for="title">Topic </label>
+    <p>Add a topic</p> 
+    <input name="title" type="text" maxlength="255" value=""/>
+
+</li>
+
+<li>
+    <label for="content-form-category">Category</label>
+    <p>Tell us which categories fit best, what is it mainly about? (Select all that apply)</p>
+   <ul> {exp:channel:categories 
+      category_group="8"
+      style="linear"
+      channel="content-form"}
+    <li class="sublist"><input type="checkbox" name="category[]" value="{category_id}" />
+    <span class="sub-label">{category_name}</span></li>
+    {/exp:channel:categories}</ul>
+</li>
+
+<li>
+<label for="content-form-media">Media Type </label>
+ <p>Tell us which type of media best fits this learning resource </p>
+ <select name="category[]">
+      <option value="">Select one...</option>
+      {exp:channel:categories
+        category_group="9"
+        style="linear"
+        channel="content-form"
+      }
+      <option value="{category_id}"{selected}>
+        {category_name}
+      </option>
+      {/exp:channel:categories}
+    </select>
+</li>
+
+<li>
+    <label for="skill_level">Difficulty Level </label>
+    <p>Indicate which level of skill is required</p> 
+    <select name="skill_level">
+    <option value="">Select one...</option>
+    {options:skill_level}
+        <option value="{option_value}" {selected}>{option_name}</option>
+      {/options:skill_level}
+    </select>       
+</li>
+
+<li> 
+<label for="content_description">Description</label>
+<p>Tell us why you're making this suggestion, in a few words. Why do you want this content - who is it aimed at? </p>
+<textarea name="content_description" rows="6" cols="30"></textarea>
+</li>
+
+
+<hr>
+
+    
+<li>
+<label for="name">Name</label>
+<p>Tell us who you are</p> 
+<input name="name" type="text" maxlength="255" value=""/>
+</li>
+
+<li>
+<label for="mail">Email</label>
+<p>Give us an email to contact you on (we won't share it)</p> 
+<input name="mail" type="text" maxlength="255" value=""/>
+</li>
+
+<li>
+<label for="faculty">Faculty:</label>
+    <p>Which faculty are you from? (London Met Only)</p> 
+     <select name="category[]">
+      <option value="">Select one...</option>
+      {exp:channel:categories
+        category_group="10"
+        style="linear"
+        channel="content-form"
+      }
+      <option value="{category_id}"{selected}>
+        {category_name}
+      </option>
+      {/exp:channel:categories}
+    </select>
+
+</li>
+
+<li>
+    
+{if captcha}<label for="captcha">Captcha</label>
+<p>Please enter the word you see in the image below:</p>
+<p><span class="captcha">{captcha}</span> <input type="text" name="captcha" value="" maxlength="20" style="border:3px solid white !important"/></p>
+{/if}
+</li>                     
+
+<li>
+<input type="hidden" name="" value="" />
+<input id="" type="submit" name="submit" value="Submit" />
+</li>
+
+</ul>
+	
+</fieldset>
+
+
+     {/exp:safecracker}
+
+
+</div><!--/#form-submit-->

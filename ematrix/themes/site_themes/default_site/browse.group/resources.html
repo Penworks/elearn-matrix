@@ -1,54 +1,64 @@
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix"}
+{embed="embeds/_html_head" my_page_title="{segment_1}/{segment_2}"}
 {embed="embeds/_head"}
 
-<!--browse by category group - media -->
+<!--browse by category group - resources -->
 
 <div id="page">
-    
-        <!--back button-->
-<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
 <h2>Browse by Resources</h2>
 
-<div class="page-body">
-
-    <div class="browse_cat_summary">
+   <div class="browse-cat-sum">
         
-    <p class="intro">Everything in Resources is sorted into different types of resources, like open source (free), online tools, further reading, learning examples or tutorials.</p>
+       <p class="intro">Everything in Resources is sorted into different types of resources, like open source (free), online tools, further reading, learning examples or tutorials.</p>
     
     </div><!--/.browse_cat_summary-->
-
-{exp:categories category_group_id='6' show_empty="no" style="linear"}
-
-    <div class="browse_cat">
     
-        <a title="{category_name}" href="{path=browse/list}/{category_url_title}"><h3>Recent entries in {category_name}</h3></a>
-        <!--<img src="{category_image}" class="browse_cat_image" height="{height}" width="{width}"/>-->
+    
+<div class="page-body">
+
+ 
+{exp:categories category_group_id='7' show_empty="yes" style="linear"}
+
+        <a title="{category_name}" href="{homepage}browse/list/category/{category_url_title}">
+            <h3 class="browse-cat-h3">Recent entries in {category_name}</h3></a>
         
-  {if has_children}
-        <ul class="browse_list">
+        
+        {if has_children}
+        <div class="browse-cat">
         {children}
-        <li><a title="{child_category_name}" href="{path=blog/category}/{child_category_url_title}">{child_category_name}</a></li>
+       <a title="{child_category_name}" href="{path=blog/category}/{child_category_url_title}">{child_category_name}</a>
         {/children}
-        </ul>
+        </div>
         {/if}
         
-        <ul class="browse_list">
-        {exp:channel:entries channel='' category="{category_id}" dynamic='off' limit='3' sort="desc" orderby="date" class="browse_cat_image"}
+  
+        {exp:channel:entries channel='' category="{category_id}" dynamic='off' limit='3' sort="desc" orderby="date"}
         
-        <li>
+      
+    
+        {if no_results}
+<div class="browse-cat">
+<span class="no-results">Sorry, no results for this category - try another!</span>
+</div>
+{/if}
+        
+  <div class="browse-cat">
         <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="100" maxHeight="90" cropratio="130:100" alt="{title}" debug="yes" class="browse_cat_image"}{/image_slideshow}</a>
         <a href="{channel_url}detail/{url_title}"><h4>{title}</h4></a>
-       {exp:snippet total="180" word="" ellipsis="..."}{page_body}{/exp:snippet}<br />
-        <i><strong>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></strong>
-        </li>
-        {/exp:channel:entries}
-        </ul>
-        
-         <p class="browse_more">See more in <a href="{homepage}/browse/list/category/{category_url_title}/">{category_name}</a></p>
- 
-    </div><!--/.browse_cat-->
+        <b>{summary}</b> 
+       {exp:snippet total="150" word="" ellipsis="..."}{page_body}{/exp:snippet} 
+       
+       <a href="{channel_url}detail/{url_title}"><i> Read the full entry</i></a> | 
+<i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
+       
+</div><!--/.browse-cat-->
 
+        {/exp:channel:entries}
+
+        <p class="browse-more">
+            See more in <a href="{homepage}browse/list/category/{category_url_title}/">{category_name}</a></p>
+     
+    
 {/exp:categories}
 
 </div><!--/.page-body-->
@@ -57,3 +67,4 @@
 
 
 {embed="embeds/_foot"}
+

@@ -10,37 +10,56 @@
 
 <div class="sharing">
 <div class="sharing-inner">
-    <span style="position: absolute; top: 5px; left: 40px;">
+    <span style="position: absolute; top: 5px; left: 62px;">
         <a href="http://twitter.com/share" class="twitter-share-button" data-count="none" data-via="penworks" style="margin-bottom: 5px;">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
         </span>
-        
-        <span style="position:absolute;top: 5px;left:100px;">
-            <fb:like layout="button_count" show_faces="false" width="300" style="z-index: 200;"></fb:like>
-    </span>
+        {exp:channel:entries}
+        <span style="position:absolute;top: 5px;left:123px;">
+            <fb:like layout="button_count" show_faces="false" width="300" style="z-index: 200;"></fb:like> </span>{/exp:channel:entries}
+            
+          
+<!-- Place this tag where you want the +1 button to render. -->
+<span style="position:absolute;top: 5px;left:200px;">
+<!-- Place this tag where you want the +1 button to render. -->
+<div class="g-plusone" data-size="medium" data-annotation="none"></div>
+           </span>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>    
+            
+            
+            
+            
+   
       
     <!--print pdf-->
 
     {exp:channel:entries channel="assorted_content|weblearn|expertise|tutorials|blog" disable="member_data|trackbacks" limit="1" backspace="2"}
     
-    {if segment_1 == "weblearn"}
-        <span style="position:absolute;top:-5px;left:5px;">
-        <a href="{url_title_path=weblearn/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
-        </span>   
-    {if:elseif segment_1 == "tutorials"}    
-        <span style="position:absolute;top:-5px;left:5px;">
-        <a href="{url_title_path=tutorials/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
-        </span>      
-    {if:elseif segment_1 == "expertise"}   
-        <span style="position:absolute;top:-5px;left:5px;">
-        <a href="{url_title_path=expertise/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
-        </span>   
-    {if:elseif segment_1 == "blog"}
-        <span style="position:absolute;top:-5px;left:5px;">
-        <a href="{url_title_path=blog/pdf}"><img src="{global_image_url}x_pdf.png" width="30" height="30" alt="print/download pdf" title="print/download pdf"/></a>
-        </span>   
+    <span class="sharing-printing">
+        
+    {if segment_1 == "weblearn"}    
+        <a href="{url_title_path=weblearn/pdf}"><img src="{global_image_url}pdf.png" alt="print/download pdf" title="print/download pdf"/></a>
+        
+    {if:elseif segment_1 == "tutorials"}           
+        <a href="{url_title_path=tutorials/pdf}"><img src="{global_image_url}pdf.png" alt="print/download pdf" title="print/download pdf"/></a>
+         
+    {if:elseif segment_1 == "expertise"}        
+        <a href="{url_title_path=expertise/pdf}"><img src="{global_image_url}pdf.png" alt="print/download pdf" title="print/download pdf"/></a>
+     
+    {if:elseif segment_1 == "blog"}      
+        <a href="{url_title_path=blog/pdf}"><img src="{global_image_url}pdf.png" alt="print/download pdf" title="print/download pdf"/></a>
+           
     {if:else}
  <h2><a href="{site_url}" alt="go home" title="go home">The London Met Elearning Matrix</a></h2>  
     {/if}
+    </span>
     
     {/exp:channel:entries} 
        

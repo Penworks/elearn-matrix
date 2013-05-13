@@ -58,8 +58,8 @@ Class Ed_imageresizer
     private $grayscale          = '';
     
     // ADD PATHS TO YOUR WEB ROOT AND CACHE FOLDER HERE
-    private $server_path        = '/kunden/homepages/45/d437191413/htdocs/ematrix'; // no trailing slash
-    private $cache_path         = '/kunden/homepages/45/d437191413/htdocs/ematrix/images/uploads/resizer/'; // with trailing slash
+    private $server_path        = '/Applications/MAMP/htdocs'; // no trailing slash
+    private $cache_path         = '/Applications/MAMP/htdocs/ematrix_site/ematrix/images/uploads/resizer/'; // with trailing slash
     
     private $memory_limit       = '64M'; // the memory limit to set
 

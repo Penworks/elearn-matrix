@@ -1,12 +1,8 @@
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix"}
+{embed="embeds/_html_head" my_page_title="{segment_1}/{segment_3}/{segment_4}"}
 {embed="embeds/_head"}
-
 
 <!--browse by list-->
 <div id="page">
-    
-    <!--back button-->
-<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
 
 {exp:channel:category_heading channel="expertise|weblearn|tutorials|blog"}
 
@@ -16,7 +12,13 @@
     
     <div class="cat_summary">
 
-<img src="{category_image}" class="category_image_sm" height="{height}" width="{width}" align="left"/>{if category_description}
+<!--<img src="{category_image}" class="category_image_sm" height="{height}" width="{width}" align="left"/>-->
+
+{exp:ed_imageresizer image="{category_image}" maxWidth="150" maxHeight="100" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="category_image"}
+
+
+
+{if category_description}
 <div class="cat-sum-small"><p><i>{category_description}</i></p></div>
 {/if}
 <br />
@@ -38,12 +40,10 @@
 
 <div class="list_entry">
     
-<a href="{channel_url}detail/{url_title}">
-{image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
-      {/image_slideshow}
-</a>
+<a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"} {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+      {/image_slideshow}</a>
 
-<a href="{channel_url}detail/{url_title}"><h3>{title}</h3><a>
+<a href="{channel_url}detail/{url_title}"><h3>{title}</h3></a>
 <p class="pub_date">{entry_date format="%D, %F %d, %Y"}</p>
 <p>{exp:snippet total="200" word="" ellipsis="..."}{page_body}{/exp:snippet}<a href="{channel_url}detail/{url_title}"><i>[read the full entry]</i></a></p>
 

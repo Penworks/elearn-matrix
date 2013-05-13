@@ -1,0 +1,27 @@
+#mainWrapper #mainContent .pageContents {padding:0; border-top:0;}
+
+#fmenu {background-color: #c8d2d7; background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))); background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); background-image:linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); border:1px solid rgba(0, 0, 0, 0.2); overflow:auto; padding:3px; -moz-box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; -webkit-box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; -o-box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset; box-shadow:rgba(255, 255, 255, 0.5) 0 1px 0 0 inset;}
+#fmenu li {float:left; margin:0; padding:2px;}
+#fmenu li a {background:#ABB7C3; color:#fff; font-size:10px; font-weight:bold; margin:3px 7px 0 0; padding:5px 10px 5px 10px; display:block; text-decoration:none; text-transform:uppercase; border-radius:5px;}
+#fmenu li.current {}
+#fmenu li.current a, #fmenu li a:hover {color:#fff; font-weight:bold; background:#27343C; /*background:rgba(125, 141, 150, 0.5);*/ text-shadow:0 -1px 0 rgba(0, 0, 0, 0.2); -moz-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset; -webkit-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset; -o-box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset; box-shadow:rgba(0, 0, 0, 0.2) 0 1px 0 0 inset;}
+
+#fbody {background:#ECF1F4; border:1px solid rgba(0, 0, 0, 0.2); border-bottom-color: rgba(0, 0, 0, 0.4); box-shadow: rgba(0, 0, 0, 0.05) 0 3px 5px 0;}
+#fbody .btitle {padding:7px 15px 7px 10px; background:#fff; border-bottom:1px solid #ddd;}
+#fbody .btitle h2 {color:#222; display:inline-block; font-size:15pt; font-weight:300; margin:0 15px 0 0; text-shadow:0 1px 0 #FFF;}
+#fbody .btitle .abtn.enabled {cursor:pointer; opacity:1; filter:alpha(opacity=100);}
+
+.DDTable {background:#ECF1F4; border:1px solid #ccc; border:1px solid rgba(0, 0, 0, 0.2); border-bottom-color:rgba(0, 0, 0, 0.4); margin-bottom:18px; margin-top:9px; -moz-box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; -webkit-box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; -o-box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; box-shadow:rgba(0, 0, 0, 0.05) 0 3px 5px 0; }
+.DDTable h2 {background:#fff; border-bottom:1px solid rgba(0, 0, 0, 0.2); color:#37444D; margin:0; padding:9px; font-size:16px;}
+.DDTable table {border-spacing:0; border-collapse:collapse; margin:-1px 0 0 0 !important; border-bottom:1px solid #c5ced4; width:100%; }
+.DDTable table tr.odd {background-color:#F6F8FA;}
+.DDTable table.hasrowspan tr.odd {background:none;}
+.DDTable table tr.odds {background-color:#F6F8FA !important;}
+.DDTable table .flabel {font-size:12px; width:200px;}
+.DDTable table th, .DDTable table td {border-color:#c5ced4; border-width:1px 1px 0 0; border-style:solid; border-right-style:dotted; padding:7px 9px; text-align:left;}
+.DDTable table tr th:last-child, .DDTable table tr td:last-child {border-right:none;}
+.DDTable table thead {background:#9aa9b3; background-image:-webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0))); background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); background-image:linear-gradient(top, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%); color:#fff; font-size:12px;}
+.DDTable table thead th {border-right:1px solid #849099; border-top:1px solid #849099; border-bottom:1px solid #849099; font-weight:normal; text-shadow:rgba(0, 0, 0, 0.5) 0 -1px 0; }
+.DDTable table .subhead {font-weight:normal; width:200px;}
+
+.DDTable th small {font-weight:normal;}

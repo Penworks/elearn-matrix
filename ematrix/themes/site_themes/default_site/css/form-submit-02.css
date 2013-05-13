@@ -1,0 +1,168 @@
+#form-submit {
+    
+}
+
+fieldset.left {
+    float:left;
+    padding:5px;
+    margin: 20px 5px 5px 5px;
+    border: 0px dotted #CAC7BE;
+    background:none;
+    width:55%;
+}
+
+fieldset.right {
+    float:right;
+    padding:5px;
+    margin: 20px 5px 5px 5px;
+    border: 0px dotted #CAC7BE;
+    background:none;
+    width:40%;
+}
+
+fieldset h3{
+    font-weight: 600;
+    font-style:italic;
+    color: #8796AE !important;  
+    padding:5px 5px 5px 22px !important;
+    width:160px;
+    margin: -20px 5px 5px 15px;
+    border: 0px dotted #CAC7BE;
+    background: #efefef;
+}
+
+fieldset label {
+    font-weight: 600;
+    color: #4A8D9A;    
+}
+
+fieldset ul{
+    margin-left:-40px !important;
+}
+
+fieldset ul li {
+    border: 0px dotted #B9D1D5;
+    list-style: none !important;
+    padding-bottom:10px !important;
+    margin:10px auto 10px auto;
+    clear:left;
+    background: #E6E6E6;
+}
+
+fieldset ul li.left {
+float:left;width:40%;margin-top:0px;
+}
+
+fieldset ul li.right {
+float:right;clear:left;width:40%;margin-top:0px;    
+}
+
+fieldset ul li.sublist {
+    width:110px !important;
+    border: none !important;
+    list-style: none !important;
+    margin:-2px 0px -5px -15px !important;
+    display:inline-block !important;
+    background: none !important;
+    padding: 0px;
+}
+
+.sub-label {
+    font-weight: 600;
+    font-size:11px;
+    font-style:italic;
+    color: #4A8D9A;
+    padding: 0px;
+}
+
+fieldset hr {
+    border: 0 !important;
+    height: 0 !important;
+    border-top: 1px solid rgba(0, 0, 0, 0.1) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+    padding:0 !important;
+    width:425px !important;
+    margin-left:10px !important;
+}
+
+fieldset p {
+    font-weight: normal;
+    font-style:italic;
+    color: #4A8D9A;
+}
+
+fieldset input[type=text] {
+    clear:left;
+    border: 1px solid white; 
+    padding: 7px;
+    width: 160px;
+    background: rgba(255,255,255,0.5);
+    margin: 5px 0 10px 0;
+    -webkit-appearence: none;
+}
+
+fieldset input[type=checkbox] {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 4px;
+    vertical-align: middle;
+    border: 3px solid white; 
+    background:rgba(255,255,255,0.5);
+    cursor:pointer;
+    -webkit-appearence: none;
+}
+
+textarea {
+    margin:10px 0 7px 0;
+    width: 370px;
+    height: 60px;
+    border: 1px solid white;
+    padding: 10px;
+    font-family: Tahoma, sans-serif;
+    background: rgba(255,255,255,0.5);
+    -webkit-appearence: none;
+}
+
+fieldset select {
+    border: 1px solid white !important; 
+    padding: 7px;
+    width: 160px;
+    margin-top:10px;
+    background: rgba(255,255,255,0.5);
+    -webkit-appearence: none;
+    /*-moz-appearance: none;*/
+}
+
+fieldset input[type=submit], fieldset input[type=reset] {
+    clear:left;
+    font-weight:600;
+    border: 1px solid white; 
+    padding: 4px;
+    width: 90px;
+    color:#EFFFF8;
+    background: #849CB4;
+    margin: 0;
+    cursor:pointer;
+    -webkit-appearence: none;
+}
+
+fieldset input[type=submit]:hover, fieldset input[type=reset]:hover {
+    background: #efefef;
+    color:#5E89A9;
+    border: 1px solid #849CB4; 
+}
+
+.captcha {
+    padding:10px !important;
+}
+
+.captcha img {
+    border: 1px solid white;
+   -moz-box-shadow: none !important;
+   -webkit-box-shadow: none !important;
+   box-shadow: none !important;
+   margin:1px 0px 0px -4px !important;
+   height:30px !important;
+   width: 176px;
+}

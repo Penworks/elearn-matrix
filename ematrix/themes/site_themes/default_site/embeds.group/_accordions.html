@@ -2,21 +2,27 @@
 
 <div id="panel_content">
 
-<small><i>Click on the arrows to access panels of content</i></small>
+<!--<small><i>Click on the arrows to access panels of content</i></small>-->
+
+<h4 style="height:20px;color:#637580;font-style:italic;">Click on the arrows to access more content</h4>
 <div class="accordion"> <!-- accordion --> 
 
 {if panel_content}
 
 
  {panel_content}	
-<!--<small>(panel {row_count})</small>-->									 
+<!--<small>(panel {field_row_count})</small>-->									 
 	<h2> <ul><li></li></ul> {panel_title} </h2> 
 
 	<div class="pane" > <!-- pane -->
 		
- {if panel_image}
-               <img src="{panel_image}" alt="{image_title}" class="bb_tab_img">
-                       {/if}
+    {if panel_image}
+    
+                <a href="#" rel="#link{row_id}">
+             {exp:ed_imageresizer image="{panel_image}" maxWidth="300" maxHeight="230" forceWidth="yes" forceHeight="yes" title="#{row_id}" cropratio="130:100" alt="{panel_title}"}
+                </a>
+
+    {/if}
         
 	<span class="embed-tabbed">{exp:tagstripper:tagsToStrip tags='div|p'}{if panel_embed}{panel_embed}{/panel_embed}{/if}{/exp:tagstripper:tagsToStrip}</span>
 	
@@ -24,37 +30,56 @@
         {if panel_text}<p>{panel_text} </p>{/panel_text}{/if}
 	
 	
-                   {if panel_file}
+                {if panel_file}
              <div class="panel-content-downloads">
                 <h5>DOWNLOADS:</h5>
                 {panel_file}
                 <ul>
-                <li>'{title}'{if desc}, <i>{desc}</i>{/if} <b><a href="{url}"> [{kind} : {size}]</a></b></li>
+       <li>
+      <a href="{url}"> [{kind} : {size}] <span class="download-span"> <img src="{global_image_url}download_icon_sm.png" /></span></a>
+       '{title}'{if desc}, <i>{desc}</i>{/if} 
+       </li>
                 </ul>
                 {/panel_file}
              </div><!--/.panel-content-downloads-->
              {/if}
 	
-	
-	
-	
-	</div> <!-- end of pane -->
+	</div> <!-- end of pane -->  
+        
 {/panel_content}	
 </div><!-- end of accordion-->
 
 </div> <!--end of panel content-->
 
-{/if}<!--/end of if panel_content-->
-
-{/exp:channel:entries}
-
 <script> 
 $(function() {
 	$("div.accordion").tabs(".pane", {tabs: 'h2', initialIndex: 0});
 });
-</script> 
+</script>
+
+
+{/if}<!--/end of if panel_content-->
 
 
 
 
 
+  <!--overlay div for larger slideshow-->
+  
+    {panel_content}
+    
+        <div class="simple_overlay" id="link{row_id}">
+            
+           {exp:ed_imageresizer image="{panel_image}" maxWidth="700" maxHeight="500" forceWidth="no" forceHeight="no" title="#{row_id}" alt="{panel_title}"}
+
+        <div id="{row_id}" class="panel-img-caption">
+           {if panel_title}{panel_title}{/if}
+        </div>
+
+        </div><!--/.simple_overlay-->
+        
+    {/panel_content}
+
+
+
+{/exp:channel:entries}

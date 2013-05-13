@@ -1,0 +1,51 @@
+.CVField {}
+.CVField .hidden {display:none;}
+
+/* Main Table */
+.CVField .CVTable {width:100%; border:1px solid #b6c0c2; border-radius:4px;}
+.CVField .CVTable thead {background:none !important}
+.CVField .CVTable thead th {text-align:left; font-size:12px; color:#505050 !important; line-height:13px; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))) !important; background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)) !important; border-bottom:1px solid #BBB; text-shadow:0 1px #fff; padding:5px 10px 6px 10px !important; border-left:0 !important; cursor:default !important; border-right:1px solid #ccc; border-right-color:rgba(0,0,0,0.1) !important;}
+.CVField .CVTable thead th:last-child {border-right:none !important;}
+.CVField .CVTable thead th h4 {font-size:14px; color:#37444D;}
+.CVField .CVTable thead th.top_actions {padding:4px 7px 4px 7px !important;}
+.CVField .CVTable thead th.top_actions .block {float:left; height:16px; position:relative; margin:0 15px 0 0;}
+.CVField .CVTable thead th.top_actions .block:hover {color:#077EB5;}
+.CVField .CVTable thead th.top_actions .block_long {float:left; width:50%; height:16px;}
+.CVField .CVTable thead th.top_actions .SearchVideos {background:url(img/search_videos.png) no-repeat; padding:0 0 0 20px; oultine:0; cursor:pointer;}
+.CVField .CVTable thead th.top_actions .SubmitVideoUrl {background:url(img/submit_videos.png) no-repeat; padding:0 0 0 20px; oultine:0; cursor:pointer;}
+.CVField .CVTable thead th .swfupload {float:left; left:0; position:absolute; top:0;}
+.CVField .CVTable td {padding:5px 8px; font-size:11px; background:#fff; border:solid #e3e3e3; border-width:1px 1px 0 0;}
+.CVField .CVTable tfoot {background:none !important}
+.CVField .CVTable tfoot td {text-align:right; font-size:12px; color:#505050 !important; line-height:13px; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))) !important; background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)) !important; border-bottom:1px solid #BBB; text-shadow:0 1px #fff; padding:5px 10px 6px 10px !important; border-left:0 !important; cursor:default !important;}
+.CVField .CVTable .Button {font-size:12px; background:#fff url(img/thead_bg.png) repeat-x 0 1px; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))); background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)); text-shadow:0 1px #fff; padding:1px 5px; border:1px solid #b6c0c2; border-radius:3px; text-decoration:none; text-align:center; cursor:pointer;}
+.CVField .CVTable .Button:hover {background:#fff url(img/thead_bg.png) repeat-x 0 1px;}
+.CVField .CVTable .PrimaryVideo td {background:#FBF9EA !important; border-top:2px solid #FFF6AF !important; border-bottom:2px solid #FFF6AF !important;}
+.CVField .CVTable .MoveVideo {background:url(img/move.png) no-repeat; width:16px; height:16px; display:block; float:left; margin:0 6px 0 0; text-indent:-99999px;}
+.CVField .CVTable .DelVideo {background:url(img/delete.png) no-repeat; width:16px; height:16px; display:block; float:left; text-indent:-99999px;}
+.CVField .CVTable a {border:none;}
+.CVField .CVTable .cvideo-reorder-state-highlight {background:url('img/reorder_bg.png'); box-shadow:inset 0px 0px 5px #aaa; -webkit-box-shadow:inset 0px 0px 5px #aaa; -moz-box-shadow:inset 0px 0px 5px #aaa;}
+.CVField .CVTable .cvideo-reorder-state-highlight td {background:none;}
+.CVField .CVTable .VideoTile {width:100px; height:121px; float:left; margin:0 5px 3px 0; overflow-y:hidden; padding:5px; position:relative; background:#fff url(img/thead_bg.png) repeat-x 0 1px !important; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))) !important; background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)) !important; border:1px solid #BBB; text-shadow:0 1px #fff; border-radius: 5px 5px 5px 5px;}
+.CVField .CVTable .VideoTile small {font-size:9px; font-weight:normal; display:block; height:25px; overflow:hidden;}
+.CVField .CVTable .VideoTile span {display:block; height:16px; margin:3px 0 0;}
+.CVField .CVTable .VideoTile span .MoveVideo {background:url(img/move_all.png) no-repeat;}
+.CVField .CVTable .TileBased .cvideo-reorder-state-highlight {display:none;}
+
+.CVField .SVWrapper {padding:8px;}
+.CVField .SVWrapper .inner {background:#fff; padding:5px;}
+.CVField .SVWrapper .cvsearch input[type=text] {padding:1px; border:1px solid #8195A0}
+.CVField .SVWrapper .LoadingVideos {height:16px; padding:0 0 0 20px; background:url(img/spinner.gif) no-repeat; margin:5px 0; display:none;}
+.CVField .SVWrapper .VideosResults {background:#fff; margin:6px 0;}
+.CVField .SVWrapper .VideosResults h6 {font-size:12px; color:#505050 !important; line-height:13px; background:#fff url(img/thead_bg.png) repeat-x 0 1px; background: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(rgba(0,0,0,0.06))) !important; background:-moz-linear-gradient(top, transparent, rgba(0,0,0,0.06)) !important; border:1px solid #BBB; text-shadow:0 1px #fff; padding:5px 10px 6px 10px !important; cursor:default !important;}
+.CVField .SVWrapper .VideosResults h6 .ClearVideoSearch {display:block; float:right; padding:0 0 0 20px; background:url(img/clear.png) no-repeat; height:16px; padding:0 0 0 20px; text-decoration:none;}
+.CVField .SVWrapper .VideosResults .results {border:1px solid #BBB; padding:5px;}
+.CVField .SVWrapper .VideosResults .results .video {width:100px; height:105px; float:left; margin:0 5px 3px 0; overflow-y:hidden; padding:3px; text-shadow:none; position:relative;}
+.CVField .SVWrapper .VideosResults .results .video img {}
+.CVField .SVWrapper .VideosResults .results .video small {font-size:9px; font-weight:normal;}
+.CVField .SVWrapper .VideosResults .results .video span {display:none; position:absolute; top:0; right:0; width:100%; height:24px;}
+.CVField .SVWrapper .VideosResults .results .video span a {width:24px; height:24px; display:block; text-indent:-9999px;}
+.CVField .SVWrapper .VideosResults .results .video:hover {background:#000; border-radius:5px; color:#fff}
+.CVField .SVWrapper .VideosResults .results .video:hover span {display:block;}
+.CVField .SVWrapper .VideosResults .results .video:hover .add {background:url(img/plus.png) no-repeat; float:left;}
+.CVField .SVWrapper .VideosResults .results .video:hover .play {background:url(img/play.png) no-repeat; float:right;}
+.CVField .SVWrapper .VideosResults .results .video:hover .loading {background:url(img/spinner_big.gif) no-repeat !important;}

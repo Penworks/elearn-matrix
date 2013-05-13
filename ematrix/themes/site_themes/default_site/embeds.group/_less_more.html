@@ -1,0 +1,119 @@
+<!--less/more content for site index, and channel & category index templates-->
+
+<!-- add the channel entry for the relevant area here, beofre the less more embed -->
+
+<script type="text/javascript">
+    $(function() {
+    $('ul.nav a').bind('click',function(event){
+        var $anchor = $(this);
+        
+        $('html, body').stop().animate({
+           scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500,'easeInOutExpo');
+        
+        event.preventDefault();
+    });
+    });
+    
+    $(document).ready(function(){
+        $(".showmore").hide();
+        $(".show_hide").show();
+     
+        $('.show_hide').click(function(){
+        $(".showmore").slideToggle();
+    });
+    });
+      
+    function exp(obj) {
+        if(obj.oldText){
+        obj.innerHTML = obj.oldText;
+        obj.oldText = null;
+        } else {
+        obj.oldText = obj.innerHTML;
+       // obj.innerHTML = '<< read less';
+       obj.innerHTML = '<img src="{global_image_url}readless.png" />';
+    }
+    }
+</script>
+
+
+<div class="panel-index">  
+        
+        <div class="showless"> 
+
+{if segment_1 == "weblearn"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="49"}
+{/if}
+
+{if segment_1 == "expertise"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="8"}
+{/if}
+
+{if segment_1 == "tutorials"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="9"}                   
+{/if}
+
+{if segment_1 == "blog"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="10"}
+{/if}
+
+{if channel == "site"}
+{exp:channel:entries channel="assorted_content" disable="member_data|trackbacks" limit="1" entry_id="5"}
+{/if}
+
+        <h2>{title}</h2>
+        
+        {page_body:excerpt}
+            
+    <div class="showmore">
+    
+   
+        <span style="float"right;">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="210" maxHeight="130" cropratio="130:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes"}{/image_slideshow}</span>
+           
+     {!-- {exp:snippet total="500" word="" ellipsis="..."}{page_body:extended}{/exp:snippet}--}
+      
+      {page_body:extended}
+        
+          <!--title link-->
+{!--      {if entry_id == "5"}
+      <a href="{page_url}">
+      {/if}
+      {if entry_id == "8"}
+      <a href="{path=expertise}">  
+      {/if}
+      {if entry_id == "9"}
+      <a href="{path=tutorials}">  
+      {/if}
+      {if entry_id == "49"}
+      <a href="{path=weblearn}">  
+      {/if}
+      {if entry_id == "10"}
+      <a href="{path=blog}">  
+      {/if}--}
+      
+      
+      <div style="clear:both; height:15px;"></div>
+      
+       <a href="{page_url}" class="showmore-gotoentry">Go to the full article</a>
+    
+    </div><!--/.showmore-->
+            
+        <br />
+    
+        <!--<a href="#" class="show_hide" onclick="javascript:exp(this);">>> read more</a> -->
+        
+        <a href="#" class="show_hide" onclick="javascript:exp(this);"><img src="{global_image_url}readmore.png" /></a> 
+    
+    </div><!--/.showless-->
+    
+    </div><!--/.panel-index-->
+    
+{/exp:channel:entries}
+
+
+{!--
+{exp:tagstripper:tagsToSave tags='div|p|h1|h2|h3|span'}--}
+
+
+
+

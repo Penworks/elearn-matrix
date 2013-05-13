@@ -1,14 +1,10 @@
 {exp:channel:category_heading channel="weblearn"}
-{embed="embeds/_html_head" my_page_title="The London Met Elearning Matrix: {category_name}"}
+{embed="embeds/_html_head" my_page_title="{category_name}"}
 {embed="embeds/_head"}
 
 <!--this is the weblearn channel list-->
 
 <div id="page">
-  
-    <!--back button-->
-<a href="#" onclick="history.go(-1);return false;"><img src="{site_url}themes/site_themes/default_site/images/arrow-back.png" alt="go back" title="go back" class="arrow-back" /></a>
-
   
 <!--category heading and summary stuff-->
 {exp:channel:category_heading channel="weblearn"}
@@ -22,9 +18,28 @@
 {exp:ed_imageresizer image="{category_image}" maxWidth="150" maxHeight="100" cropratio="150:100" forceWidth="yes" forceHeight="yes" alt="{title}" debug="yes" class="category_image"}
 
     {if category_description}
-    <div class="cat-sum-small">{category_description}</div>
+    <div class="cat-sum-small">{category_description}
         {/if}
-        <h4>See below for everything filed in the <span class="cat-name">'{category_name}'</span> section.</h4>
+        </div><!--/.cat_sum-small-->
+            
+   {if segment_4 == "assessment-feedback"}{exp:channel:entries channel="weblearn" dynamic='off' limit='1' entry_id="35"}
+      <a href="{channel_url}detail/{url_title}" class="cat-sum-small">
+      {/if}
+      {if segment_4  == "collaboration"}{exp:channel:entries channel="weblearn" dynamic='off' limit='1' entry_id="34"}
+      <a href="{channel_url}detail/{url_title}" class="cat-sum-small">  
+      {/if}
+      {if segment_4 == "communication"}{exp:channel:entries channel="weblearn" dynamic='off' limit='1' entry_id="42"}
+      <a href="{channel_url}detail/{url_title}" class="cat-sum-small">  
+      {/if}
+      {if segment_4 == "learning-design"}{exp:channel:entries channel="weblearn" dynamic='off' limit='1' entry_id="43"}
+      <a href="{channel_url}detail/{url_title}" class="cat-sum-small">  
+      {/if}
+            
+            
+      Read more about {category_name}</a>
+      
+      {/exp:channel:entries}
+<h4>See below for everything in the <span class="cat-name">'{category_name}'</span> category</h4>
         
         {/exp:channel:category_heading}
     </div><!--/.cat_summary-->
@@ -33,43 +48,7 @@
 
 <!--category entries stuff-->
   
-{exp:channel:entries channel="weblearn" disable="member_data|trackbacks" orderby="date" limit="7" dynamic=“no” paginate="bottom"}
-
-{if no_results}
-<div class="list_entry">
-<span class="no-results">Sorry, no results for this category - try another!</span>
-</div>
-{/if}
-
-
-<div class="list_entry">
-
-      <!--[if lte IE 9]>
-<style>#ie-fix-img-thmb { width:auto;border:none;}</style>
-<![endif]-->   
-        <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
-      {/image_slideshow}
-        </a>
-        
-<a href="{channel_url}detail/{url_title}"><h3>{title}</h3></a>
-<p class="pub_date">{entry_date format="%D, %F %d, %Y"}</p>
-
-<p>{exp:snippet total="250" word="" ellipsis="..."}{page_body}{/exp:snippet}
-<a href="{channel_url}detail/{url_title}"><i> - read the full entry</i></a> | 
-<i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
-
-</div><!--/.blog_entry-->
-
-<!--pagination-->
-
-{if total_results <= '1'}
-    {paginate}
-    <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
-    {pagination_links}</div>
-    {/paginate}
-{/if}
-
-{/exp:channel:entries}
+{embed=embeds/_list_items}
 
 </div><!--/.page-body-->
 

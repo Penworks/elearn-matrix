@@ -1,0 +1,132 @@
+<!--form for submitting content ideas-->
+
+<div id="form-submit">   
+
+    {exp:safecracker channel="submissions" return="thankyou"}
+     <ul>  
+<form name="suggest-entry" action="" method="POST" enctype="application/x-www-form-urlencoded">
+						
+<ul >
+ 
+<li id="li_1" >
+<label class="description" for="element_1">Topic </label>
+<div>
+<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+</div><p class="guidelines" id="guide_1"><small>Add a topic</small></p> 
+</li>
+
+<li id="li_3" >
+<label class="description" for="element_3">What's it mainly about?  </label>
+<span>
+<input id="element_3_1" name="element_3_1" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_3_1">Weblearn</label>
+<input id="element_3_2" name="element_3_2" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_3_2">Web 2.0</label>
+<input id="element_3_3" name="element_3_3" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_3_3">Presentations</label>
+<input id="element_3_4" name="element_3_4" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_3_4">Theory</label>
+<input id="element_3_5" name="element_3_5" class="element checkbox" type="checkbox" value="1" />
+<label class="choice" for="element_3_5">Case Study</label>
+
+		</span>
+
+<!--<span>
+<input name="element_3_1" type="checkbox" value="" />
+<label for="element_3_1">Weblearn</label>
+<input name="element_3_2" class="element checkbox" type="checkbox" value="1" />
+<label for="element_3_2">Web 2.0</label>
+<input name="element_3_3" class="element checkbox" type="checkbox" value="1" />
+<label for="element_3_3">Presentations</label>
+<input name="element_3_4" class="element checkbox" type="checkbox" value="1" />
+<label for="element_3_4">Theory</label>
+<input name="element_3_5" class="element checkbox" type="checkbox" value="1" />
+<label for="element_3_5">Case Study</label>
+
+</span>-->
+
+<p class="guidelines" id="guide_3"><small>Tell us which categories fit best (Select all that apply)</small></p>
+</li>
+
+
+<li id="li_4" >
+		<label class="description" for="element_4">Media Type </label>
+		<div>
+		<select class="element select medium" id="element_4" name="element_4"> 
+<option value="select" selected="selected">choose suitable media</option>
+<option value="video" >Video</option>
+<option value="text" >Text</option>
+<option value="images" >Image Slideshow</option>
+<option value="podcast" >Podcast</option>
+<option value="presentation" >Presentation Slides</option>
+		</select>
+
+  <p class="guidelines" id="guide_3"><small>Tell us which type of media best fits this learning resource </small></p>
+</li>
+
+
+<li id="li_4" >
+		<label class="description" for="element_4">Difficulty Level </label>
+		<div>
+		<select class="element select medium" id="element_4" name="element_4"> 
+			<option value="1" selected="selected">Really Easy</option>
+<option value="2" >Need some experience</option>
+<option value="3" >Quite hard</option>
+<option value="4" >Difficult!</option>
+
+		</select>
+		</div><p class="guidelines" id="guide_4"><small>Indicate which level of skill is required</small></p> 
+		</li>
+
+
+<li id="li_2" >
+		<label class="description" for="element_2">Why do you want this content - who is it aimed at? </label>
+		<div>
+			<textarea id="element_2" name="element_2" class="element textarea medium" rows="6" cols="30"></textarea> 
+		</div><p class="guidelines" id="guide_2"><small>Tell us why you're making this suggestion, in a few words.</small></p> 
+		</li>
+
+          <li id="li_1" >
+<label class="description" for="element_1">Tell us who you are</label>
+<div>
+<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+</div><p class="guidelines" id="guide_1"><small>Name</small></p> 
+</li>    
+			
+             <li id="li_1" >
+<label class="description" for="element_1">Tell us your Faculty (London Met Only)</label>
+<div><select class="element select medium" id="element_4" name="element_4"> 
+<option value="Select a Faculty" selected="selected">Select a Faculty</option>
+<option value="cass" >CASS</option>
+<option value="fssh" >FSSH</option>
+<option value="flsc" >FLSC</option>
+<option value="lmbs" >LMBS</option>
+<option value="lgir" >LGIR</option>
+
+		</select>
+    
+    <!--    <select id="element_4" name="element_4"> 
+<option value="Select a Faculty" selected="selected">Select a Faculty</option>
+<option value="cass" >CASS</option>
+<option value="fssh" >FSSH</option>
+<option value="flsc" >FLSC</option>
+<option value="lmbs" >LMBS</option>
+<option value="lgir" >LGIR</option>
+</select>-->
+		</div><p class="guidelines" id="guide_4"><small>Which faculty are you from?</small></p> 
+</li>           
+                        
+                        
+                        
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="599888" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+			</ul>
+		</form>	
+     </ul>
+     {/exp:safecracker}
+
+
+</div><!--/#form-submit-->

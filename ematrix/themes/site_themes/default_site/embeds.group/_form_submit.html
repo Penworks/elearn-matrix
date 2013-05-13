@@ -1,0 +1,206 @@
+<div style="clear:both;"></div>
+
+<!--form for submitting content ideas-->
+
+<div id="form-submit">   
+
+    {exp:safecracker channel="content-form" rules:name="required" logged_out_member_id="5" include_jquery="no" return="/thankyou"}
+    
+    
+      
+<fieldset class="left">
+    
+    <h3>Enter your Content Idea</h3>
+    
+<ul>
+
+<li>
+
+    <label for="title">Topic </label>
+    <p>Add a topic</p> 
+    <input name="title" type="text" maxlength="255" value=""/>
+
+</li>
+
+
+<!--[if lte IE 9]>
+<style>
+ul li#sublist-ie {
+    border: none !important;
+    width:110px !important;
+    list-style: none !important;
+    margin:2px 0px 2px 0px !important;
+    display:inline-block !important;
+    }
+    .sub-label{
+        font-size:11px;
+    }
+.checkbox {
+    display:inline-block !important;
+    width:12px !important;
+    height:12px !important;
+    margin:2px 8px 0 8px;
+    vertical-align: middle;
+    border: none !important; 
+    background:rgba(255,255,255,0.5);
+    cursor:pointer;
+    -webkit-appearence: none;
+    }
+</style>    <![endif]-->
+ <li>
+    <label for="content-form-category">Category</label>
+    <p>Tell us which categories fit best, what is it mainly about? (Select all that apply)</p>
+   <ul> {exp:channel:categories 
+      category_group="8"
+      style="linear"
+      channel="content-form"}
+    <li  class="sublist" id="sublist-ie"><input type="checkbox" name="category[]" value="{category_id}" class="checkbox"/>
+    <span class="sub-label">{category_name}</span></li>
+    {/exp:channel:categories}</ul>
+</li>
+
+
+<li class="right">
+
+    <label for="skill_level">Difficulty Level </label>
+    <p>Indicate which level of skill is required</p> 
+    <select name="skill_level">
+    <option value="">Select one...</option>
+    {options:skill_level}
+        <option value="{option_value}" {selected}>{option_name}</option>
+      {/options:skill_level}
+    </select>
+ 
+</li>
+<li class="left">
+<label for="content-form-media">Media Type </label>
+ <p>Tell us which type of media best fits this learning resource </p>
+ <select name="category[]">
+     <option value="">Select one...</option>
+      {exp:channel:categories
+        category_group="9"
+        style="linear"
+        channel="content-form"
+      }
+      <option value="{category_id}"{selected}>
+        {category_name}
+      </option>
+      {/exp:channel:categories}
+    </select>
+
+</li>
+
+
+<li> 
+<label for="content_description">Description</label>
+<p>Tell us why you're making this suggestion, in a few words. Why do you want this content - who is it aimed at? </p>
+<textarea name="content_description"></textarea>
+</li>
+
+</ul>
+
+</fieldset>
+
+<!--<hr>-->
+    
+    <fieldset class="right">
+
+ <h3>Some info about you</h3>
+ 
+ <ul>
+    
+<li>
+<label for="name">Name</label>
+<p>Tell us who you are</p> 
+<input name="name" type="text" maxlength="255" value=""/>
+</li>
+
+<li>
+<label for="mail">Email</label>
+<p>Give us an email to contact you on (we won't share it)</p> 
+<input name="mail" type="text" maxlength="255" value=""/>
+</li>
+
+<li>
+<label for="faculty">Faculty:</label>
+    <p>Which faculty are you from? (London Met Only)</p> 
+     <select name="category[]">
+      <option value="">Select one...</option>
+      {exp:channel:categories
+        category_group="10"
+        style="linear"
+        channel="content-form"
+      }
+      <option value="{category_id}"{selected}>
+        {category_name}
+      </option>
+      {/exp:channel:categories}
+      <option value="">Not Applicable</option>
+    </select>
+
+</li>
+
+{if captcha}
+<!--[if lte IE 9]>
+<style>
+.li-height{
+    overflow:hidden;
+}
+input.cap {
+    clear:left;
+    float:left;
+    border: 1px solid white; 
+    padding: 7px;
+    width: 160px !important;
+    background: rgba(255,255,255,0.5);
+    margin: 5px 0 10px 0px !important;
+    /*margin: -40px 30px 10px -130px !important;*/
+    -webkit-appearence: none;
+}
+   
+.cap img {
+    float:left;
+    display:block;
+    margin:0px 0 5px -5px;
+    width:176px;
+    padding:10px;
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    } 
+    </style>
+<![endif]-->
+    <li class="li-height">
+    <label for="captcha">Captcha</label>
+    <p>Please enter the word you see in the image below:</p>
+ 
+        <span class="captcha">
+        <!--[if lte IE 9]><span class="cap"><![endif]-->
+        {captcha}
+        <!--[if lte IE 9]></span><![endif]-->
+        </span>
+        <input type="text" name="captcha" value="" class="cap"/>
+    </li>      
+                   
+{/if}
+
+<li>
+    
+    <ul>
+<!--<input type="hidden" name="" value="" />-->
+<li class="sublist"><input id="" type="submit" name="submit" value="Submit" /></li>
+
+<li class="sublist"><input id="" type="reset" name="reset" value="Reset" /></li>
+
+    </ul>
+</li>
+
+</ul>
+	
+</fieldset>
+
+
+     {/exp:safecracker}
+
+
+</div><!--/#form-submit-->

@@ -1,8 +1,40 @@
-{exp:channel:entries channel="expertise|tutorials|weblearn|blog" disable="member_data|trackbacks" limit="1" parse="inward"}
-<div class="list_items">
-<h4> More Useful Information</h4>
-{exp:list_maker type="ul"}
-{list_items}
-{/exp:list_maker}
-{/exp:channel:entries}
+<!-- LIST DISPLAY FOR ALL CATEGORIES -->
+
+{exp:channel:entries channel="tutorials|weblearn" disable="member_data|trackbacks" orderby="date" limit="7" dynamic=“no” paginate="bottom"}
+
+
+{if no_results}
+<div class="list_entry">
+<span class="no-results">Sorry, no results for this category - try another!</span>
 </div>
+{/if}
+
+
+<div class="list_entry">
+
+      <!--[if lte IE 9]>
+<style>#ie-fix-img-thmb { width:auto;border:none;}</style>
+<![endif]-->   
+        <a href="{channel_url}detail/{url_title}">{image_slideshow limit="1"}   {exp:ed_imageresizer image="{image}" maxWidth="130" maxHeight="100" cropratio="130:100" alt="{title}" debug="yes"}
+      {/image_slideshow}
+        </a>
+        
+<a href="{channel_url}detail/{url_title}"><h3>{title}</h3></a>
+<p class="pub_date">{entry_date format="%D, %F %d, %Y"}</p>
+
+<p>{exp:snippet total="250" word="" ellipsis="..."}{page_body}{/exp:snippet}
+<a href="{channel_url}detail/{url_title}"><i> - read the full entry</i></a> | 
+<i>Filed in the <a href="{channel_url}">'{channel_title}'</a> section</i></p>
+
+</div><!--/.list_entry-->
+
+<!--pagination-->
+
+{if total_results <= '1'}
+    {paginate}
+    <div class="paginate"><span class="pagecount">Page {current_page} of {total_pages} pages</span>  
+    {pagination_links}</div>
+    {/paginate}
+{/if}
+
+{/exp:channel:entries}
