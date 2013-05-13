@@ -189,7 +189,7 @@ ul.css-tabs_bb a {
    text-decoration:none;
    height:18px;
    background-color: #CAD6D8;
-   border-bottom: 1px solid /*#efefef*/#E7E7E7;
+   border-bottom: 1px solid #efefef;
    color:#8AAFB7;
    margin-right:2px;
    position:relative;
@@ -201,17 +201,17 @@ ul.css-tabs_bb a:hover {
 }	
 /* selected tab */
 ul.css-tabs_bb a.current {
-   background-color:/*#efefef*/ #E7E7E7;
+   background-color:#efefef;
    color:#429995;	
    cursor:default;
-   border-bottom: 1px solid /*#efefef*/#E7E7E7;
+   border-bottom: 1px solid #efefef;
 }
 .css-panes_bb {
    border-width:0 1px 1px 1px;
    min-height:200px;
    padding:15px 20px; 
    width:auto;
-   background: /*#efefef*/ #E7E7E7;
+   background: #efefef;
    overflow: hidden;
 }
 

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
+
+<!--<!DOCTYPE html>-->
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>{site_name} | {embed:my_page_title}</title>
+        <meta name="description" content="This is the London Met Elearning Matrix, an online resource for everything relating to elearning, technology enhanced learning and teaching, e-pedagogy and digital literacies in higher education. We are supported by the London Met Centre for the Enhancement of Learning and Teaching.">
+            
+ <!--<script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.tools.min.js"></script>
+        <script src="{site_url}themes/site_themes/default_site/scripts/modernizr.js"></script>-->
+        
+ <!--ALL GLOBAL SCRIPTS ARE LINKED HERE--> 
+{exp:minimee:js}         
+        <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js' type='text/javascript'></script>
+	<script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/blogger.js"></script>
+	<script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/tweetpanel.js"></script>
+        <script src="http://cdn.jquerytools.org/1.2.7/all/jquery.tools.min.js"></script>	
+	<script type="text/javascript" src="{site_url}themes/site_themes/default_site/scripts/jquery.easing.1.3.js"></script>
+	<script src="{site_url}themes/site_themes/default_site/scripts/effects.core.js"></script>
+        <script src="{site_url}themes/site_themes/default_site/scripts/jquery.isotope.min.js"></script>
+        <script type='text/javascript' src='{site_url}themes/site_themes/default_site/scripts/jquery.masonry.min.js'></script>
+{/exp:minimee:js}
+ 
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="{site_url}elearning-londonmet.rsd" />
+        
+        
+<!--ALL GLOBAL STYLES & ALL jQUERY interface STYLES ARE LINKED HERE--> 
+{exp:minimee:css}      
+        <link rel="stylesheet" href="{site_url}themes/site_themes/default_site/css/layout.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="{site_url}themes/site_themes/default_site/css/fonts/fonts.css" type="text/css" media="screen"/>
+<link rel="stylesheet" type="text/css" href="{site_url}themes/site_themes/default_site/css/css-tabs.css">
+    <link rel="stylesheet" type="text/css" href="{site_url}themes/site_themes/default_site/css/basic_overlay.css">
+            <link rel="stylesheet" href="{site_url}themes/site_themes/default_site/css/nivo-slider.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="{site_url}themes/site_themes/default_site/scripts/themes/default/default.css" type="text/css" media="screen" />
+ {/exp:minimee:css} 
+  
+{if segment_1 == "weblearn"}
+        <!--OG stuff weblearn-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{embed:my_page_title}"/>
+        <meta property="og:url" content="{path={segment_1}/{segment_2}/{segment_3}}" />
+        <meta property="og:description" content="{exp:channel:entries}{summary}{/exp:channel:entries}"/>
+        <meta property="og:image" content="{exp:channel:entries}{image_slideshow limit="1"}{image}{/image_slideshow}{/exp:channel:entries}"/>
+        <meta property="fb:app_id" content="401377913263513"/>
+        <meta property="fb:admins" content="737984873" />       
+{if:elseif segment_1 == "expertise"}
+        <!--OG stuff expertise-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{embed:my_page_title}"/>
+        <meta property="og:url" content="{path={segment_1}/{segment_2}/{segment_3}}" />
+        <meta property="og:description" content="{exp:channel:entries}{summary}{/exp:channel:entries}"/>
+        <meta property="og:image" content="{exp:channel:entries}{image_slideshow limit="1"}{image}{/image_slideshow}{/exp:channel:entries}"/>
+        <meta property="fb:app_id" content="401377913263513"/>
+        <meta property="fb:admins" content="737984873" />        
+{if:elseif segment_1 == "tutorials"}
+        <!--OG stuff tutorials-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{embed:my_page_title}"/>
+        <meta property="og:url" content="{path={segment_1}/{segment_2}/{segment_3}}" />
+        <meta property="og:description" content="{exp:channel:entries}{summary}{/exp:channel:entries}"/>
+        <meta property="og:image" content="{exp:channel:entries}{image_slideshow limit="1"}{image}{/image_slideshow}{/exp:channel:entries}"/>
+        <meta property="fb:app_id" content="401377913263513"/>
+        <meta property="fb:admins" content="737984873" />
+{if:elseif segment_1 == "blog"}
+        <!--OG stuff blog-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{embed:my_page_title}"/>
+        <meta property="og:url" content="{path={segment_1}/{segment_2}/{segment_3}}" />
+        <meta property="og:description" content="{exp:channel:entries}{summary}{/exp:channel:entries}"/>
+        <meta property="og:image" content="{exp:channel:entries}{image_slideshow limit="1"}{image}{/image_slideshow}{/exp:channel:entries}"/>
+        <meta property="fb:app_id" content="401377913263513"/>
+        <meta property="fb:admins" content="737984873" />  
+{if:else}
+        <!--OG stuff-->
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="{embed:my_page_title}"/>
+        <meta property="og:url" content="{path={segment_1}/{segment_2}/{segment_3}}" />
+        <meta property="og:description" content="This is the London Met Elearning Matrix, an online resource for everything relating to elearning, technology enhanced learning and teaching, e-pedagogy and digital literacies in higher education. We are supported by the London Met Centre for the Enhancement of Learning and Teaching."/>
+        <meta property="og:image" content="{global_image_url}celt-logo_tr-sm.png"/>
+        <meta property="fb:app_id" content="401377913263513"/>
+        <meta property="fb:admins" content="737984873" />
+ {/if}
+
+   
+            

@@ -15,7 +15,7 @@ $config['app_version'] = "255";
 $config['install_lock'] = "";
 $config['license_number'] = "9252-5714-3393-0676";
 $config['debug'] = "1";
-$config['cp_url'] = "http://localhost:8888/ematrix_site/ematrix/admin.php";
+$config['cp_url'] = "http://www.celtelearning.org/admin.php";
 $config['doc_url'] = "http://ellislab.com/expressionengine/user-guide/";
 $config['is_system_on'] = "y";
 $config['allow_extensions'] = 'y';
@@ -55,7 +55,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = "index.php";
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------

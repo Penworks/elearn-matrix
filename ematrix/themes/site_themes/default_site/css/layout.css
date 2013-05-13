@@ -1008,6 +1008,19 @@ a.cat-sum-small {
    box-shadow: -1px 0px 4px rgba(0,0,0,0.2);
 }
 
+#panel_content a:link {
+   color: #B8465B;
+   text-decoration: none;
+}
+#panel_content a:visited {
+   color: #85B967;
+   text-decoration: none;
+}
+#panel_content a:hover {
+   color: #3BAC94;
+   text-decoration:underline;
+}
+
 .panel-content-downloads {
    float:left;
    clear:both;

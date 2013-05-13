@@ -1,0 +1,234 @@
+*{margin:0}html,body{height:100%}html{overflow:scroll}body{background:#ECF1EF;margin:0;padding:0;height:100%;font-size:14px;color:#1C4952;font-family:helvetica neue,tahoma,arial,lucida grand,trebuchet MS,sans-serif;-webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased}strong{display:inline !important}* html
+body{text-align:center;height:100%}img a:link, img a:hover, img a:visited, img a:focus{-moz-outline-style:none;border:none;outline:0}body a:link{color:#2F6D6C;text-decoration:none}body a:visited{color:#419D9C;text-decoration:none}body a:hover{color:#809408;text-decoration:underline}.large{font-size:large}.small{font-size:small}#wrapper{width:1000px;margin:0
+auto;overflow:hidden;padding-top:2px;min-height:100%;background:#bededd}* html
+#wrapper{text-align:left;padding-left:30px;height:100%}.skin{width:auto;overflow:hidden;padding:2px
+0px 0px 0px;margin-bottom:357px;position:relative}/*/*/#top_header{height:80px;padding:5px;margin:0
+5px 0 5px;width:auto;text-align:left;font-size: .9em;font-style:normal;font-weight:600;color:#387B79;/**/background: #FBFBFB url(http://www.celtelearning.org/themes/site_themes/default_site/images/.png) repeat-x;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#top_header
+h2{padding:10px
+5px 10px 5px;font-size:30px;letter-spacing:-0.5px;font-weight:500}#top_header
+p{font-size:14px;margin:-20px 6px 10px 10px;text-align:right;letter-spacing:normal}* html
+#top_header{height:190px;width:850px;background:#E1D8D8}#top_header a:link{color:#30808C;text-decoration:none}#top_header a:visited{color:#419D9C;text-decoration:none}#top_header a:hover{color:#809408;text-decoration:underline}/*/*/.top-nav{clear:both;float:left;list-style:none;height:17px;padding:3px
+0px 2px 0px;margin:-6px -5px -5px 5px;width:978px;font-style:normal;font-weight:300;color:#3A4C67;border-top:1px dotted #A4AFA3;background:none;overflow:hidden}.top-nav
+ul{margin-top:-3px;margin-left:-35px}.top-nav ul
+li{display:inline;color:#B2BBA2;font-weight:600;font-size:17px;letter-spacing:-1px;list-style:none;text-transform:lowercase;padding:4px
+10px 3px 5px}/*/*/.panel-index{padding:5px;float:left;overflow:hidden;margin:-2px 0 auto;height:auto}.panel-index
+h2{padding:3px
+0px;color:#4A8B8A;font-size:24px;font-weight:500;letter-spacing:-2px}.panel-index
+h3{padding:10px
+10px;text-align:right;font-size:30px;font-weight:500;letter-spacing:-2px}.panel-index h3
+a{color:#93C5CF}.short-desc{text-align:left;font-size:20px;font-weight:600;letter-spacing:-1px;color:#78A1AB;font-style:italic}.panel-index .more:hover{opacity:0.7;filter:alpha(opacity=70);/**/}.panel-index
+img{border:none;outline:0;-moz-outline-style:none}.panel-index-holder{margin:-2px 0px 3px 0px;width:995px;height:100%;padding:0px;overflow:hidden}.panel-index-inner{float:left;padding:18px
+0px 20px 5px;overflow:hidden;margin:0px
+3px 0px 0px;width:323px;height:270px;position:relative;background:#FBFBFB;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-inner:hover{background:#E5E5E5;border:inset 1px solid #7B7C7B;opacity:0.8;filter:alpha(opacity=80)}.panel-index-content-box{width:auto;padding:15px
+15px 20px 15px;margin:0;overflow:hidden;font-size:90%;color:#5F6055;float:left;display:block}.panel-index-features-slideshow{width:950px;height:auto;padding:20px;margin:0
+0 -2px 0;overflow:hidden;font-size:90%;color:#5F6055;background:#FBFBFB;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-content-box
+img{padding:2px;margin-right:5px;float:left;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-content-box-img{padding:2px;margin:-10px 0 10px 0;float:left;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-content-box
+h3{color:#7FA6AA;font-weight:600;font-size:26px;text-transform:lowercase;padding:8px
+0px 3px 0px;letter-spacing:-2px;text-align:left}.panel-index-content-box .h3-index{color:#7FA6AA;font-weight:400;font-size:30px;text-transform:lowercase;padding:2px
+0px 3px 0px;letter-spacing:-2px;text-align:left;margin:0
+auto}.panel-index-content-box a:link{color:#7D565D;text-decoration:none}.panel-index-content-box a:visited{color:#527733;text-decoration:none}.panel-index-content-box a:hover{color:#3BAC94;text-decoration:underline}/*/*/#search{position:absolute;top:12px;left:648px;font-weight:600;font-size:inherit;margin:0px
+0 5px 4px;width:180px;height:35px}#search
+input.text{border:none;float:left;clear:left;color:#A8B5B8;font-style:italic;font-size:inherit;font-weight:600;margin:4px
+10px 2px 10px;width:180px;height:22px;padding-left:10px;background:#F2F3ED;border:1px
+dotted #D1DAD2}#search
+input.button{width:45px;height:45px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/bb/search.png) no-repeat;border:none;cursor:pointer}#social{position:absolute;top:8px;left:809px;padding:0px;margin:5px
+14px 10px 10px;width:auto;height:50px}#social ul
+li{display:inline;padding:0px;margin:0px
+auto}#social
+img{border:none;padding:2px}#social  :focus{-moz-outline-style:none;outline:0;/**/}/*/*/.panel-index-inner-cat{float:left;padding:10px
+8px 20px 12px;overflow:hidden;margin:2px
+0px -3px 0px;font-size:90%;width:970px;height:auto;position:relative;background:#FBFBFB;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-cat-box-4:hover{background:#E5E5E5;border:inset 1px solid #7B7C7B;opacity:0.8;filter:alpha(opacity=80)}.panel-index-cat-box-4{width:220px;height:365px;padding:10px
+10px 5px 10px;margin:0
+auto;overflow:hidden;color:#5F6055;float:left}.panel-index-cat-box-4
+img{border:0px
+solid #ccc;padding:4px;float:left;margin:0px
+15px 10px 0px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.panel-index-cat-box-4
+h3{color:#41777E !important;font-weight:600;font-size:22px;text-transform:lowercase;padding:8px
+0px 3px 0px;letter-spacing:-1px;line-height:90%;text-align:left}.panel-index-cat-box-more{float:left;margin-top:0px;padding:3px
+5px 10px 0px;font-weight:bold}/*/*/a.showmore-gotoentry{height:20px;font-size:120%;text-decoration:none;font-weight:600;padding:10px
+10px 30px 0px;margin:20px
+0px 20px 0px}.excerpt{width:auto;padding:10px
+10px 10px 0px;margin:0px;overflow:hidden;font-size:inherit;color:#5F6055;background:none}.excerpt
+h4{font-size:16px}.excerpt
+hr{width:130%;padding:0;margin:3px
+0px 10px -20px;border:#E0E0E0 1px solid}/*/*/.channel-rss{position:absolute;top:105px;left:845px;width:150px;height:30px;font-size:small;font-weight:600;font-style:italic;color:#54C7C5;line-height:40px;background:#193947;opacity:0.8;filter:alpha(opacity=80);/**/}.channel-rss
+img{padding:4px
+4px 4px 10px;border:none;float:left}.channel-rss a:link{color:#2CB5B7;text-decoration:none}.channel-rss a:visited{color:#F99700;text-decoration:none}.channel-rss a:hover{color:#ABDE31;text-decoration:underline}/*/*/.list_entry{float:left;clear:left;width:930px;padding:5px
+3px 0px 3px;overflow:hidden}.list_entry:hover{float:left;clear:left;width:930px;height:auto;background:#E5E5E5;padding:5px
+3px 0px 3px;overflow:hidden}.list_entry
+h3{font-size:18px !important}.list_entry
+.pub_date{font-style:italic;font-weight:600;color:#30B9B7}.cat-name{font-style:italic;color:#30B9B7;text-transform:lowercase}.cat_summary{padding:5px
+5px 1px 5px;overflow:hidden;margin:0px
+10px 10px 18px;height:auto;width:740px;font-size:inherit;float:left}.category_image{padding:3px;margin:0;position:absolute;top:115px;left:820px;border:none !important}.category_image_index{width:auto;height:170px;padding:3px;float:left;margin:-50px 0 0 0px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.cat-sum-small{height:auto;font-style:normal;width:auto;padding:10px
+10px 10px 0px;overflow:hidden}a.cat-sum-small{font-size:120%;text-decoration:none;font-weight:600;padding:10px
+10px 10px 0px;margin:20px
+0 auto}/*/*/.browse-cat-sum{text-align:right;padding:5px;margin:-55px 10px 5px -5px;font-style:italic;font-size:small;color:#1F8389;width:auto;max-width:400px;float:right;overflow:hidden;min-height:40px}.browse-cat{float:left;clear:left;width:930px;height:auto;background:none;padding:5px
+3px 0px 3px;overflow:hidden;margin:2px}.browse-cat:hover{float:left;clear:left;width:930px;height:auto;background:#E5E5E5;padding:5px
+3px 0px 3px;overflow:hidden;margin:2px}.browse-cat-h3{font-size:18px !important}.browse-cat
+h4{font-size:14px !important}.browse-cat
+.pub_date{font-style:italic;font-weight:600;color:#30B9B7}.browse-more{clear:both;text-align:right;font-size:20px;font-weight:600;font-style:inherit;text-transform:lowercase;letter-spacing:-1px;color:#853857;padding:15px
+30px 5px 10px;margin:20px
+0 0 0px}/*/*/#page{background:#FBFBFB;padding:10px
+5px;overflow:hidden;margin:3px
+5px 10px 5px;width:980px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#page .page-body a:link{color:#B8465B;text-decoration:none}#page .page-body a:visited{color:#85B967;text-decoration:none}#page .page-body a:hover{color:#3BAC94;text-decoration:underline}#page
+h2{font-weight:600;font-style:normal;font-size:26px;text-transform:lowercase;text-align:left;letter-spacing:-2px;margin:-1px 5px 10px 15px;padding:2px
+10px 5px 10px;color:#769F9B;border-left:12px solid #CAD6D8;max-width:420px;height:auto;min-height:22px}#page h3,h4,h5,h6{color:#387B79;padding:5px
+5px 10px 0px;font-size:inherit}#page
+.pub_date_author{padding:6px
+15px 4px 5px;font-style:normal;font-size:16px;font-weight:700;letter-spacing:-1px;text-transform:lowercase;color:#5D8482;margin:-1px 10px 2px 5px;width:auto;height:15px;border-right:12px solid #CAD6D8;float:right;text-align:right}#page
+.snapshot{text-align:right;padding:5px;margin:-27px 10px 5px -5px;font-style:italic;font-size:small;color:#1F8389;width:auto;max-width:400px;float:right;overflow:hidden;min-height:40px}#page .page-body{clear:both;overflow:hidden;width:auto;text-align:left;padding:15px
+20px 15px 20px;font-size:90%;color:#413F32;margin:-3px -5px 10px -5px;border-top:5px solid #E0E0E0}#page .page-body
+blockquote{font-style:italic;font-weight:500;color:#154052}#page .page-body .media-embed{float:left;padding:10px;margin:-30px 5px 20px 5px}#page .media-embed-type embed, .media-embed-type object, .media-embed-type
+iframe{float:left;width:450px;height:350px;max-width:450px;min-width:450px;max-height:350px;min-height:320px;overflow:hidden;padding-top:10px;margin:10px
+1px 5px -15px}#page .page-body
+ul{margin:10px
+0 5px 20px}#page .page-body ul
+li{padding:5px
+5px 2px 40px;font-size:inherit;color:#183A54;list-style:square inside}#page
+img{border:0px
+solid #ccc;float:right;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#page .page-body img, #page .page-body .slideshow-single-img{border:0px
+solid #ccc;padding:4px;float:left;margin:0px
+5px 5px 0px}.slideshow-single-img{position:relative}.slideshow-single-img-caption{position:absolute;left:8px;bottom:12px;background:#214444;padding:5px;color:#fff;opacity:0.8;/**/width:440px;height:13px;z-index:8}.panel-img-caption{position:absolute;left:10px;bottom:10px;background:#214444;padding:10px;color:#fff;opacity:0.8;width:auto;height:20px;z-index:8}.slideshow-overlay-img-caption{position:absolute;left:13px;bottom:18px;background:#0B2C2C;padding:5px;color:#fff;opacity:0.8;width:592px;height:15px;z-index:8}#page
+hr{width:110%;padding:0;margin-left:-15px;border:#E0E0E0 3px solid}.page-body-downloads{float:left;clear:both;padding:10px;margin:10px
+10px 10px 0px;width:auto;height:auto;background:#E7E7E7}.page-body-downloads ul
+li{font-weight:600;text-transform:lowercase;list-style:none !important;padding:10px;line-height:25px;margin:-20px 0 5px -85px}.page-body-downloads
+img{padding:0px!important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}.download-span{float:left;display:inline;inline-box-align:initial}.page-body .contactform
+ul{font-weight:600;font-style:italic;float:right;display:block;width:400px;height:auto;text-align:right;text-transform:lowercase}.page-body .contactform ul
+li{list-style:none !important;padding:5px}.no-image-thmb{border:1px
+dotted grey;color:grey;width:70px;height:70px;font-style:italic;font-size:small;float:left;padding:5px;margin:5px
+5px 0px 3px}/*/*/.sharing{float:left;width:226px;height:14px;padding:7px;margin:-5px 7px 3px 10px;position:relative}.sharing-inner
+ul{width:18px;height:18px;list-style:none;display:inline;margin:0
+auto}.sharing-inner li
+img{padding:3px;border:1px
+dotted blue;width:18px;height:18px}.sharing-printing{position:absolute;top:4px;left:4px}.sharing-printing
+img{width:55px;height:23px;border:none !important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}/*/*/#panel_content{background:none !important;font-size:90%;width:auto;padding:5px
+20px 5px 20px;margin:0
+-5px 0 -5px;overflow:hidden}#panel_content
+h3{color:#387B79;padding:5px
+5px 10px 0px;font-size:18px}#panel_content h4,h5,h6{color:#387B79;padding:5px
+5px 10px 0px;font-size:inherit}#panel_content
+img{float:right;padding:5px
+5px 5px 5px;margin:4px
+4px 4px 20px;max-width:350px;max-height:250px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}#panel_content a:link{color:#B8465B;text-decoration:none}#panel_content a:visited{color:#85B967;text-decoration:none}#panel_content a:hover{color:#3BAC94;text-decoration:underline}.panel-content-downloads{float:left;clear:both;padding:10px;margin:10px
+10px 10px 0px;width:auto;height:auto;background:#DBE2E3}.panel-content-downloads ul
+li{font-weight:600;text-transform:lowercase;list-style:none !important;padding:3px;line-height:30px;margin:-10px 0 5px -40px}.panel-content-downloads ul li
+img{padding:0px
+!important;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important}#panel_content .panel-content-downloads a:link{color:#B8465B;text-decoration:none}#panel_content .panel-content-downloads a:visited{color:#85B967;text-decoration:none}#panel_content .panel-content-downloads a:hover{color:#3BAC94;text-decoration:underline}#panel_content div.prezi-player{overflow:hidden;float:right;fit-position:right}#panel_content .embed-tabbed{clear:left;width:auto;height:auto;overflow:hidden;float:right;padding:5px
+5px 5px 15px}#panel_content .embed-tabbed embed,object,iframe{border:0px
+solid !important;float:right}#panel_content .embed-tabbed
+iframe{overflow:hidden;display:block}#panel_content .embed-tabbed .prezi-player{border:0px
+solid !important;overflow:hidden;float:right;fit-position:right}#panel_content .embed-tabbed .prezi-player-links{display:none}#panel_content .embed-tabbed
+div{width:280px !important;min-width:280px !important;max-width:280px !important;height:20px !important;min-height:20px !important;max-height:20px !important;float:right;clear:both}/*/*//**/div.accordion{background:#E7EDEB;width:auto;display:block;overflow:hidden;color:inherit}div.accordion
+h2{background:#CFDBDC;padding:5px
+5px 5px 2px !important;margin-left:-40px !important;font-size:18px !important;letter-spacing:0px !important;word-spacing:2px;font-weight:normal;border-left:none !important;border-bottom:2px solid #CAD6D8;cursor:pointer;height:20px !important;min-width:120% !important}div.accordion
+h2.current{cursor:default;background:#B1D0D4;color:inherit !important}div.accordion h2:hover{cursor:default;background-color:#93C3CA !important;color:inherit !important}div.accordion h2 ul
+li{background:url('http://www.celtelearning.org/themes/site_themes/default_site/images/arrow-accordion1.png') no-repeat;width:32px;height:32px;float:left;list-style:none;list-style-position:outside;padding-left:0px;margin:-4px 5px 2px 0px}div.accordion h2.current ul li, div.accordion h2:hover ul
+li{background:url('http://www.celtelearning.org/themes/site_themes/default_site/images/arrow-accordion2.png') no-repeat;width:32px;height:32px;float:left;list-style:none;list-style-position:outside;padding-left:0;margin:-4px 5px 2px 0px}div.accordion
+div.pane{height:auto;padding:10px;color:inherit;font-size:inherit;width:auto;overflow:hidden}div.accordion div.pane
+h3{font-weight:normal;margin:0
+0 2px 0;font-size:16px;color:#999;padding:10px}/*/*/#disqus_thread{margin:10px
+-7px -20px -7px;clear:both;width:auto;background:#F4F4F4 !important;padding:5px
+10px 10px 10px;overflow:hidden}#disqus_thread
+#layout{margin:10px
+auto;width:auto}nav #disqus_thread #global-nav .publisher-anchor-hover .active #post-count ul li a:link{font-size:20px!important;color:#426A71 !important;text-decoration:none}nav #disqus_thread #global-nav .publisher-anchor-hover .active #post-count  ul li a:visited{font-size:20px!important;color:#337D90 !important;text-decoration:none}nav #disqus_thread #global-nav .publisher-anchor-hover .active #post-count  ul li a:hover{font-size:20px!important;color:#40A749 !important;text-decoration:underline}nav #disqus_thread #global-nav #post-count
+h4{font-size:20px!important;color:#426A71 !important}#disqus_thread .textarea-wrapper{background:#D5DDDE !important}#disqus_thread .connect .services
+ul{width:10px !important;height:10px !important}/*/*/.page-footer,.level,.tagged,.cat-detail{font-weight:normal;padding:5px;font-style:italic;clear:left}.tagged,.cat-detail{width:45%}.tagged .word, .cat-detail
+.word{background:#CAD6D8;padding:1px
+3px 1px 3px;height:auto;margin:2px
+2px 2px 0px !important;width:auto;display:inline-block}.tag-footer{width:100%;float:left}.paginate{clear:both;float:left;width:906px;font-size:inherit;font-weight:700;color:#9C2D7A;padding:15px;text-transform:lowercase;margin:20px
+0 0 0;background:none;border-top:3px #C6C6C6 solid}/*/*/.related-content{float:right;vertical-align:top;width:50%;height:auto;font-weight:normal;padding:0px
+5px 5px 10px;font-weight:600;margin-top:-5px;overflow:hidden;clear:left}.related-content
+h3{margin:10px
+5px;font-style:italic}.rel-list-box{width:140px;float:left;font-weight:inherit;font-style:normal;padding:2px
+2px 2px 0px;margin:0px
+2px 0px 0px;opacity:1.0;filter:alpha(opacity=100);/**/}.rel-list-box
+img{float:right;padding:3px;border:none}.rel-list-box:hover{background:#E5E5E5;border:inset 1px solid #BEBFBE;opacity:0.8;filter:alpha(opacity=80)}.rel-list-box
+h6{margin-top:5px;font-size:12px;padding:10px}.rel-list{width:90%;float:left;font-weight:inherit;padding:5px;font-style:inherit}.rel-list
+li{line-height:30px;list-style:none;padding:5px
+0 5px 0}/*/*/#footer{float:left;display:block;width:auto;color:white;font-size:small;text-align:left;padding:5px
+5px 0px 5px;margin-top:-360px;background:#bededd url(http://www.celtelearning.org/themes/site_themes/default_site/images/footer-bg.png) repeat-x;height:350px;min-height:350px;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.2);box-shadow:-1px 0px 10px rgba(0,0,0,0.2)}.footer-weblearn-info-strap{text-align:center;float:left;height:10px;padding:5px
+0px 10px 0px;width:980px;font-style:italic;font-size:12px;font-weight:600;color:#3E7682;overflow:hidden;/**/margin: -5px 5px 0px 5px}.footer-holder{position:relative;margin:0
+auto;width:1000px;height:330px;overflow:hidden;padding:0px
+0px 0px 7px}.footer-inner{width:938px;padding:20px;margin:0
+0 10px 0;overflow:hidden;font-size:90%;color:#D6DAB7}.footer-content-box{width:270px;min-height:200px;padding:15px;margin:6px
+2px 10px 6px;overflow:hidden;font-size:100%;color:#59879C;float:left;border-left:1px dotted #ABABAB}.footer-content-box
+h3{color:#909A9C;font-weight:600;font-size:28px;letter-spacing:-2px;text-transform:lowercase;padding:10px
+0px 3px 0px}.footer-browse{color:#B2BBA2;font-weight:600;font-size:24px;letter-spacing:-2px;list-style:none;text-transform:lowercase;padding:10px
+0px 3px 0px}.footer-content-box .logo-ft{padding:5px;height:90px;width:90px;margin-top:0px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/bb/celt-logo_tr_m.png) no-repeat;position:absolute;top:190px;left:170px;clear:both}.footer-nav{float:left;list-style:none;height:26px;padding:5px;width:968px;font-style:normal;font-weight:600;color:#3A4C67;overflow:hidden;margin:-15px 5px 0px 0px;border-top:1px dotted #D0D0D0}.footer-nav ul
+li{display:inline;color:#B2BBA2;font-weight:600;font-size:16px;letter-spacing:-1px;list-style:none;text-transform:lowercase;padding:4px
+10px 3px 5px}.footer-nav
+.logo{padding:5px;height:70px;width:70px;margin-top:-5px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/celt-logo_tr-sm.png) no-repeat;position:absolute;top:260px;left:905px}.logo-lonmet{float:right;padding:2px;height:65px;width:95px;margin-top:0px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/images/logo-lonmet.png) no-repeat;position:absolute;top:195px;left:885px}
+/*/*//**/ul.css-tabs_index{margin:0
+!important;padding:0;height:39px;width:auto}ul.css-tabs_index
+li{float:left;padding:0;margin:0;list-style-type:none}ul.css-tabs_index
+a{float:left;font-size:1.4em;font-weight:600;letter-spacing:-1px;text-transform:lowercase;color:#2B8BAB;text-decoration:none;border-bottom:0px;height:18px;background:#CAD6D8;display:block;padding:10px;margin-right:2px;position:relative;top:1px;border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px}ul.css-tabs_index a:hover{background-color:#5F8B97;color:#CAD6D8 }ul.css-tabs_index
+a.current{background:#efefef;color:#2B8BAB;cursor:default;margin-top:0px;height:21px}.css-panes_index{height:200px;max-height:200px;min-height:200px;padding:5px;width:auto;background:#efefef;overflow:hidden;clear:left;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2);border-radius:0px 5px 5px 5px;-moz-border-radius:0px 5px 5px 5px;-webkit-border-radius:0px 5px 5px 5px}a:active{outline:none}:focus{-moz-outline-style:none;outline:0}/*/*//**/ul.css-tabs_main{margin:0
+!important;padding:0;height:39px;width:auto}ul.css-tabs_main
+li{float:left;padding:0;margin:0;list-style-type:none}ul.css-tabs_main
+a{float:left;font-size:1.2em;font-weight:600;letter-spacing:-1px;text-transform:lowercase;color:#8AAFB7;text-decoration:none;border-bottom:0px;height:18px;background:#CAD6D8;display:block;padding:10px;margin-right:2px;position:relative;top:1px;border-radius:5px 5px 0px 0px;-moz-border-radius:5px 5px 0px 0px;-webkit-border-radius:5px 5px 0px 0px}ul.css-tabs_main a:hover{background-color:#69A7A4;color:#CAD6D8 }ul.css-tabs_main
+a.current{background:#efefef;color:#429995;cursor:default;margin-top:0px;height:21px}.css-panes_main{height:200px;max-height:200px;min-height:200px;padding:5px;width:auto;background:#efefef;overflow:hidden;clear:left;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2);border-radius:0px 5px 5px 5px;-moz-border-radius:0px 5px 5px 5px;-webkit-border-radius:0px 5px 5px 5px}/*/*/ul.css-tabs_bb{margin:0
+!important;padding:0;height:30px;width:auto}/**/ul.css-tabs_bb
+li{float:left;padding:0;margin:0;list-style-type:none}ul.css-tabs_bb
+a{float:left;font-size:16px;font-weight:700;display:block;padding:5px
+10px;text-decoration:none;height:18px;background-color:#CAD6D8;border-bottom:1px solid #efefef;color:#8AAFB7;margin-right:2px;position:relative;top:1px}ul.css-tabs_bb a:hover{background-color:#69A7A4;color:#CAD6D8}ul.css-tabs_bb
+a.current{background-color:#efefef;color:#429995;cursor:default;border-bottom:1px solid #efefef}.css-panes_bb{border-width:0 1px 1px 1px;min-height:200px;padding:15px
+20px;width:auto;background:#efefef;overflow:hidden}
+.simple_overlay{display:none;z-index:10000;background-color:#130104;width:auto;min-height:200px;border:1px
+solid #666;padding:10px;-moz-box-shadow:0 0 90px 5px #000;-webkit-box-shadow:0 0 90px #000;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)";filter:progid:DXImageTransform.Microsoft.Alpha(opacity=99)}.simple_overlay
+.close{background-image:url(http://www.celtelearning.org/themes/site_themes/default_site/images/close.png);position:absolute;right:-15px;top:-15px;cursor:pointer;height:35px;width:35px}a:active{outline:none}:focus{-moz-outline-style:none}#triggers{text-align:left}#triggers
+img{cursor:pointer;margin:0
+5px;background-color:#fff;border:1px
+solid #ccc;padding:2px;-moz-border-radius:4px;-webkit-border-radius:4px}.details{padding:10px;position:absolute;top:25px;right:25px;font-size:1.2em;color:#778277;width:350px;background:#EBE0E6;-moz-box-shadow:-1px 0px 10px rgba(0,0,0,0.5);-webkit-box-shadow:-1px 0px 10px rgba(0,0,0,0.5);box-shadow:-1px 0px 10px rgba(0,0,0,0.5);-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}.banner{padding:10px;position:absolute;top:165px;right:15px;font-size:2.5em;font-weight:600;color:#C2301E;width:375px;height:180px;opacity:0.9;filter:alpha(opacity=90);background:url(http://www.celtelearning.org/themes/site_themes/default_site/img/plank.png) no-repeat}
+.nivoSlider{position:relative}.nivoSlider
+img{position:absolute;top:0px;left:0px}.nivoSlider a.nivo-imageLink{position:absolute;top:0px;left:0px;width:100%;height:100%;border:0;padding:0;margin:0;z-index:6;display:none}.nivo-slice{display:block;position:absolute;z-index:5;height:100%}.nivo-box{display:block;position:absolute;z-index:5}.nivo-caption{position:absolute;left:0px;bottom:0px;background:#2D748A;color:#fff;opacity:0.8;width:100%;z-index:8}.nivo-caption
+p{padding:5px;margin:0}.nivo-caption
+a{display:inline !important}.nivo-html-caption{display:none}.nivo-directionNav
+a{position:absolute;top:45%;z-index:9;cursor:pointer}.nivo-prevNav{left:0px}.nivo-nextNav{right:0px}.nivo-controlNav
+a{position:relative;z-index:9;cursor:pointer}.nivo-controlNav
+a.active{font-weight:bold}
+.theme-default
+#slider_big{margin:10px
+10px 30px 10px;float:left;width:auto;height:auto}.theme-default
+#slider_wide{margin:-10px 0px 8px -12px;width:973px;min-height:200px}.theme-default
+#slider{margin:10px
+10px 30px 10px;float:left;width:450px;height:350px}.theme-default
+.nivoSlider{position:relative;background:#fff url(http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/loading.gif) no-repeat 50% 50%;margin-bottom:50px;-moz-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);-webkit-box-shadow:-1px 0px 4px rgba(0,0,0,0.2);box-shadow:-1px 0px 4px rgba(0,0,0,0.2)}.theme-default .nivoSlider
+img{position:absolute;top:0px;left:0px;display:none}.theme-default .nivoSlider
+a{border:0;display:block}.theme-default .nivo-controlNav{position:absolute;left:10%;bottom:-25px;margin-right:10px;margin-left:-40px}.theme-default .nivo-controlNav
+a{display:block;width:22px;height:22px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/bullets.png) no-repeat;text-indent:-9999px;border:0;margin-right:3px;float:left}.theme-default .nivo-controlNav
+a.active{background-position:0 -22px}.theme-default .nivo-directionNav
+a{display:block;width:30px;height:30px;background:url(http://www.celtelearning.org/themes/site_themes/default_site/scripts/themes/default/arrows.png) no-repeat;text-indent:-9999px;border:0}.theme-default a.nivo-nextNav{background-position:-30px 0;right:15px}.theme-default a.nivo-prevNav{left:15px}.theme-default .nivo-caption{font-family:Helvetica,Arial,sans-serif}.theme-default .nivo-caption
+a{color:#fff;border-bottom:1px dotted #fff}.theme-default .nivo-caption a:hover{color:#fff}
+#form-submit{}fieldset.left{float:left;padding:5px;margin:20px
+5px 5px 5px;border:0px
+dotted #CAC7BE;background:none;width:55%}fieldset.right{float:right;padding:5px;margin:20px
+5px 5px 5px;border:0px
+dotted #CAC7BE;background:none;width:40%}fieldset
+h3{font-weight:600;font-style:italic;color:#298687 !important;padding:5px
+5px 5px 22px !important;width:160px;margin:-20px 5px 5px 15px;border:0px
+dotted #CAC7BE;background:#E8F6ED}fieldset
+label{font-weight:600;color:#298687}fieldset
+ul{margin-left:-40px !important}fieldset ul
+li{border:0px
+dotted #B9D1D5;list-style:none !important;padding-bottom:10px !important;margin:10px
+auto 10px auto;clear:left;background:#CFE3E6}fieldset ul
+li.left{float:left;width:40%;margin-top:0px}fieldset ul
+li.right{float:right;clear:left;width:40%;margin-top:0px}fieldset ul
+li.sublist{width:110px !important;border:none !important;list-style:none !important;margin:-2px 0px -5px -15px !important;display:inline-block !important;background:none !important;padding:0px}.sub-label{font-weight:600;font-size:11px;font-style:italic;color:#298687;padding:0px}fieldset
+hr{border:0
+!important;height:0 !important;border-top:1px solid rgba(0, 0, 0, 0.1) !important;border-bottom:1px solid rgba(255, 255, 255, 0.3) !important;padding:0
+!important;width:425px !important;margin-left:10px !important}fieldset
+p{font-weight:normal;font-style:italic;color:#4A8D9A}fieldset input[type=text]{clear:left;border:1px
+solid white;padding:7px;width:160px;background:rgba(255,255,255,0.5);margin:5px
+0 10px 0;-webkit-appearence:none}fieldset input[type=checkbox]{display:inline-block;width:19px;height:19px;margin:-1px 4px 0 4px;vertical-align:middle;border:3px
+solid white;background:rgba(255,255,255,0.5);cursor:pointer;-webkit-appearence:none}textarea{margin:10px
+0 7px 0;width:370px;height:60px;border:1px
+solid white;padding:10px;font-family:Tahoma,sans-serif;background:rgba(255,255,255,0.5);-webkit-appearence:none}fieldset
+select{border:1px
+solid white !important;padding:7px;width:160px;margin-top:10px;background:rgba(255,255,255,0.5);-webkit-appearence:none}fieldset input[type=submit], fieldset input[type=reset]{clear:left;font-weight:600;border:1px
+solid white;padding:4px;width:90px;color:#EFFFF8;background:#32B48B;margin:0;cursor:pointer;-webkit-appearence:none}fieldset input[type=submit]:hover, fieldset input[type=reset]:hover{background:#efefef;color:#5E89A9;border:1px
+solid #849CB4}.captcha{padding:10px
+!important}.captcha
+img{border:1px
+solid white;-moz-box-shadow:none !important;-webkit-box-shadow:none !important;box-shadow:none !important;margin:1px
+0px 0px -4px !important;height:30px !important;width:176px}
